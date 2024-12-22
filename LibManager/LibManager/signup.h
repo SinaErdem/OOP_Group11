@@ -19,13 +19,12 @@ public:
 
 private slots:
     void on_signupButton_clicked();
-    void on_Back_Button_clicked();
+    void on_user_Button_clicked();
+    void on_admin_Button_clicked();
 
 private:
     Ui::SignUp *ui;
-    void saveToFile(const QString &username,const QString &email ,const QString &password,const QString &role);
-    bool isUserExist(const QString &username, const QString &email);
-    void showSuccessPopup(QWidget *parent);
+
 };
 
 #endif // SIGNUP_H

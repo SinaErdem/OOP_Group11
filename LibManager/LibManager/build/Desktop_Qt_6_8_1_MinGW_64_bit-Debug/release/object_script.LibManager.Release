@@ -1,0 +1,10 @@
+release/admindashboard.o
+release/main.o
+release/authscreen.o
+release/signup.o
+release/userdashboard.o
+release/qrc_qmake_qmake_qm_files.o
+release/moc_admindashboard.o
+release/moc_authscreen.o
+release/moc_signup.o
+release/moc_userdashboard.o

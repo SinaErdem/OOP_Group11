@@ -187,7 +187,11 @@ background-color: transparent;</string>
 	color: black;
 	
 	font: 300 10pt &quot;Calibri&quot;;
-	background-color: qlineargradient(spread:pad, x1:0.23, y1:0.477273, x2:0.915, y2:0.0800455, stop:0 rgba(165, 34, 36, 255), stop:1 rgba(255, 224, 174, 255));
+		
+	background-color: qlineargradient(spread:reflect, x1:0.484, y1:0.534091, x2:0.479, y2:1, stop:0 rgba(90, 191, 47, 255), stop:1 rgba(13, 134, 0, 255));
+}
+QPushButton:hover {
+	background-color: rgb(136, 202, 129);
 }</string>
     </property>
     <property name="text">
@@ -197,14 +201,14 @@ background-color: transparent;</string>
    <widget class="QLabel" name="LibManager_logo">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>60</y>
+      <x>470</x>
+      <y>50</y>
       <width>349</width>
       <height>79</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(C:/LibManager/LibManager/LBResources/full_logo_LibManager_relieved.png);
+     <string notr="true">background-image: url(C:/LibManager/LibManager/LBResources/LibManager_logo_revised.png);
 background-color:transparent;</string>
     </property>
     <property name="text">
@@ -222,6 +226,7 @@ background-color:transparent;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 18pt &quot;Calibri&quot;;
+color:white;
 background-color:transparent;</string>
     </property>
     <property name="text">
@@ -238,7 +243,8 @@ background-color:transparent;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:transparent;</string>
+     <string notr="true">background-color:transparent;
+color:white;</string>
     </property>
     <property name="text">
      <string>abalblalbablabalbalalbalblalballabalba</string>
@@ -257,7 +263,8 @@ background-color:transparent;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:transparent;</string>
+     <string notr="true">background-color:transparent;
+color: white;</string>
     </property>
     <property name="text">
      <string>blablablablablabaalblaal</string>
@@ -276,7 +283,8 @@ background-color:transparent;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:transparent;</string>
+     <string notr="true">background-color:transparent;
+color:white;</string>
     </property>
     <property name="text">
      <string>blablallba</string>
@@ -295,7 +303,7 @@ background-color:transparent;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.23, y1:0.477273, x2:0.915, y2:0.0800455, stop:0 rgba(165, 34, 36, 255), stop:1 rgba(255, 224, 174, 255));</string>
+     <string notr="true">background-image:url(C:/LibManager/LibManager/LBResources/authScreen_imageV2.png)</string>
     </property>
     <property name="text">
      <string/>
@@ -316,7 +324,12 @@ background-color:transparent;</string>
 	color: black;
 	
 	font: 300 10pt &quot;Calibri&quot;;
-	background-color: qlineargradient(spread:pad, x1:0.23, y1:0.477273, x2:0.915, y2:0.0800455, stop:0 rgba(165, 34, 36, 255), stop:1 rgba(255, 224, 174, 255));
+		
+	background-color: qlineargradient(spread:reflect, x1:0.484, y1:0.534091, x2:0.479, y2:1, stop:0 rgba(90, 191, 47, 255), stop:1 rgba(13, 134, 0, 255));
+}
+
+QPushButton:hover {
+	background-color: rgb(136, 202, 129);
 }</string>
     </property>
     <property name="text">

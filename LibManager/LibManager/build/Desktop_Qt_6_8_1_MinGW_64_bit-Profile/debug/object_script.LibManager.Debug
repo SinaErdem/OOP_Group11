@@ -1,0 +1,10 @@
+debug/admindashboard.o
+debug/main.o
+debug/authscreen.o
+debug/signup.o
+debug/userdashboard.o
+debug/qrc_qmake_qmake_qm_files.o
+debug/moc_admindashboard.o
+debug/moc_authscreen.o
+debug/moc_signup.o
+debug/moc_userdashboard.o

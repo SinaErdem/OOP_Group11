@@ -4,7 +4,11 @@
 #include <QFile>
 #include <QString>
 #include <QRegularExpression>
+#include <QFileInfo>
 #include<QVBoxLayout>
+#include <QTextStream>
+#include <QDir>
+
 
 SignUp::SignUp(QWidget *parent)
     : QDialog(parent)
@@ -14,114 +18,120 @@ SignUp::SignUp(QWidget *parent)
 
 }
 
+
+
 SignUp::~SignUp()
 {
     delete ui;
 }
 
 
-void showSuccessPopup(QWidget *parent) {
-    QDialog *dialog = new QDialog(parent);
-    dialog->setWindowTitle("Başarılı");
-    dialog->resize(300, 150);
+int selectedUserType = -1;  // -1: No selection, 0: Admin, 1: User
 
-    // QVBoxLayout ile düzen
-    QVBoxLayout *layout = new QVBoxLayout(dialog);
-
-    // Başarı mesajı için QLabel
-    QLabel *label = new QLabel("Kayıt işlemi başarıyla tamamlandı!", dialog);
-    label->setAlignment(Qt::AlignCenter);
-    label->setStyleSheet("font-size: 16px; color: green;"); // CSS tarzı
-    layout->addWidget(label);
-
-    // Kapat butonu
-    QPushButton *closeButton = new QPushButton("Kapat", dialog);
-    closeButton->setStyleSheet("background-color: green; color: white; font-weight: bold; padding: 5px;");
-    layout->addWidget(closeButton);
-
-    QAbstractButton::connect(closeButton, &QPushButton::clicked, dialog, &QDialog::accept);
-
-    dialog->setStyleSheet("background-color: #f0f0f0; border: 1px solid green; border-radius: 10px;"); // Popup genel stili
-    dialog->exec();
-}
-
-void SignUp::on_Back_Button_clicked()
+// Admin butonuna tıklanınca
+void SignUp::on_user_Button_clicked()
 {
-    this->close();
-
+    selectedUserType = 0;
 }
-void SignUp::on_signupButton_clicked()
+
+void SignUp::on_admin_Button_clicked()
 {
-    QString name = ui->Name_Line_Edit->text();
-    QString surname = ui->Surname_Line_Edit->text();
-    QString username = ui->UsernameLineEdit->text();
-    QString password = ui->Password_Line_Edit->text();
-    QString email = ui->Mail_Line_Edit->text();
-    QString role =ui->roleComboBox->currentText();
-
-
-
-    if (username.isEmpty() || password.isEmpty() || email.isEmpty()|| name.isEmpty()|| surname.isEmpty() ||role.isEmpty() ) {
-        QMessageBox::warning(this, "Hata", "Tüm alanlar doldurulmalıdır!");
-        return;
-
+    selectedUserType = 1;
 }
-    if(isUserExist(username,email)){
-    QMessageBox::warning(this,"Hata","Bu kullanıcı adı veya e-posta zaten kayıtlı!");
-        return;
-    }
-    if (password.length() < 8) {
-        QMessageBox::warning(this, "Hata", "Şifre en az 8 karakter uzunluğunda olmalıdır!");
-        return;
-    }
-    QRegularExpression emailRegex("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
-    if (!emailRegex.match(email).hasMatch()) {
-        QMessageBox::warning(this, "Hata", "Geçerli bir e-posta adresi giriniz!");
-        return;
-    }
 
 
-    saveToFile(username,email,password,role);
-    showSuccessPopup(this);
+
+
+// Email kontrol fonksiyonu
+bool isValidEmail(const QString &email) {
+    // Basit bir @ kontrolü
+    return email.contains("@");
 }
-void SignUp::saveToFile(const QString &username,const QString &email,const QString &password,const QString &role)
-{
-    QFile file("users.txt");
 
-    if (!file.open(QIODevice::Append | QIODevice::Text)) {
-        QMessageBox::critical(this, "Hata", "Dosya açılamadı!");
-        return;
-    }
-
-    QTextStream out(&file);
-    //yazma out ile
-    out << username << "," << email << "," << password << "," << role<< "\n";
-    file.close();
-
-    QMessageBox::information(this, "Başarılı", "Kayıt başarıyla tamamlandı!");
-}
-bool SignUp::isUserExist(const QString &username, const QString &email)
-{
-    QFile file("users.txt");
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        QMessageBox::critical(this, "Hata", "Dosya açılamadı!");
-        return false;
-    }
-
-    QTextStream in(&file);
-    while (!in.atEnd()) {
-        QString line = in.readLine();
-        QStringList fields = line.split(",");
-        if (fields.size() >= 2) {
-            QString existingUsername = fields[0];
-            QString existingEmail = fields[1];
-            if (username == existingUsername || email == existingEmail) {
-                return true;
-            }
+// Şifre kontrol fonksiyonu
+bool isValidPassword(const QString &password) {
+    // Şifre en az bir harf ve bir rakam içermelidir
+    bool hasLetter = false;
+    bool hasDigit = false;
+    for (int i = 0; i < password.length(); ++i) {
+        if (password[i].isLetter()) {
+            hasLetter = true;
+        } else if (password[i].isDigit()) {
+            hasDigit = true;
+        }
+        if (hasLetter && hasDigit) {
+            return true;
         }
     }
-
-    file.close();
     return false;
 }
+
+
+void SignUp::on_signupButton_clicked() {
+    if (selectedUserType == -1) {
+        qDebug() << "Kullanıcı türü seçilmedi!";
+        return;  // Kullanıcı türü seçilmediyse işlem yapma
+    }
+
+    QString email = ui->Mail_Line_Edit->text();
+    QString username = ui->UsernameLineEdit->text();
+    QString password = ui->Password_Line_Edit->text();
+
+    // Email kontrolü
+    if (!isValidEmail(email)) {
+        qDebug() << "Geçersiz email adresi!";
+        return;  // Geçersiz email
+    }
+
+    // Şifre kontrolü
+    if (!isValidPassword(password)) {
+        qDebug() << "Şifre en az bir harf ve bir rakam içermelidir!";
+        return;  // Geçersiz şifre
+    }
+
+    qDebug() << "Email: " << email;
+    qDebug() << "Username: " << username;
+    qDebug() << "Password: " << password;
+
+    QString filePath;
+    if (selectedUserType == 1) {
+        // Admin dosyasına kaydet
+        filePath = "C:/LibManager/LibManager/LBResources/admins.txt";
+    } else if(selectedUserType == 0) {
+        // User dosyasına kaydet
+        filePath = "C:/LibManager/LibManager/LBResources/users.txt";
+    }
+
+    // Dizin kontrolü ve oluşturulması
+    QDir dir;
+    if (!dir.exists("C:/LibManager/LibManager/LBResources")) {
+        qDebug() << "Dizin mevcut değil, oluşturuluyor...";
+        dir.mkpath("C:/LibManager/LibManager/LBResources");  // Eğer dizin yoksa oluştur
+    }
+
+    QFile file(filePath);  // Seçilen türdeki dosyayı aç
+
+    if (file.open(QIODevice::Append | QIODevice::Text)) {
+        QTextStream out(&file);
+        out << email << "," << username << "," << password << "\n";
+        file.close();
+        qDebug() << "Veriler dosyaya kaydedildi.";
+    } else {
+        qDebug() << "Dosya açılamadı!" << file.errorString();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

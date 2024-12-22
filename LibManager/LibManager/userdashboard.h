@@ -15,12 +15,11 @@ public:
     explicit UserDashboard(QWidget *parent = nullptr);
     ~UserDashboard();
 
-private slots:
-    void on_searchButton_clicked();
+
 
 private:
     Ui::UserDashboard *ui;
-    QList<QStringList> searchBooks(const QString &query, const QString &genreFilter);
+
 };
 
 #endif // USERDASHBOARD_H
