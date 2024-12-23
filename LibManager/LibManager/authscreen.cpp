@@ -28,6 +28,51 @@ void AuthScreen::on_signupButton_clicked() //event listener mantığı
 
 
 
+QString AuthScreen::checkCredentials(const QString &username, const QString &password) { //userType döndürme amacıyla ve username& password kontrol amacıyla
+    QFile file("C:/LibManager/LibManager/LBResources/users.txt");
+
+    // Dosyanın varlığını kontrol et
+    if (!file.exists()) {
+        qDebug() << "Dosya bulunamadı!";
+        return "";
+    }
+
+    // Dosyayı aç
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qDebug() << "Dosya açılamadı!";
+        return "";
+    }
+
+    QTextStream in(&file);
+
+    // Dosya satırlarını kontrol et
+    while (!in.atEnd()) {
+        QString line = in.readLine().trimmed();
+        QStringList parts = line.split(",");
+
+        // format: email,username,password,userType
+        if (parts.size() == 4) {
+            QString fileUsername = parts[1].trimmed(); // Username
+            QString filePassword = parts[2].trimmed(); // Password
+            QString userType = parts[3].trimmed();     // UserType
+
+            qDebug() << "Kontrol edilen username:" << fileUsername;
+            qDebug() << "Kontrol edilen password:" << filePassword;
+            qDebug() << "Kontrol edilen userType:" << userType;
+
+            // Kullanıcı adı ve şifre kontrolü
+            if (fileUsername == username && filePassword == password) {
+                file.close();
+                return userType; // Kullanıcı doğrulandı
+            }
+        }
+    }
+
+    file.close();
+    return ""; // Kullanıcı adı veya şifre yanlışsa
+}
+
+
 
 
 
@@ -36,64 +81,36 @@ void AuthScreen::on_signinButton_clicked()
     QString username = ui->UsernameLineEdit->text(); // Kullanıcı adı
     QString password = ui->PasswordLineEdit->text(); // Şifre
 
+    // Boş alan kontrolü
     if (username.isEmpty() || password.isEmpty()) {
         QMessageBox::warning(this, "Hata", "Lütfen kullanıcı adı ve şifreyi doldurun!");
         return;
     }
 
-    // Dosyadan okuma işlemi
-    if (checkCredentials(username, password)) {
-        QMessageBox::information(this, "Giriş Başarılı", "Başarıyla giriş yaptınız.");
-        // Başarılı giriş sonrası yapılacak işlemler
+    // Kullanıcı doğrulama
+    QString userType = checkCredentials(username, password);
+
+    // Giriş başarısızsa
+    if (userType.isEmpty()) {
+        QMessageBox::warning(this, "Giriş Hatası", "Kullanıcı adı veya şifre yanlış.");
+        return;
+    }
+
+    // Kullanıcı türüne göre yönlendirme
+    if (userType == "Admin") {
+        QMessageBox::information(this, "Giriş Başarılı", "Admin paneline yönlendiriliyorsunuz.");
+        AdminDashboard *adminDashboard = new AdminDashboard(this);
+        adminDashboard->show();
+    } else if (userType == "User") {
+        QMessageBox::information(this, "Giriş Başarılı", "Kullanıcı paneline yönlendiriliyorsunuz.");
         UserDashboard *userDashboard = new UserDashboard(this);
         userDashboard->show();
     } else {
-        QMessageBox::warning(this, "Giriş Hatası", "Kullanıcı adı veya şifre yanlış.");
+        QMessageBox::warning(this, "Hata", "Geçersiz kullanıcı türü!");
     }
 }
 
-bool AuthScreen::checkCredentials(const QString &username, const QString &password) {
-    QFile file("C:/LibManager/LibManager/LBResources/admins.txt");
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qDebug() << "Dosya açılamadı!";
-        return false;
-    }
 
-    QTextStream in(&file);
-    while (!in.atEnd()) {
-        QString line = in.readLine();
-        QStringList parts = line.split(",");
 
-        // Eğer satırdaki kullanıcı adı ve şifre eşleşiyorsa
-        if (parts.size() == 2 && parts[0] == username && parts[1] == password) {
-            file.close();
-            return true;
-        }
-    }
-
-    file.close();
-
-    // Eğer admin.txt dosyasında bulunmazsa, users.txt dosyasını kontrol et
-    file.setFileName("C:/LibManager/LibManager/LBResources/users.txt");
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qDebug() << "Dosya açılamadı!";
-        return false;
-    }
-
-    QTextStream inUser(&file);
-    while (!inUser.atEnd()) {
-        QString line = inUser.readLine();
-        QStringList parts = line.split(",");
-
-        // Eğer satırdaki kullanıcı adı ve şifre eşleşiyorsa
-        if (parts.size() == 2 && parts[0] == username && parts[1] == password) {
-            file.close();
-            return true;
-        }
-    }
-
-    file.close();
-    return false;
-}
 
 
