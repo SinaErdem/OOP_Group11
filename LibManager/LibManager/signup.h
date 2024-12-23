@@ -22,8 +22,12 @@ private slots:
     void on_user_Button_clicked();
     void on_admin_Button_clicked();
 
+    void on_Back_Button_clicked();
+
 private:
     Ui::SignUp *ui;
+    QPushButton *adminButton;
+    QPushButton *userButton;
 
 };
 

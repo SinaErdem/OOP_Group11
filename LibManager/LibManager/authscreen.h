@@ -24,7 +24,7 @@ private slots:
     void on_signinButton_clicked();
 private:
     Ui::AuthScreen *ui;
-    bool checkCredentials(const QString &username, const QString &password);
+    QString checkCredentials(const QString &username, const QString &password);
 
 };
 #endif // AUTHSCREEN_H
