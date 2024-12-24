@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 {
 
 
-    const std::string data = "C:\\LibManager\\LibManager\\books.txt";
+     std::string data = "C:\\LibManager\\LibManager\\books.txt";
     std::ifstream dosya(data);
 
     if (!dosya.is_open()) {
@@ -41,10 +41,10 @@ int main(int argc, char *argv[])
 
             try {
                 num = std::stoi(number);
-            } catch (const std::invalid_argument& e) {
+            } catch ( std::invalid_argument& e) {
                 std::cerr << "Geçersiz sayı formatı: " << number << "\n";
                 continue;
-            } catch (const std::out_of_range& e) {
+            } catch ( std::out_of_range& e) {
                 std::cerr << "Sayı çok büyük: " << number << "\n";
                 continue;
             }

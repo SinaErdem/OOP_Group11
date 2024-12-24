@@ -1,8 +1,12 @@
 #ifndef USERDASHBOARD_H
 #define USERDASHBOARD_H
 #include "user.h"
-
+#include <QLineEdit>
+#include <QComboBox>
+#include <QListWidget>
+#include <QPushButton>
 #include <QDialog>
+#include "library_database.h"
 
 namespace Ui {
 class UserDashboard;
@@ -22,11 +26,16 @@ public slots:
 
 
 private slots:
-    void on_BookList_button_clicked();
+    // Butonlar ve girişler için slotlar
+    void on_BookList_button_clicked();  // Kitap listesine tıklama
+    void borrowBook();
+    void on_findButton_toggled(bool checked);
+
 
 private:
     Ui::UserDashboard *ui;
     User& currentUser;
+    void populateResults(std::vector<Library_Database> &results);
 
 };
 

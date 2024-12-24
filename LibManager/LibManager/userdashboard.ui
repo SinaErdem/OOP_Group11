@@ -19,8 +19,8 @@
   <widget class="QLabel" name="logo_searchScreen">
    <property name="geometry">
     <rect>
-     <x>272</x>
-     <y>190</y>
+     <x>280</x>
+     <y>60</y>
      <width>479</width>
      <height>109</height>
     </rect>
@@ -33,11 +33,11 @@ background-color:transparent;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLineEdit" name="searchBar">
+  <widget class="QLineEdit" name="searchLineEdit">
    <property name="geometry">
     <rect>
-     <x>197</x>
-     <y>340</y>
+     <x>200</x>
+     <y>180</y>
      <width>630</width>
      <height>44</height>
     </rect>
@@ -178,11 +178,52 @@ QPushButton:hover {
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QComboBox" name="filterComboBox">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>160</y>
+     <width>111</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="resultsTableWidget">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>220</y>
+     <width>521</width>
+     <height>361</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="findButton">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>170</y>
+     <width>111</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PushButton</string>
+   </property>
+  </widget>
   <zorder>allBackground</zorder>
   <zorder>logo_searchScreen</zorder>
-  <zorder>searchBar</zorder>
+  <zorder>searchLineEdit</zorder>
   <zorder>navBar</zorder>
   <zorder>bookListWidget</zorder>
+  <zorder>filterComboBox</zorder>
+  <zorder>resultsTableWidget</zorder>
+  <zorder>findButton</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -10,7 +10,7 @@ private:
 
 public:
     void addBook(const Library_Database& book);
-    std::list<Library_Database> allBooks() const;
+    std::list<Library_Database>& allBooks();
 };
 
 #endif // LIBRARY_H
