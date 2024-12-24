@@ -9,10 +9,15 @@
 AuthScreen::AuthScreen(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::AuthScreen)
+    , bookManager()
+    , currentUser("", "", "", gbookManager)
 {
 
     ui->setupUi(this);
     this->setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+    userDashboard = new UserDashboard(currentUser, this);
+    userDashboard->hide();
+
 }
 
 AuthScreen::~AuthScreen()
@@ -22,8 +27,8 @@ AuthScreen::~AuthScreen()
 
 void AuthScreen::on_signupButton_clicked() //event listener mantığı
 {
-    SignUp *signUpWindow = new SignUp(this);//tıklandığında yeni pencere oluşturma
-    signUpWindow->show();
+    SignUp *signupWindow = new SignUp(this, bookManager); // bookManager'ı doğru bir şekilde geçiriyorsunuz
+    signupWindow->show();
 }
 
 
@@ -103,12 +108,13 @@ void AuthScreen::on_signinButton_clicked()
         adminDashboard->show();
     } else if (userType == "User") {
         QMessageBox::information(this, "Giriş Başarılı", "Kullanıcı paneline yönlendiriliyorsunuz.");
-        UserDashboard *userDashboard = new UserDashboard(this);
+        UserDashboard *userDashboard = new UserDashboard(currentUser, this);
         userDashboard->show();
     } else {
         QMessageBox::warning(this, "Hata", "Geçersiz kullanıcı türü!");
     }
 }
+
 
 
 

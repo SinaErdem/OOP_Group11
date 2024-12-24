@@ -1,9 +1,10 @@
 #ifndef SIGNUP_H
 #define SIGNUP_H
-
+#include "user.h"
 #include <QDialog>
 #include <QString>
 #include <QRegularExpression>
+#include "book_management_fuser.h"
 
 
 namespace Ui {
@@ -14,8 +15,9 @@ class SignUp : public QDialog {
     Q_OBJECT
 
 public:
-    explicit SignUp(QWidget *parent = nullptr);
+    explicit SignUp(QWidget *parent, Book_Management_fUser& bookManager);
     ~SignUp();
+
 
 private slots:
     void on_signupButton_clicked();
@@ -28,7 +30,9 @@ private:
     Ui::SignUp *ui;
     QPushButton *adminButton;
     QPushButton *userButton;
+    Book_Management_fUser& bookManager;
 
 };
+
 
 #endif // SIGNUP_H

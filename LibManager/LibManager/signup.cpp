@@ -1,18 +1,23 @@
 #include "signup.h"
+#include "book_management_fuser.h"
 #include "ui_signup.h"
 #include <QMessageBox>
 #include <QFile>
 #include <QString>
 #include <QRegularExpression>
 #include <QFileInfo>
-#include<QVBoxLayout>
+#include <QVBoxLayout>
 #include <QTextStream>
 #include <QDir>
+#include "admin.h"
+#include "user.h"
 
 
-SignUp::SignUp(QWidget *parent)
+
+SignUp::SignUp(QWidget *parent, Book_Management_fUser& bookManager)
     : QDialog(parent)
     , ui(new Ui::SignUp)
+    , bookManager(bookManager)
 {
     ui->setupUi(this);
     adminButton = new QPushButton("Admin", this);
@@ -174,80 +179,58 @@ bool isValidPassword(const QString &password) {
 void SignUp::on_signupButton_clicked() {
     QString userType;
     if (selectedUserType == -1) {
-        qDebug() << "Kullanıcı türü seçilmedi!";
-        QMessageBox::warning(this, "Kayıt olma hatası", "Lütfen Kullanıcı türü seçiniz.");
-
-        return;  // kullanıcı işlemi yapmadıysa işlem yapma
-    }else if(selectedUserType==0){//user
-         userType ="User";
-
-
-    }else if(selectedUserType==1){//Admin
-         userType ="Admin";
+        qDebug() << "User type not selected!";
+        QMessageBox::warning(this, "Registration error", "Please select a user type.");
+        return;
     }
 
     QString email = ui->Mail_Line_Edit->text();
     QString username = ui->UsernameLineEdit->text();
     QString password = ui->Password_Line_Edit->text();
 
-
-    // Email kontrolü
+    // Email validation
     if (!isValidEmail(email)) {
-        qDebug() << "Geçersiz email adresi!";
-        QMessageBox::warning(this, "Kayıt olma hatası", "Geçersiz e-mail Adresi Girdiniz!");
-        return;  // Geçersiz email
+        qDebug() << "Invalid email!";
+        QMessageBox::warning(this, "Registration error", "Invalid email address.");
+        return;
     }
 
-    // Şifre kontrolü
+    // Password validation
     if (!isValidPassword(password)) {
-        QMessageBox::warning(this, "Kayıt olma hatası", "Şifre en az bir harf ve bir rakam içermelidir!");
-        qDebug() << "Şifre en az bir harf ve bir rakam içermelidir!";
-        return;  // Geçersiz şifre
+        qDebug() << "Password must contain at least one letter and one digit!";
+        QMessageBox::warning(this, "Registration error", "Password must contain at least one letter and one digit.");
+        return;
     }
 
     qDebug() << "Email: " << email;
     qDebug() << "Username: " << username;
     qDebug() << "Password: " << password;
-    qDebug() <<"UserType:"<< userType;
-    QString  filePath = "C:/LibManager/LibManager/LBResources/users.txt";
 
-
-    // Dizin kontrolü ve oluşturulması
-    QDir dir;
-    if (!dir.exists("C:/LibManager/LibManager/LBResources")) {
-        qDebug() << "Dizin mevcut değil, oluşturuluyor...";
-        dir.mkpath("C:/LibManager/LibManager/LBResources");  // Eğer dizin yoksa oluştur
-    }
-
-    QFile file(filePath);
-
-    if (file.open(QIODevice::Append | QIODevice::Text)) {
-        QTextStream out(&file);
-        out << email << "," << username << "," << password << "," << userType <<"\n"; //format
-        file.close();
-        qDebug() << "Veriler dosyaya kaydedildi.";
-    } else {
-        qDebug() << "Dosya açılamadı!" << file.errorString();
+    // Instantiate appropriate user object
+    if (selectedUserType == 0) {  // User
+        User user(email, username, password,bookManager);  // *bookmanager kullanılıyor, çünkü bookmanager işaretçi
+        user.saveUserInfo();
+    } else if (selectedUserType == 1) {  // Admin
+        Admin admin(email, username, password);
+        admin.saveUserInfo();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 void SignUp::on_Back_Button_clicked()
 {
     window()->close();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

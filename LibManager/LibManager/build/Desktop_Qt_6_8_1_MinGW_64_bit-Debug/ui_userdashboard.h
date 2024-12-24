@@ -14,6 +14,7 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
@@ -27,10 +28,9 @@ public:
     QWidget *navBar;
     QLabel *LibManager_logo_navBar;
     QPushButton *BookList_button;
-    QPushButton *Magazines_button;
-    QPushButton *cd_button;
     QPushButton *profile_button;
     QLabel *allBackground;
+    QListWidget *bookListWidget;
 
     void setupUi(QDialog *UserDashboard)
     {
@@ -76,34 +76,7 @@ public:
 "	background-color: rgb(136, 202, 129);\n"
 "	border-radius: 0px;\n"
 "}"));
-        Magazines_button = new QPushButton(navBar);
-        Magazines_button->setObjectName("Magazines_button");
-        Magazines_button->setGeometry(QRect(280, 0, 111, 50));
-        Magazines_button->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: transparent;\n"
-"    color: white;\n"
-"    padding: 5px;\n"
-"	border-color: transparent;\n"
-"	border-radius: 0px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(136, 202, 129);\n"
-"	border-radius: 0px;\n"
-"}"));
-        cd_button = new QPushButton(navBar);
-        cd_button->setObjectName("cd_button");
-        cd_button->setGeometry(QRect(390, 0, 111, 50));
-        cd_button->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: transparent;\n"
-"    color: white;\n"
-"    padding: 5px;\n"
-"	border-color: transparent;\n"
-"	border-radius: 0px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(136, 202, 129);\n"
-"	border-radius: 0px;\n"
-"}"));
+        BookList_button->setIconSize(QSize(18, 18));
         profile_button = new QPushButton(navBar);
         profile_button->setObjectName("profile_button");
         profile_button->setGeometry(QRect(913, 0, 111, 50));
@@ -122,10 +95,14 @@ public:
         allBackground->setObjectName("allBackground");
         allBackground->setGeometry(QRect(0, 0, 1024, 576));
         allBackground->setStyleSheet(QString::fromUtf8("background-color: rgb(231, 231, 231);"));
+        bookListWidget = new QListWidget(UserDashboard);
+        bookListWidget->setObjectName("bookListWidget");
+        bookListWidget->setGeometry(QRect(0, 50, 441, 531));
         allBackground->raise();
         logo_searchScreen->raise();
         searchBar->raise();
         navBar->raise();
+        bookListWidget->raise();
 
         retranslateUi(UserDashboard);
 
@@ -138,9 +115,7 @@ public:
         logo_searchScreen->setText(QString());
         searchBar->setText(QCoreApplication::translate("UserDashboard", "allah allah neymi\305\237 ki bu", nullptr));
         LibManager_logo_navBar->setText(QString());
-        BookList_button->setText(QCoreApplication::translate("UserDashboard", "Book List", nullptr));
-        Magazines_button->setText(QCoreApplication::translate("UserDashboard", "Magazine", nullptr));
-        cd_button->setText(QCoreApplication::translate("UserDashboard", "CDs", nullptr));
+        BookList_button->setText(QCoreApplication::translate("UserDashboard", "All Books", nullptr));
         profile_button->setText(QCoreApplication::translate("UserDashboard", "Profile", nullptr));
         allBackground->setText(QString());
     } // retranslateUi

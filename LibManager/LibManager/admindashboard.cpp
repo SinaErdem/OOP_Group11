@@ -6,6 +6,7 @@ AdminDashboard::AdminDashboard(QWidget *parent)
     , ui(new Ui::AdminDashboard)
 {
     ui->setupUi(this);
+
 }
 
 AdminDashboard::~AdminDashboard()

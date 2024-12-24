@@ -9,16 +9,30 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    admin.cpp \
     admindashboard.cpp \
+    book_management_fadmin.cpp \
+    book_management_fuser.cpp \
+    library.cpp \
+    library_database.cpp \
+    librarymanagement.cpp \
     main.cpp \
     authscreen.cpp \
     signup.cpp \
+    user.cpp \
     userdashboard.cpp
 
 HEADERS += \
+    admin.h \
     admindashboard.h \
     authscreen.h \
+    book_management_fadmin.h \
+    book_management_fuser.h \
+    library.h \
+    library_database.h \
+    librarymanagement.h \
     signup.h \
+    user.h \
     userdashboard.h
 
 FORMS += \
@@ -36,3 +50,6 @@ CONFIG += embed_translations
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    books.txt

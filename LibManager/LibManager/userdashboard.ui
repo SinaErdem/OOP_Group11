@@ -52,7 +52,7 @@ padding-left: 10px;
 padding-bottom: 2px;</string>
    </property>
    <property name="text">
-    <string>allah allah neymiş ki bu</string>
+    <string/>
    </property>
   </widget>
   <widget class="QWidget" name="navBar" native="true">
@@ -84,7 +84,7 @@ background-color: transparent;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="BookList_button">
+   <widget class="QPushButton" name="showBooksButton">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -107,59 +107,13 @@ QPushButton:hover {
 }</string>
     </property>
     <property name="text">
-     <string>Book List</string>
+     <string>All Books</string>
     </property>
-   </widget>
-   <widget class="QPushButton" name="Magazines_button">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>0</y>
-      <width>111</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-    background-color: transparent;
-    color: white;
-    padding: 5px;
-	border-color: transparent;
-	border-radius: 0px;
-}
-QPushButton:hover {
-	background-color: rgb(136, 202, 129);
-	border-radius: 0px;
-}</string>
-    </property>
-    <property name="text">
-     <string>Magazine</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="cd_button">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>0</y>
-      <width>111</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-    background-color: transparent;
-    color: white;
-    padding: 5px;
-	border-color: transparent;
-	border-radius: 0px;
-}
-QPushButton:hover {
-	background-color: rgb(136, 202, 129);
-	border-radius: 0px;
-}</string>
-    </property>
-    <property name="text">
-     <string>CDs</string>
+    <property name="iconSize">
+     <size>
+      <width>18</width>
+      <height>18</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="profile_button">
@@ -205,10 +159,30 @@ QPushButton:hover {
     <string/>
    </property>
   </widget>
+  <widget class="QListWidget" name="bookListWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>50</y>
+     <width>441</width>
+     <height>531</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:reflect, x1:0.484, y1:0.534091, x2:0.479, y2:1, stop:0 rgba(90, 191, 47, 255), stop:1 rgba(13, 134, 0, 255));</string>
+   </property>
+   <property name="autoScroll">
+    <bool>true</bool>
+   </property>
+  </widget>
   <zorder>allBackground</zorder>
   <zorder>logo_searchScreen</zorder>
   <zorder>searchBar</zorder>
   <zorder>navBar</zorder>
+  <zorder>bookListWidget</zorder>
  </widget>
  <resources/>
  <connections/>
