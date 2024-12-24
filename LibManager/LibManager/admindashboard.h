@@ -1,6 +1,7 @@
 #ifndef ADMINDASHBOARD_H
 #define ADMINDASHBOARD_H
 
+
 #include <QDialog>
 
 namespace Ui {
@@ -15,8 +16,14 @@ public:
     explicit AdminDashboard(QWidget *parent = nullptr);
     ~AdminDashboard();
 
+private slots:
+    void addBooks();  // Kitap ekleme fonksiyonu
+    void removeBooks();  // Kitap kaldırma fonksiyonu
+
+
 private:
     Ui::AdminDashboard *ui;
 };
+
 
 #endif // ADMINDASHBOARD_H

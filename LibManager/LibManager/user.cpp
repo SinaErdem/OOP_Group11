@@ -6,7 +6,7 @@
 #include <QDir>
 
 User::User(const QString& email, const QString& username, const QString& password, Book_Management_fUser& bookManager)
-    : m_email(email), m_username(username), m_password(password), bookManager(bookManager) {}
+    : bookManager(bookManager), m_email(email), m_username(username), m_password(password) {}
 
 User::~User(){}
 

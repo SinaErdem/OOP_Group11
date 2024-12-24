@@ -104,7 +104,7 @@ void AuthScreen::on_signinButton_clicked()
     // Kullanıcı türüne göre yönlendirme
     if (userType == "Admin") {
         QMessageBox::information(this, "Giriş Başarılı", "Admin paneline yönlendiriliyorsunuz.");
-        AdminDashboard *adminDashboard = new AdminDashboard(this);
+        AdminDashboard *adminDashboard = new AdminDashboard(this);  // QWidget'ı kullanıyorsanız
         adminDashboard->show();
     } else if (userType == "User") {
         QMessageBox::information(this, "Giriş Başarılı", "Kullanıcı paneline yönlendiriliyorsunuz.");
