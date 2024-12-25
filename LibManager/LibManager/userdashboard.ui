@@ -20,7 +20,7 @@
    <property name="geometry">
     <rect>
      <x>280</x>
-     <y>60</y>
+     <y>110</y>
      <width>479</width>
      <height>109</height>
     </rect>
@@ -36,17 +36,14 @@ background-color:transparent;</string>
   <widget class="QLineEdit" name="searchLineEdit">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>180</y>
-     <width>630</width>
+     <x>312</x>
+     <y>250</y>
+     <width>407</width>
      <height>44</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-radius: 20px;
-background-color: green;
-border-radius: 15px;
-color: black; 
+    <string notr="true">background-color: qlineargradient(spread:reflect, x1:0.484, y1:0.534091, x2:0.479, y2:1, stop:0 rgba(90, 191, 47, 255), stop:1 rgba(13, 134, 0, 255));
 font-size: 16px;
 padding-left: 10px; 
 padding-bottom: 2px;</string>
@@ -116,36 +113,10 @@ QPushButton:hover {
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="profile_button">
-    <property name="geometry">
-     <rect>
-      <x>913</x>
-      <y>0</y>
-      <width>111</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-    background-color: transparent;
-    color: white;
-    padding: 5px;
-	border-color: transparent;
-	border-radius: 0px;
-}
-QPushButton:hover {
-	background-color: rgb(136, 202, 129);
-	border-radius: 0px;
-}</string>
-    </property>
-    <property name="text">
-     <string>Profile</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="showBorrowedBooksButton">
     <property name="geometry">
      <rect>
-      <x>280</x>
+      <x>890</x>
       <y>0</y>
       <width>131</width>
       <height>50</height>
@@ -193,7 +164,7 @@ QPushButton:hover {
     <rect>
      <x>0</x>
      <y>50</y>
-     <width>441</width>
+     <width>191</width>
      <height>531</height>
     </rect>
    </property>
@@ -207,10 +178,10 @@ QPushButton:hover {
   <widget class="QComboBox" name="filterComboBox">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>160</y>
+     <x>200</x>
+     <y>250</y>
      <width>111</width>
-     <height>61</height>
+     <height>44</height>
     </rect>
    </property>
    <property name="font">
@@ -219,77 +190,75 @@ QPushButton:hover {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:red;</string>
+    <string notr="true">
+    background-color:white;
+    color: green;
+    padding: 5px;
+	border-color: transparent;
+	border-radius: 0px;
+
+</string>
    </property>
   </widget>
   <widget class="QTableWidget" name="resultsTableWidget">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>220</y>
+     <x>250</x>
+     <y>294</y>
      <width>521</width>
      <height>361</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:green;</string>
+    <string notr="true">background-color: qlineargradient(spread:reflect, x1:0.484, y1:0.534091, x2:0.479, y2:1, stop:0 rgba(90, 191, 47, 255), stop:1 rgba(13, 134, 0, 255));</string>
    </property>
   </widget>
   <widget class="QPushButton" name="findButton">
    <property name="geometry">
     <rect>
-     <x>810</x>
-     <y>170</y>
+     <x>720</x>
+     <y>250</y>
      <width>111</width>
-     <height>51</height>
+     <height>44</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">
-color: red;
+    <string notr="true">QPushButton {
+    background-color:white;
+    color: green;
+    padding: 5px;
+	border-color: transparent;
+	border-radius: 0px;
+}
 </string>
    </property>
    <property name="text">
     <string>Borrow Book</string>
    </property>
   </widget>
-<<<<<<< HEAD
   <widget class="QTableWidget" name="barrowedbooks">
    <property name="geometry">
     <rect>
-     <x>130</x>
+     <x>540</x>
      <y>50</y>
-     <width>511</width>
-     <height>192</height>
-    </rect>
-=======
-  <widget class="QListWidget" name="borrowedBookListWidget">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>50</y>
-     <width>256</width>
-     <height>211</height>
+     <width>491</width>
+     <height>221</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:green;</string>
->>>>>>> c6c584033b7e038d0a4866a83fcb6e398ce0357d
+    <string notr="true">background-color: qlineargradient(spread:reflect, x1:0.484, y1:0.534091, x2:0.479, y2:1, stop:0 rgba(90, 191, 47, 255), stop:1 rgba(13, 134, 0, 255));
+color: white;</string>
    </property>
   </widget>
   <zorder>allBackground</zorder>
   <zorder>logo_searchScreen</zorder>
   <zorder>searchLineEdit</zorder>
   <zorder>navBar</zorder>
-  <zorder>bookListWidget</zorder>
-  <zorder>filterComboBox</zorder>
   <zorder>resultsTableWidget</zorder>
   <zorder>findButton</zorder>
-<<<<<<< HEAD
+  <zorder>filterComboBox</zorder>
+  <zorder>bookListWidget</zorder>
   <zorder>barrowedbooks</zorder>
-=======
-  <zorder>borrowedBookListWidget</zorder>
->>>>>>> c6c584033b7e038d0a4866a83fcb6e398ce0357d
  </widget>
  <resources/>
  <connections/>

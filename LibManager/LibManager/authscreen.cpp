@@ -88,7 +88,22 @@ void AuthScreen::on_signinButton_clicked()
 
     // Boş alan kontrolü
     if (username.isEmpty() || password.isEmpty()) {
-        QMessageBox::warning(this, "Hata", "Lütfen kullanıcı adı ve şifreyi doldurun!");
+        //QMessageBox::warning(this, "Hata", "Lütfen kullanıcı adı ve şifreyi doldurun!");
+        QMessageBox msgBox;
+        msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+        msgBox.setIcon(QMessageBox::Warning);  // Uyarı simgesi
+        msgBox.setWindowTitle("Error");        // Başlık
+        msgBox.setText("Please enter username and password");  // Mesaj metni
+        msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+
+        // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
+        msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                             "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                             "QPushButton:hover { background-color: #888; }");
+
+        // Mesaj kutusunu göster
+        msgBox.exec();
+
         return;
     }
 
@@ -97,7 +112,21 @@ void AuthScreen::on_signinButton_clicked()
 
     // Giriş başarısızsa
     if (userType.isEmpty()) {
-        QMessageBox::warning(this, "Giriş Hatası", "Kullanıcı adı veya şifre yanlış.");
+        //QMessageBox::warning(this, "Giriş Hatası", "Kullanıcı adı veya şifre yanlış.");
+        QMessageBox msgBox;
+        msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+        msgBox.setIcon(QMessageBox::Warning);  // Uyarı simgesi
+        msgBox.setWindowTitle("Authentication Error");        // Başlık
+        msgBox.setText("Username or password is wrong.");  // Mesaj metni
+        msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+
+        // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
+        msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                             "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                             "QPushButton:hover { background-color: #888; }");
+
+        // Mesaj kutusunu göster
+        msgBox.exec();
         return;
     }
 
@@ -108,23 +137,62 @@ void AuthScreen::on_signinButton_clicked()
 
     // Kullanıcı türüne göre yönlendirme
     if (userType == "Admin") {
-        QMessageBox::information(this, "Giriş Başarılı", "Admin paneline yönlendiriliyorsunuz.");
+        //QMessageBox::information(this, "Giriş Başarılı", "Admin paneline yönlendiriliyorsunuz.");
+        QMessageBox msgBox;
+        msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+        msgBox.setIcon(QMessageBox::Information);  // Uyarı simgesi
+        msgBox.setWindowTitle("Authentication Successful");        // Başlık
+        msgBox.setText("Redirecting to Admin Dashboard...");  // Mesaj metni
+        msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+
+        // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
+        msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                             "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                             "QPushButton:hover { background-color: #888; }");
+
+        // Mesaj kutusunu göster
+        msgBox.exec();
         AdminDashboard *adminDashboard = new AdminDashboard(this);
         adminDashboard->show();
 
-<<<<<<< HEAD
     } else if (userType == "User") {
-        QMessageBox::information(this, "Giriş Başarılı", "Kullanıcı paneline yönlendiriliyorsunuz.");
-=======
+        //QMessageBox::information(this, "Giriş Başarılı", "Kullanıcı paneline yönlendiriliyorsunuz.");
+        QMessageBox msgBox;
+        msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+        msgBox.setIcon(QMessageBox::Information);  // Uyarı simgesi
+        msgBox.setWindowTitle("Authentication Successful");        // Başlık
+        msgBox.setText("Redirecting to User Dashboard...");  // Mesaj metni
+        msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
 
-    } else if (userType == "User") {
-        QMessageBox::information(this, "Giriş Başarılı", "Kullanıcı paneline yönlendiriliyorsunuz.");
-        UserDashboard *userDashboard = new UserDashboard(currentUser, bookManager,this);
->>>>>>> c6c584033b7e038d0a4866a83fcb6e398ce0357d
-        userDashboard->show();
+        // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
+        msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                             "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                             "QPushButton:hover { background-color: #888; }");
 
+        // Mesaj kutusunu göster
+        msgBox.exec();
+        // Eğer userDashboard zaten varsa, tekrar oluşturma
+        if (!userDashboard) {
+            userDashboard = new UserDashboard(currentUser, bookManager, this);
+        }
+
+        userDashboard->show(); // Kullanıcı panelini göster
     } else {
-        QMessageBox::warning(this, "Hata", "Geçersiz kullanıcı türü!");
+        //QMessageBox::warning(this, "Hata", "Geçersiz kullanıcı türü!");
+        QMessageBox msgBox;
+        msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+        msgBox.setIcon(QMessageBox::Warning);  // Uyarı simgesi
+        msgBox.setWindowTitle("Error");        // Başlık
+        msgBox.setText("Invalid User Type");  // Mesaj metni
+        msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+
+        // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
+        msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                             "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                             "QPushButton:hover { background-color: #888; }");
+
+        // Mesaj kutusunu göster
+        msgBox.exec();
     }
 }
 

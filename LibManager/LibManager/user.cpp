@@ -9,7 +9,7 @@
 #include <QMessageBox>
 
 User::User(const QString& email, const QString& username, const QString& password, Book_Management_fUser& bookManager)
-    : bookManager(bookManager), m_email(email), m_username(username), m_password(password) {}
+    : bookManager(bookManager), m_email(email), m_username(username), m_password(password), m_userType("User") {}
 
 User::~User(){}
 void User::setm_userType(const QString& userType) {

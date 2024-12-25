@@ -31,14 +31,13 @@ public:
     QWidget *navBar;
     QLabel *LibManager_logo_navBar;
     QPushButton *showBooksButton;
-    QPushButton *profile_button;
     QPushButton *showBorrowedBooksButton;
     QLabel *allBackground;
     QListWidget *bookListWidget;
     QComboBox *filterComboBox;
     QTableWidget *resultsTableWidget;
     QPushButton *findButton;
-    QListWidget *borrowedBookListWidget;
+    QTableWidget *barrowedbooks;
 
     void setupUi(QDialog *UserDashboard)
     {
@@ -48,16 +47,13 @@ public:
         UserDashboard->setStyleSheet(QString::fromUtf8("background-color:white;"));
         logo_searchScreen = new QLabel(UserDashboard);
         logo_searchScreen->setObjectName("logo_searchScreen");
-        logo_searchScreen->setGeometry(QRect(280, 60, 479, 109));
+        logo_searchScreen->setGeometry(QRect(280, 110, 479, 109));
         logo_searchScreen->setStyleSheet(QString::fromUtf8("background-image: url(C:/LibManager/LibManager/LBResources/LibManager_searchScreen.png);\n"
 "background-color:transparent;"));
         searchLineEdit = new QLineEdit(UserDashboard);
         searchLineEdit->setObjectName("searchLineEdit");
-        searchLineEdit->setGeometry(QRect(200, 180, 630, 44));
-        searchLineEdit->setStyleSheet(QString::fromUtf8("border-radius: 20px;\n"
-"background-color: green;\n"
-"border-radius: 15px;\n"
-"color: black; \n"
+        searchLineEdit->setGeometry(QRect(312, 250, 407, 44));
+        searchLineEdit->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:reflect, x1:0.484, y1:0.534091, x2:0.479, y2:1, stop:0 rgba(90, 191, 47, 255), stop:1 rgba(13, 134, 0, 255));\n"
 "font-size: 16px;\n"
 "padding-left: 10px; \n"
 "padding-bottom: 2px;"));
@@ -85,23 +81,9 @@ public:
 "	border-radius: 0px;\n"
 "}"));
         showBooksButton->setIconSize(QSize(18, 18));
-        profile_button = new QPushButton(navBar);
-        profile_button->setObjectName("profile_button");
-        profile_button->setGeometry(QRect(913, 0, 111, 50));
-        profile_button->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: transparent;\n"
-"    color: white;\n"
-"    padding: 5px;\n"
-"	border-color: transparent;\n"
-"	border-radius: 0px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(136, 202, 129);\n"
-"	border-radius: 0px;\n"
-"}"));
         showBorrowedBooksButton = new QPushButton(navBar);
         showBorrowedBooksButton->setObjectName("showBorrowedBooksButton");
-        showBorrowedBooksButton->setGeometry(QRect(280, 0, 131, 50));
+        showBorrowedBooksButton->setGeometry(QRect(890, 0, 131, 50));
         showBorrowedBooksButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: transparent;\n"
 "    color: white;\n"
@@ -120,39 +102,52 @@ public:
         bookListWidget = new QListWidget(UserDashboard);
         bookListWidget->setObjectName("bookListWidget");
         bookListWidget->setEnabled(true);
-        bookListWidget->setGeometry(QRect(0, 50, 441, 531));
+        bookListWidget->setGeometry(QRect(0, 50, 191, 531));
         bookListWidget->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:reflect, x1:0.484, y1:0.534091, x2:0.479, y2:1, stop:0 rgba(90, 191, 47, 255), stop:1 rgba(13, 134, 0, 255));"));
         bookListWidget->setAutoScroll(true);
         filterComboBox = new QComboBox(UserDashboard);
         filterComboBox->setObjectName("filterComboBox");
-        filterComboBox->setGeometry(QRect(90, 160, 111, 61));
+        filterComboBox->setGeometry(QRect(200, 250, 111, 44));
         QFont font;
         font.setPointSize(16);
         filterComboBox->setFont(font);
-        filterComboBox->setStyleSheet(QString::fromUtf8("color:red;"));
+        filterComboBox->setStyleSheet(QString::fromUtf8("\n"
+"    background-color:white;\n"
+"    color: green;\n"
+"    padding: 5px;\n"
+"	border-color: transparent;\n"
+"	border-radius: 0px;\n"
+"\n"
+""));
         resultsTableWidget = new QTableWidget(UserDashboard);
         resultsTableWidget->setObjectName("resultsTableWidget");
-        resultsTableWidget->setGeometry(QRect(200, 220, 521, 361));
-        resultsTableWidget->setStyleSheet(QString::fromUtf8("background-color:green;"));
+        resultsTableWidget->setGeometry(QRect(250, 294, 521, 361));
+        resultsTableWidget->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:reflect, x1:0.484, y1:0.534091, x2:0.479, y2:1, stop:0 rgba(90, 191, 47, 255), stop:1 rgba(13, 134, 0, 255));"));
         findButton = new QPushButton(UserDashboard);
         findButton->setObjectName("findButton");
-        findButton->setGeometry(QRect(810, 170, 111, 51));
-        findButton->setStyleSheet(QString::fromUtf8("\n"
-"color: red;\n"
+        findButton->setGeometry(QRect(720, 250, 111, 44));
+        findButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color:white;\n"
+"    color: green;\n"
+"    padding: 5px;\n"
+"	border-color: transparent;\n"
+"	border-radius: 0px;\n"
+"}\n"
 ""));
-        borrowedBookListWidget = new QListWidget(UserDashboard);
-        borrowedBookListWidget->setObjectName("borrowedBookListWidget");
-        borrowedBookListWidget->setGeometry(QRect(230, 50, 256, 211));
-        borrowedBookListWidget->setStyleSheet(QString::fromUtf8("background-color:green;"));
+        barrowedbooks = new QTableWidget(UserDashboard);
+        barrowedbooks->setObjectName("barrowedbooks");
+        barrowedbooks->setGeometry(QRect(540, 50, 491, 221));
+        barrowedbooks->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:reflect, x1:0.484, y1:0.534091, x2:0.479, y2:1, stop:0 rgba(90, 191, 47, 255), stop:1 rgba(13, 134, 0, 255));\n"
+"color: white;"));
         allBackground->raise();
         logo_searchScreen->raise();
         searchLineEdit->raise();
         navBar->raise();
-        bookListWidget->raise();
-        filterComboBox->raise();
         resultsTableWidget->raise();
         findButton->raise();
-        borrowedBookListWidget->raise();
+        filterComboBox->raise();
+        bookListWidget->raise();
+        barrowedbooks->raise();
 
         retranslateUi(UserDashboard);
 
@@ -166,7 +161,6 @@ public:
         searchLineEdit->setText(QString());
         LibManager_logo_navBar->setText(QString());
         showBooksButton->setText(QCoreApplication::translate("UserDashboard", "All Books", nullptr));
-        profile_button->setText(QCoreApplication::translate("UserDashboard", "Profile", nullptr));
         showBorrowedBooksButton->setText(QCoreApplication::translate("UserDashboard", "Borrowed Books", nullptr));
         allBackground->setText(QString());
         findButton->setText(QCoreApplication::translate("UserDashboard", "Borrow Book", nullptr));

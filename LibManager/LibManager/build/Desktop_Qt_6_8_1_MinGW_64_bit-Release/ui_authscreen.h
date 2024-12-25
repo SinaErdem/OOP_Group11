@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QFrame>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
@@ -24,7 +23,6 @@ class Ui_AuthScreen
 {
 public:
     QWidget *centralwidget;
-    QFrame *line;
     QLabel *AuthScreen1;
     QLabel *SignIn_text;
     QLineEdit *UsernameLineEdit;
@@ -34,11 +32,11 @@ public:
     QPushButton *signinButton;
     QLabel *LibManager_logo;
     QLabel *welcome_text;
-    QLabel *label;
-    QLabel *label_2;
-    QLabel *label_3;
     QLabel *AuthScreen1_2;
     QPushButton *signupButton;
+    QLabel *label_4;
+    QLabel *label_5;
+    QLabel *label_6;
 
     void setupUi(QMainWindow *AuthScreen)
     {
@@ -48,11 +46,6 @@ public:
         AuthScreen->setStyleSheet(QString::fromUtf8("background-color: rgb(166, 135, 166);"));
         centralwidget = new QWidget(AuthScreen);
         centralwidget->setObjectName("centralwidget");
-        line = new QFrame(centralwidget);
-        line->setObjectName("line");
-        line->setGeometry(QRect(427, 0, 3, 480));
-        line->setFrameShape(QFrame::Shape::VLine);
-        line->setFrameShadow(QFrame::Shadow::Sunken);
         AuthScreen1 = new QLabel(centralwidget);
         AuthScreen1->setObjectName("AuthScreen1");
         AuthScreen1->setGeometry(QRect(0, 0, 427, 480));
@@ -71,7 +64,7 @@ public:
 "background-color: transparent;"));
         UsernameLineEdit = new QLineEdit(centralwidget);
         UsernameLineEdit->setObjectName("UsernameLineEdit");
-        UsernameLineEdit->setGeometry(QRect(40, 150, 341, 41));
+        UsernameLineEdit->setGeometry(QRect(40, 160, 341, 41));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("Calibri")});
         UsernameLineEdit->setFont(font1);
@@ -89,12 +82,12 @@ public:
 "}"));
         Username_text = new QLabel(centralwidget);
         Username_text->setObjectName("Username_text");
-        Username_text->setGeometry(QRect(46, 125, 111, 20));
+        Username_text->setGeometry(QRect(50, 130, 111, 20));
         Username_text->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "background-color: transparent;"));
         PasswordLineEdit = new QLineEdit(centralwidget);
         PasswordLineEdit->setObjectName("PasswordLineEdit");
-        PasswordLineEdit->setGeometry(QRect(40, 280, 341, 41));
+        PasswordLineEdit->setGeometry(QRect(40, 250, 341, 41));
         PasswordLineEdit->setFont(font1);
         PasswordLineEdit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "	background-color: rgb(214, 214, 214);\n"
@@ -110,12 +103,12 @@ public:
 "}"));
         Password_text = new QLabel(centralwidget);
         Password_text->setObjectName("Password_text");
-        Password_text->setGeometry(QRect(50, 250, 111, 20));
+        Password_text->setGeometry(QRect(50, 220, 111, 20));
         Password_text->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "background-color: transparent;"));
         signinButton = new QPushButton(centralwidget);
         signinButton->setObjectName("signinButton");
-        signinButton->setGeometry(QRect(40, 350, 341, 41));
+        signinButton->setGeometry(QRect(40, 330, 341, 41));
         signinButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	border-radius:15px;\n"
 "	color: black;\n"
@@ -129,40 +122,22 @@ public:
 "}"));
         LibManager_logo = new QLabel(centralwidget);
         LibManager_logo->setObjectName("LibManager_logo");
-        LibManager_logo->setGeometry(QRect(470, 50, 349, 79));
+        LibManager_logo->setGeometry(QRect(465, 70, 349, 91));
         LibManager_logo->setStyleSheet(QString::fromUtf8("background-image: url(C:/LibManager/LibManager/LBResources/LibManager_logo_revised.png);\n"
 "background-color:transparent;"));
         welcome_text = new QLabel(centralwidget);
         welcome_text->setObjectName("welcome_text");
-        welcome_text->setGeometry(QRect(500, 150, 311, 41));
+        welcome_text->setGeometry(QRect(484, 170, 312, 41));
         welcome_text->setStyleSheet(QString::fromUtf8("font: 18pt \"Calibri\";\n"
 "color:white;\n"
 "background-color:transparent;"));
-        label = new QLabel(centralwidget);
-        label->setObjectName("label");
-        label->setGeometry(QRect(460, 240, 391, 21));
-        label->setStyleSheet(QString::fromUtf8("background-color:transparent;\n"
-"color:white;"));
-        label->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        label_2 = new QLabel(centralwidget);
-        label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(460, 280, 391, 21));
-        label_2->setStyleSheet(QString::fromUtf8("background-color:transparent;\n"
-"color: white;"));
-        label_2->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        label_3 = new QLabel(centralwidget);
-        label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(460, 320, 391, 21));
-        label_3->setStyleSheet(QString::fromUtf8("background-color:transparent;\n"
-"color:white;"));
-        label_3->setAlignment(Qt::AlignmentFlag::AlignCenter);
         AuthScreen1_2 = new QLabel(centralwidget);
         AuthScreen1_2->setObjectName("AuthScreen1_2");
-        AuthScreen1_2->setGeometry(QRect(430, 0, 427, 480));
+        AuthScreen1_2->setGeometry(QRect(427, 0, 428, 480));
         AuthScreen1_2->setStyleSheet(QString::fromUtf8("background-image:url(C:/LibManager/LibManager/LBResources/authScreen_imageV2.png)"));
         signupButton = new QPushButton(centralwidget);
         signupButton->setObjectName("signupButton");
-        signupButton->setGeometry(QRect(40, 410, 341, 41));
+        signupButton->setGeometry(QRect(40, 390, 341, 41));
         signupButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	border-radius:15px;\n"
 "	color: black;\n"
@@ -175,9 +150,26 @@ public:
 "QPushButton:hover {\n"
 "	background-color: rgb(136, 202, 129);\n"
 "}"));
+        label_4 = new QLabel(centralwidget);
+        label_4->setObjectName("label_4");
+        label_4->setGeometry(QRect(460, 240, 361, 21));
+        label_4->setStyleSheet(QString::fromUtf8("background-color:transparent;\n"
+"color: white;"));
+        label_4->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        label_5 = new QLabel(centralwidget);
+        label_5->setObjectName("label_5");
+        label_5->setGeometry(QRect(497, 280, 291, 21));
+        label_5->setStyleSheet(QString::fromUtf8("background-color:transparent;\n"
+"color: white;"));
+        label_5->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        label_6 = new QLabel(centralwidget);
+        label_6->setObjectName("label_6");
+        label_6->setGeometry(QRect(525, 320, 231, 21));
+        label_6->setStyleSheet(QString::fromUtf8("background-color:transparent;\n"
+"color: white;"));
+        label_6->setAlignment(Qt::AlignmentFlag::AlignCenter);
         AuthScreen->setCentralWidget(centralwidget);
         AuthScreen1_2->raise();
-        line->raise();
         AuthScreen1->raise();
         SignIn_text->raise();
         UsernameLineEdit->raise();
@@ -186,11 +178,11 @@ public:
         Password_text->raise();
         signinButton->raise();
         welcome_text->raise();
-        label->raise();
-        label_2->raise();
-        label_3->raise();
         signupButton->raise();
         LibManager_logo->raise();
+        label_4->raise();
+        label_5->raise();
+        label_6->raise();
 
         retranslateUi(AuthScreen);
 
@@ -202,18 +194,18 @@ public:
         AuthScreen->setWindowTitle(QCoreApplication::translate("AuthScreen", "AuthScreen", nullptr));
         AuthScreen1->setText(QString());
         SignIn_text->setText(QCoreApplication::translate("AuthScreen", "<html><head/><body><p><span style=\" font-size:26pt;\">Sign In</span></p></body></html>", nullptr));
-        UsernameLineEdit->setText(QCoreApplication::translate("AuthScreen", "  Username", nullptr));
+        UsernameLineEdit->setText(QCoreApplication::translate("AuthScreen", "Username", nullptr));
         Username_text->setText(QCoreApplication::translate("AuthScreen", "USERNAME:", nullptr));
-        PasswordLineEdit->setText(QCoreApplication::translate("AuthScreen", "  Password", nullptr));
+        PasswordLineEdit->setText(QCoreApplication::translate("AuthScreen", "Password", nullptr));
         Password_text->setText(QCoreApplication::translate("AuthScreen", "PASSWORD:", nullptr));
         signinButton->setText(QCoreApplication::translate("AuthScreen", "Sign in", nullptr));
         LibManager_logo->setText(QString());
         welcome_text->setText(QCoreApplication::translate("AuthScreen", "Welcome to LibManager!", nullptr));
-        label->setText(QCoreApplication::translate("AuthScreen", "abalblalbablabalbalalbalblalballabalba", nullptr));
-        label_2->setText(QCoreApplication::translate("AuthScreen", "blablablablablabaalblaal", nullptr));
-        label_3->setText(QCoreApplication::translate("AuthScreen", "blablallba", nullptr));
         AuthScreen1_2->setText(QString());
         signupButton->setText(QCoreApplication::translate("AuthScreen", "Sign up", nullptr));
+        label_4->setText(QCoreApplication::translate("AuthScreen", "Organize, track, and optimize your library effortlessly.", nullptr));
+        label_5->setText(QCoreApplication::translate("AuthScreen", "Create, edit, and maintain records of books.", nullptr));
+        label_6->setText(QCoreApplication::translate("AuthScreen", "Login to get started LibManager!", nullptr));
     } // retranslateUi
 
 };

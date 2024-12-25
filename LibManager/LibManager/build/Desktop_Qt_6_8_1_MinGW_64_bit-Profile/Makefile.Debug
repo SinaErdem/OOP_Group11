@@ -2458,7 +2458,87 @@ debug/user.o: ../../user.cpp ../../User.h \
 		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qvariant.h \
 		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/q23utility.h \
 		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qfileinfo.h \
-		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qtimezone.h
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qtimezone.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/QTimer \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qtimer.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qbasictimer.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtWidgets/QMessageBox \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtWidgets/qmessagebox.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qtguiglobal.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qtgui-config.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qtguiexports.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtWidgets/qtwidgets-config.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtWidgets/qtwidgetsexports.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtWidgets/qdialog.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtWidgets/qwidget.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qwindowdefs.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qwindowdefs_win.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qmargins.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qaction.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qkeysequence.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qicon.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qsize.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qpixmap.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qpaintdevice.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qrect.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qpoint.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qcolor.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qrgb.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qrgba64.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qimage.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qpixelformat.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qtransform.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qpolygon.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qregion.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qspan.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/q20iterator.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qline.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qpalette.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qbrush.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qfont.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qendian.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qfontmetrics.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qfontinfo.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtWidgets/qsizepolicy.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qcursor.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qbitmap.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qevent.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qurl.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qeventpoint.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qvector2d.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qvectornd.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qpointingdevice.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qinputdevice.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qscreen.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/QList \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/QObject \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/QRect \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/QSize \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/QSizeF \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/QTransform \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qnativeinterface.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qscreen_platform.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qguiapplication.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qcoreapplication.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qdeadlinetimer.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qelapsedtimer.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qeventloop.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qfuture.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qfutureinterface.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qmutex.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qtsan_impl.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qresultstore.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qfuture_impl.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qthreadpool.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qthread.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qrunnable.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qexception.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qpromise.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qinputmethod.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtGui/qguiapplication_platform.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\user.o ..\..\user.cpp
 
 debug/userdashboard.o: ../../userdashboard.cpp ../../userdashboard.h \
@@ -2694,15 +2774,24 @@ debug/userdashboard.o: ../../userdashboard.cpp ../../userdashboard.h \
 		../../../../../../Qt/6.8.1/mingw_64/include/QtWidgets/qlayout.h \
 		../../../../../../Qt/6.8.1/mingw_64/include/QtWidgets/qlayoutitem.h \
 		../../../../../../Qt/6.8.1/mingw_64/include/QtWidgets/qgridlayout.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qdir.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qdirlisting.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qfiledevice.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qdatetime.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qcalendar.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qfile.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qfileinfo.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qtimezone.h \
 		../../signup.h \
 		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/QRegularExpression \
 		ui_userdashboard.h \
 		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/QFile \
-		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qfile.h \
-		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qfiledevice.h \
 		../../../../../../Qt/6.8.1/mingw_64/include/QtWidgets/QMessageBox \
 		../../../../../../Qt/6.8.1/mingw_64/include/QtWidgets/qmessagebox.h \
-		../../../../../../Qt/6.8.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h
+		../../../../../../Qt/6.8.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/QTimer \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qtimer.h \
+		../../../../../../Qt/6.8.1/mingw_64/include/QtCore/qbasictimer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\userdashboard.o ..\..\userdashboard.cpp
 
 debug/qrc_qmake_qmake_qm_files.o: debug/qrc_qmake_qmake_qm_files.cpp 

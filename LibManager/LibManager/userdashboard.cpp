@@ -9,15 +9,15 @@
 #include<QMessageBox>
 #include "book_management_fuser.h"
 #include "QString"
-<<<<<<< HEAD
+#include "user.h"
+
 #include <QTimer>  // Burada da QTimer'ı dahil edin
 #include <QMessageBox>
-UserDashboard::UserDashboard(User& currentUser,Book_Management_fUser& bookManager ,QWidget *parent)
-    : QDialog(parent), borrowTimer(nullptr), ui(new Ui::UserDashboard),currentUser(currentUser),bookManager(bookManager) // bookManager başlatılıyor
-=======
+ // bookManager başlatılıyor
+
 UserDashboard::UserDashboard(User& currentUser,Book_Management_fUser& bookManager ,QWidget *parent)
     : QDialog(parent), ui(new Ui::UserDashboard), currentUser(currentUser),bookManager(bookManager) // bookManager başlatılıyor
->>>>>>> c6c584033b7e038d0a4866a83fcb6e398ce0357d
+
 {
     ui->setupUi(this);
     ui->bookListWidget->hide();
@@ -25,13 +25,9 @@ UserDashboard::UserDashboard(User& currentUser,Book_Management_fUser& bookManage
     ui->bookListWidget->hide();
     ui->resultsTableWidget->hide();
     ui->findButton->setCheckable(true);
-<<<<<<< HEAD
+
+
     ui->barrowedbooks->hide();
-=======
->>>>>>> c6c584033b7e038d0a4866a83fcb6e398ce0357d
-
-
-
 }
 
 UserDashboard::~UserDashboard()
@@ -113,10 +109,7 @@ void UserDashboard::populateResults(std::vector<Library_Database>& results) {
 }
 
 void UserDashboard::borrowBook() {
-    borrowTimer = new QTimer(this);
-    borrowTimer->setSingleShot(true);
-    connect(borrowTimer, &QTimer::timeout, this, &UserDashboard::on_bookReturnTimeout);
-    borrowTimer->start(bookBorrowDuration * 1000);
+
     // Sender() fonksiyonundan gelen işaretçiyi hemen kullanın
     QPushButton* button = qobject_cast<QPushButton*>(sender());
     if (!button) return;  // Buton geçerli değilse çık
@@ -149,8 +142,38 @@ void UserDashboard::borrowBook() {
     }
 
     if (!book) {
-        QMessageBox::warning(this, "Error", "Book not found in library.");
+        // Kitap bulunamadığında uyarı ver
+        QMessageBox msgBox;
+        msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+        msgBox.setIcon(QMessageBox::Warning);  // Uyarı simgesi
+        msgBox.setWindowTitle("Error");        // Başlık
+        msgBox.setText("Book not found in library.");  // Mesaj metni
+        msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+        msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                             "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                             "QPushButton:hover { background-color: #888; }");
+        msgBox.exec();
         return;
+    }
+
+    // Aynı kitabın kullanıcı tarafından zaten ödünç alınmış olup olmadığını kontrol et
+    for (auto& borrowedBook : currentUser.borrowedBooks) {
+        if (borrowedBook.getName() == bookName &&
+            borrowedBook.getAuthor() == bookAuthor &&
+            borrowedBook.getIsbn() == bookISBN) {
+            // Kitap daha önce ödünç alınmışsa uyarı göster
+            QMessageBox msgBox;
+            msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+            msgBox.setIcon(QMessageBox::Information);  // Uyarı simgesi
+            msgBox.setWindowTitle("Info");        // Başlık
+            msgBox.setText("You can not borrow the same book more than once by our policy.");  // Mesaj metni
+            msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+            msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                                 "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                                 "QPushButton:hover { background-color: #888; }");
+            msgBox.exec();
+            return;
+        }
     }
 
     // Kitap sayısını bir azalt
@@ -170,12 +193,21 @@ void UserDashboard::borrowBook() {
         QFile userFile(userFileName);
 
         if (!userFile.open(QIODevice::Append | QIODevice::Text)) {
-            QMessageBox::critical(this, "Error", "Cannot open user file for saving borrowed books.");
+            // Dosya açılamadıysa hata mesajı ver
+            QMessageBox msgBox;
+            msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+            msgBox.setIcon(QMessageBox::Critical);  // Uyarı simgesi
+            msgBox.setWindowTitle("Error");        // Başlık
+            msgBox.setText("Cannot open user file for saving borrowed books.");  // Mesaj metni
+            msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+            msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                                 "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                                 "QPushButton:hover { background-color: #888; }");
+            msgBox.exec();
             return;
         }
 
         QTextStream out(&userFile);
-        // Burada boşluksuz yazma işlemi yapılacak
         out << QString::fromStdString(book->getName())
             << "," << QString::fromStdString(book->getAuthor())
             << "," << QString::fromStdString(book->getGenre())
@@ -184,7 +216,16 @@ void UserDashboard::borrowBook() {
         userFile.close();
 
         // Kullanıcıya başarılı olduğunu bildirin
-        QMessageBox::information(this, "Success", "Book added to borrowed list and saved to file.");
+        QMessageBox info1;
+        info1.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+        info1.setIcon(QMessageBox::Information);  // Uyarı simgesi
+        info1.setWindowTitle("Success");        // Başlık
+        info1.setText("Book added to borrowed list and saved to file.");  // Mesaj metni
+        info1.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+        info1.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                            "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                            "QPushButton:hover { background-color: #888; }");
+        info1.exec();
 
         // Tabloyu yeniden güncelle
         QString searchQuery = ui->searchLineEdit->text().trimmed();
@@ -220,11 +261,25 @@ void UserDashboard::borrowBook() {
         }
 
         populateResults(results);  // Sonuçları tekrar doldur
+        borrowTimer = new QTimer(this);
+        borrowTimer->setSingleShot(true);
+        connect(borrowTimer, &QTimer::timeout, this, &UserDashboard::on_bookReturnTimeout);
+        borrowTimer->start(bookBorrowDuration * 1000);
     } else {
-        // Eğer kitap sayısı 0 ise, ödünç alınamaz
-        QMessageBox::warning(this, "Error", "This book is out of stock.");
+        // Kitap sayısı 0 ise, ödünç alınamaz
+        QMessageBox msgBox;
+        msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+        msgBox.setIcon(QMessageBox::Warning);  // Uyarı simgesi
+        msgBox.setWindowTitle("Error");        // Başlık
+        msgBox.setText("This book is out of stock.");  // Mesaj metni
+        msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+        msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                             "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                             "QPushButton:hover { background-color: #888; }");
+        msgBox.exec();
     }
 }
+
 void UserDashboard::on_findButton_toggled(bool checked) {
     if (!checked) {
         // Buton bırakıldı, sonuçları gizle
@@ -237,7 +292,21 @@ void UserDashboard::on_findButton_toggled(bool checked) {
     QString filterOption = ui->filterComboBox->currentText();
 
     if (searchQuery.isEmpty()) {
-        QMessageBox::warning(this, "Error", "Please enter a search query.");
+        //QMessageBox::warning(this, "Error", "Please enter a search query.");
+        QMessageBox msgBox;
+        msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+        msgBox.setIcon(QMessageBox::Warning);  // Uyarı simgesi
+        msgBox.setWindowTitle("Error");        // Başlık
+        msgBox.setText("Please enter a search query.");  // Mesaj metni
+        msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+
+        // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
+        msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                             "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                             "QPushButton:hover { background-color: #888; }");
+
+        // Mesaj kutusunu göster
+        msgBox.exec();
         ui->findButton->setChecked(false);  // Butonu normal hale getir
         return;
     }
@@ -274,7 +343,21 @@ void UserDashboard::on_findButton_toggled(bool checked) {
 
     // Sonuçları işleme
     if (results.empty()) {
-        QMessageBox::information(this, "Info", "No books found.");
+        //QMessageBox::information(this, "Info", "No books found.");
+        QMessageBox msgBox;
+        msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+        msgBox.setIcon(QMessageBox::Information);  // Uyarı simgesi
+        msgBox.setWindowTitle("Info");        // Başlık
+        msgBox.setText("No books found.");  // Mesaj metni
+        msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+
+        // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
+        msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                             "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                             "QPushButton:hover { background-color: #888; }");
+
+        // Mesaj kutusunu göster
+        msgBox.exec();
         ui->findButton->setChecked(false);  // Butonu normal hale getir
         ui->resultsTableWidget->hide();  // Sonuç yoksa listeyi gizle
         return;
@@ -289,7 +372,6 @@ void UserDashboard::on_showBorrowedBooksButton_clicked()
 {
     qDebug() << "Displaying borrowed books...";
 
-<<<<<<< HEAD
     // Tabloyu kontrol et, görünürse gizle, görünür değilse göster
     if (ui->barrowedbooks->isVisible()) {
         // Eğer tablo görünüyorsa, gizle
@@ -375,160 +457,213 @@ void UserDashboard::on_showBorrowedBooksButton_clicked()
         }
 
         userFile.close();
+
+
     }
 }
-
 void UserDashboard::on_returnBookClicked() {
-    // Kitap geri verildiğinde zamanlayıcıyı durdur
-    if (borrowTimer) {
-        borrowTimer->stop();
-    }
-    qDebug() << "Book returned successfully.";
-=======
-    ui->borrowedBookListWidget->clear(); // Listeyi temizle
-
-    // Ödünç alınan kitapları al
-    const auto& borrowedBooks = currentUser.borrowedBooks;
-    qDebug() << "Number of borrowed books:" << borrowedBooks.size();
-
-    if (borrowedBooks.empty()) {
-        qDebug() << "No borrowed books found.";
-        ui->borrowedBookListWidget->addItem("No borrowed books.");
-        return;
-    }
-
-    for (const auto& book : borrowedBooks) {
-        qDebug() << "Processing book:" << QString::fromStdString(book.getName());
-
-        // Kitap için özel bir widget oluştur
-        QWidget* itemWidget = new QWidget(ui->borrowedBookListWidget);
-
-        // Kitap bilgilerini gösteren QLabel
-        QLabel* bookLabel = new QLabel(
-            QString("Name: %1, Author: %2, Genre: %3, ISBN: %4")
-                .arg(QString::fromStdString(book.getName()))
-                .arg(QString::fromStdString(book.getAuthor()))
-                .arg(QString::fromStdString(book.getGenre()))
-                .arg(QString::fromStdString(book.getIsbn())),
-            itemWidget);
-
-        // "Return Book" butonu oluştur
-        QPushButton* returnButton = new QPushButton("Return Book", itemWidget);
-        returnButton->setProperty("bookIsbn", QString::fromStdString(book.getIsbn())); // ISBN bilgisini butona ekle
-
-        // Buton sinyalini slota bağla
-        connect(returnButton, &QPushButton::clicked, this, &UserDashboard::on_returnBookClicked);
-
-        // Widget için layout
-        QHBoxLayout* layout = new QHBoxLayout(itemWidget);
-        layout->addWidget(bookLabel);
-        layout->addWidget(returnButton);
-        itemWidget->setLayout(layout);
-
-        // Widget'i QListWidgetItem olarak ekle
-        QListWidgetItem* item = new QListWidgetItem(ui->borrowedBookListWidget);
-        item->setSizeHint(itemWidget->sizeHint());
-        ui->borrowedBookListWidget->setItemWidget(item, itemWidget);
-
-        qDebug() << "Book added to the list:" << QString::fromStdString(book.getName());
-    }
-}
-
-
-void UserDashboard::on_returnBookClicked() {
->>>>>>> c6c584033b7e038d0a4866a83fcb6e398ce0357d
+    // Butona tıklanan kitabın adı bilgisini al
     QPushButton* button = qobject_cast<QPushButton*>(sender());
-    if (!button) {
-        qDebug() << "Error: Button is invalid!";
+    if (!button) return;
+
+    QString bookName = button->property("bookName").toString();
+    qDebug() << "Book returned: " << bookName;
+
+    // Kitap bilgilerini içeren dosyayı güncelle
+    QString filename = "C:/LibManager/LibManager/usersTXT/" + currentUser.getm_username() + ".txt"; // Dosya yolu (username.txt)
+
+    QFile file(filename);
+    if (!file.open(QIODevice::ReadWrite | QIODevice::Text)) {
+        //QMessageBox::warning(this, "Dosya Hatası", "Kitap bilgileri dosyası açılamadı.");
+        QMessageBox msgBox;
+        msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+        msgBox.setIcon(QMessageBox::Warning);  // Uyarı simgesi
+        msgBox.setWindowTitle("File Error");        // Başlık
+        msgBox.setText("The book data file could not be opened.");  // Mesaj metni
+        msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+
+        // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
+        msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                             "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                             "QPushButton:hover { background-color: #888; }");
+
+        // Mesaj kutusunu göster
+        msgBox.exec();
         return;
     }
 
-<<<<<<< HEAD
-    QString bookName = button->property("bookName").toString().simplified();  // Kitap adını al ve boşlukları temizle
-    qDebug() << "Retrieved book name from button: '" << bookName << "'";  // Butondan alınan kitap adı debug'da yazdır
-=======
-    QString bookIsbn = button->property("bookIsbn").toString().trimmed();
-    qDebug() << "Book ISBN retrieved:" << bookIsbn;
->>>>>>> c6c584033b7e038d0a4866a83fcb6e398ce0357d
-
-    auto& borrowedBooks = currentUser.borrowedBooks;
-    qDebug() << "Number of borrowed books before return:" << borrowedBooks.size();
-
-<<<<<<< HEAD
-    // Kullanıcı dosyasının yolunu oluştur
-    QString userFileName = "C:/LibManager/LibManager/usersTXT/" + currentUser.getm_username() + ".txt";
-    QFile userFile(userFileName);
-    if (!userFile.open(QIODevice::ReadWrite | QIODevice::Text)) {
-        QMessageBox::critical(this, "Error", "Cannot open user file.");
-        return;
-    }
-
-    QTextStream in(&userFile);
+    QTextStream in(&file);
     QStringList lines;
     bool bookFound = false;
 
-    // Dosyadaki her satırı oku ve kitap adı eşleşen satırı hariç tut
+    // Dosyadaki tüm satırları oku ve satırı silmek için yeniden yaz
     while (!in.atEnd()) {
-        QString line = in.readLine().simplified();  // Ekstra boşlukları kaldır
-        QStringList bookDetails = line.split(",");
+        QString line = in.readLine().trimmed();
+        QStringList parts = line.split(",");
 
-        // Kitap adı eşleştiğinde satırı hariç tut
-        if (bookDetails.size() >= 4 && bookDetails[0].simplified() == bookName) {
-            bookFound = true;  // Kitap bulundu
-            qDebug() << "Found matching book in user file: " << bookDetails[0];
-        } else {
-            lines.append(line); // Diğer kitapları tut
+        // Kitap adını virgüle kadar al
+        QString currentBookName = parts[0].trimmed();
+
+        // Eğer kitap adı ile eşleşen satır varsa, bu satırı atla (sil)
+        if (currentBookName.compare(bookName.trimmed(), Qt::CaseInsensitive) == 0) {
+            bookFound = true;
+            qDebug() << "Book removed from file: " << bookName;
+            continue;  // Bu satırı geç (sil)
+        }
+
+        lines.append(line);  // Diğer satırları sakla
+    }
+
+    if (!bookFound) {
+        qDebug() << "Book not found in file.";
+        return;
+    }
+
+    // Dosyanın başına geri dön ve içeriği temizle
+    file.resize(0);
+    QTextStream out(&file);
+
+    // Geriye kalan satırları dosyaya tekrar yaz
+    for (const QString& line : lines) {
+        out << line << "\n";
+    }
+    file.close();
+
+    // Kullanıcıya geri bildirim yap
+    //QMessageBox::information(this, "Success", "The book has been successfully returned.");
+    QMessageBox msgBox;
+    msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+    msgBox.setIcon(QMessageBox::Information);  // Uyarı simgesi
+    msgBox.setWindowTitle("Success");        // Başlık
+    msgBox.setText("The book has been successfully returned.");  // Mesaj metni
+    msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+
+    // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
+    msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                         "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                         "QPushButton:hover { background-color: #888; }");
+
+    // Mesaj kutusunu göster
+    msgBox.exec();
+
+    // Tabloyu güncelle
+    ui->barrowedbooks->clearContents();
+    ui->barrowedbooks->setRowCount(0); // Mevcut satırları temizle
+
+    QFile userFile(filename);
+
+    if (!userFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qDebug() << "Cannot open user file.";
+        ui->barrowedbooks->setRowCount(1);
+        ui->barrowedbooks->setItem(0, 0, new QTableWidgetItem("Error reading borrowed books."));
+        return;
+    }
+
+    QTextStream updatedIn(&userFile);
+    QString updatedLine;
+    bool foundBooks = false;
+
+    // Dosyadaki her bir satırı işle
+    while (!updatedIn.atEnd()) {
+        updatedLine = updatedIn.readLine().trimmed();
+        QStringList bookDetails = updatedLine.split(",");
+
+        if (bookDetails.size() == 4) {
+            QString updatedBookName = bookDetails[0].trimmed();
+            QString bookAuthor = bookDetails[1].trimmed();
+            QString bookGenre = bookDetails[2].trimmed();
+            QString bookIsbn = bookDetails[3].trimmed();
+
+            int row = ui->barrowedbooks->rowCount();
+            ui->barrowedbooks->insertRow(row);
+
+            // Tabloya kitap bilgilerini ekle
+            ui->barrowedbooks->setItem(row, 0, new QTableWidgetItem(updatedBookName));
+            ui->barrowedbooks->setItem(row, 1, new QTableWidgetItem(bookAuthor));
+            ui->barrowedbooks->setItem(row, 2, new QTableWidgetItem(bookGenre));
+            ui->barrowedbooks->setItem(row, 3, new QTableWidgetItem(bookIsbn));
+
+            // "Return Book" butonunu ekle
+            QPushButton* returnButton = new QPushButton("Return Book");
+            returnButton->setProperty("bookName", updatedBookName);
+            connect(returnButton, &QPushButton::clicked, this, &UserDashboard::on_returnBookClicked);
+            ui->barrowedbooks->setCellWidget(row, 4, returnButton);
+
+            foundBooks = true;
         }
     }
 
-    // Eğer kitap bulunduysa dosyayı güncelle
-    if (bookFound) {
-        // Dosyayı temizle
-        userFile.resize(0);
-        QTextStream out(&userFile);
-        for (const QString& line : lines) {
-            out << line << "\n"; // Kalan kitapları tekrar dosyaya yaz
-        }
-        QMessageBox::information(this, "Success", "Book returned successfully and removed from your list.");
-        qDebug() << "Book removed from user file.";
-    } else {
-        QMessageBox::warning(this, "Error", "Book not found in user file.");
+    if (!foundBooks) {
+        ui->barrowedbooks->setRowCount(1);
+        ui->barrowedbooks->setItem(0, 0, new QTableWidgetItem("No borrowed books found."));
     }
 
-    // Listeyi güncelle
-    on_showBorrowedBooksButton_clicked();
+    userFile.close();
+    if (borrowTimer && borrowTimer->isActive()) {
+        borrowTimer->stop();
+        qDebug() << "Borrow timer stopped.";
+    }
 }
+
+
 void UserDashboard::on_bookReturnTimeout() {
     // Zaman aşımı olursa uyarı mesajı göster
-    QMessageBox::warning(this, "Time expired", "You did not return the book within the allotted time. Please return the book as soon as possible.");
-=======
-    auto it = std::find_if(borrowedBooks.begin(), borrowedBooks.end(),
+    //QMessageBox::warning(this, "Time expired", "You did not return the book within the allotted time. Please return the book as soon as possible.");
+    QMessageBox msgBox;
+    msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+    msgBox.setIcon(QMessageBox::Warning);  // Uyarı simgesi
+    msgBox.setWindowTitle("Time Expired!");        // Başlık
+    msgBox.setText("You did not return the book within the allotted time.\nPlease return the book as soon as possible.");  // Mesaj metni
+    msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+
+    // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
+    msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                         "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                         "QPushButton:hover { background-color: #888; }");
+
+    // Mesaj kutusunu göster
+    msgBox.exec();
+    // bookIsbn değişkeninin doğru şekilde tanımlandığından emin olun
+    QString bookIsbn = "some_isbn_value";  // Burada gerçek ISBN değeri olmalı
+
+    auto it = std::find_if(currentUser.borrowedBooks.begin(), currentUser.borrowedBooks.end(),
                            [bookIsbn](const Library_Database& book) {
                                return QString::fromStdString(book.getIsbn()).trimmed() == bookIsbn;
                            });
 
-    if (it != borrowedBooks.end()) {
+    if (it != currentUser.borrowedBooks.end()) {
         qDebug() << "Book found:" << QString::fromStdString(it->getName());
         try {
+            // bookManager nesnesinin doğru şekilde tanımlandığından emin olun
             bookManager.returnBook(*it); // Kitabı iade et
             qDebug() << "Book successfully returned.";
             QMessageBox::information(this, "Success", "Book returned successfully.");
+            QMessageBox msgBox;
+            msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+            msgBox.setIcon(QMessageBox::Information);  // Uyarı simgesi
+            msgBox.setWindowTitle("Success!");        // Başlık
+            msgBox.setText("Just in time!\nThanks for returning the book.");  // Mesaj metni
+            msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+
+            // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
+            msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                                 "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                                 "QPushButton:hover { background-color: #888; }");
+
+            // Mesaj kutusunu göster
+            msgBox.exec();
             on_showBorrowedBooksButton_clicked(); // Listeyi güncelle
         } catch (std::runtime_error& e) {
-            QMessageBox::critical(this, "Error", e.what());
+            QMessageBox::critical(this,"Error",e.what());
             qDebug() << "Error during returnBook:" << e.what();
         }
-    } else {
-        qDebug() << "Error: Book not found in borrowedBooks.";
-        QMessageBox::warning(this, "Error", "Book not found in your borrowed list.");
     }
->>>>>>> c6c584033b7e038d0a4866a83fcb6e398ce0357d
 }
 
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> c6c584033b7e038d0a4866a83fcb6e398ce0357d
+
+
+

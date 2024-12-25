@@ -182,7 +182,21 @@ void SignUp::on_signupButton_clicked() {
     // Kullanıcı türü seçilip seçilmediğini kontrol et
     if (selectedUserType == -1) {
         qDebug() << "User type not selected!";
-        QMessageBox::warning(this, "Registration error", "Please select a user type.");
+        //QMessageBox::warning(this, "Registration error", "Please select a user type.");
+        QMessageBox msgBox;
+        msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+        msgBox.setIcon(QMessageBox::Warning);  // Uyarı simgesi
+        msgBox.setWindowTitle("Registration Error");        // Başlık
+        msgBox.setText("Please select a user type.");  // Mesaj metni
+        msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+
+        // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
+        msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                             "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                             "QPushButton:hover { background-color: #888; }");
+
+        // Mesaj kutusunu göster
+        msgBox.exec();
         return;
     }
 
@@ -193,14 +207,42 @@ void SignUp::on_signupButton_clicked() {
     // Email doğrulama
     if (!isValidEmail(email)) {
         qDebug() << "Invalid email!";
-        QMessageBox::warning(this, "Registration error", "Invalid email address.");
+        //QMessageBox::warning(this, "Registration error", "Invalid email address.");
+        QMessageBox msgBox;
+        msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+        msgBox.setIcon(QMessageBox::Warning);  // Uyarı simgesi
+        msgBox.setWindowTitle("Registration Error");        // Başlık
+        msgBox.setText("Invalid email address.");  // Mesaj metni
+        msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+
+        // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
+        msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                             "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                             "QPushButton:hover { background-color: #888; }");
+
+        // Mesaj kutusunu göster
+        msgBox.exec();
         return;
     }
 
     // Şifre doğrulama
     if (!isValidPassword(password)) {
         qDebug() << "Password must contain at least one letter and one digit!";
-        QMessageBox::warning(this, "Registration error", "Password must contain at least one letter and one digit.");
+        //QMessageBox::warning(this, "Registration error", "Password must contain at least one letter and one digit.");
+        QMessageBox msgBox;
+        msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+        msgBox.setIcon(QMessageBox::Warning);  // Uyarı simgesi
+        msgBox.setWindowTitle("Registration Error");        // Başlık
+        msgBox.setText("Password must contain at least one letter and one digit and must be at least 8 characters.");  // Mesaj metni
+        msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+
+        // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
+        msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                             "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                             "QPushButton:hover { background-color: #888; }");
+
+        // Mesaj kutusunu göster
+        msgBox.exec();
         return;
     }
 
@@ -212,11 +254,39 @@ void SignUp::on_signupButton_clicked() {
     if (selectedUserType == 0) {  // User
         User user(email, username, password, bookManager);  // *bookManager kullanılıyor çünkü işaretçi
         user.saveUserInfo();
-        QMessageBox::information(this, "Registration", "User registered successfully!");
+        //QMessageBox::information(this, "Registration", "User registered successfully!");
+        QMessageBox msgBox;
+        msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+        msgBox.setIcon(QMessageBox::Information);  // Uyarı simgesi
+        msgBox.setWindowTitle("Registration Successful!");        // Başlık
+        msgBox.setText("User registered successfully!");  // Mesaj metni
+        msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+
+        // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
+        msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                             "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                             "QPushButton:hover { background-color: #888; }");
+
+        // Mesaj kutusunu göster
+        msgBox.exec();
     } else if (selectedUserType == 1) {  // Admin
         Admin admin(email, username, password);
         admin.saveUserInfo();
-        QMessageBox::information(this, "Registration", "Admin registered successfully!");
+        //QMessageBox::information(this, "Registration", "Admin registered successfully!");
+        QMessageBox msgBox;
+        msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
+        msgBox.setIcon(QMessageBox::Information);  // Uyarı simgesi
+        msgBox.setWindowTitle("Registration Successful!");        // Başlık
+        msgBox.setText("Admin registered successfully!");  // Mesaj metni
+        msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
+
+        // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
+        msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
+                             "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                             "QPushButton:hover { background-color: #888; }");
+
+        // Mesaj kutusunu göster
+        msgBox.exec();
     }
 }
 void SignUp::on_Back_Button_clicked()

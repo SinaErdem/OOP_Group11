@@ -35,7 +35,7 @@ void AdminDashboard::addBooks()
         return;
     }
 
-    QFile file("books.txt");
+    QFile file("C:/LibManager/LibManager/books.txt");
     if (!file.open(QIODevice::Append | QIODevice::Text)) {
         QMessageBox::critical(this, "Error", "Cannot open books file!");
         return;
@@ -64,7 +64,7 @@ void AdminDashboard::removeBooks()
         return;
     }
 
-    QFile file("books.txt");
+    QFile file("C:/LibManager/LibManager/books.txt");
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         QMessageBox::critical(this, "Error", "Cannot open books file!");
         return;

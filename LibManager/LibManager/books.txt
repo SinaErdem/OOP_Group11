@@ -1,95 +1,100 @@
-The Catcher in the Rye,  J.D. Salinger,  Novel,  978-0-316-76948-0, 3
-The Great Gatsby,  F. Scott Fitzgerald,  Novel,  978-0-7432-7356-5, 3
-Moby Dick,  Herman Melville,  Novel,  978-0-14-243724-7, 1
-To Kill a Mockingbird,  Harper Lee,  Novel,  978-0-06-112008-4, 3
-1984,  George Orwell,  Dystopia,  978-0-452-28423-4, 2
-Pride and Prejudice,  Jane Austen,  Romance,  978-1-85326-000-2, 1
-The Hobbit,  J.R.R. Tolkien,  Fantasy,  978-0-618-00222-8, 3
-Brave New World,  Aldous Huxley,  Dystopia,  978-0-06-085052-4, 2
-The Great Expectations,  Charles Dickens,  Novel,  978-0-14-143956-3, 3
-One Hundred Years of Solitude,  Gabriel García Márquez,  Magical Realism,  978-0-06-088328-7, 2
-The Brothers Karamazov,  Fyodor Dostoyevsky,  Novel,  978-0-14-044924-2, 3
-War and Peace,  Leo Tolstoy,  Historical Fiction,  978-0-14-303999-9, 1
-Anna Karenina,  Leo Tolstoy,  Novel,  978-0-14-303500-8, 2
-The Picture of Dorian Gray,  Oscar Wilde,  Novel,  978-0-14-143957-0, 3
-Wuthering Heights,  Emily Brontë,  Novel,  978-0-14-143957-0, 3
-Crime and Punishment,  Fyodor Dostoyevsky,  Novel,  978-0-14-044913-6, 3
-Les Misérables,  Victor Hugo,  Historical Fiction,  978-0-307-38867-5, 3
-The Odyssey,  Homer,  Epic,  978-0-14-026886-7, 2
-The Iliad,  Homer,  Epic,  978-0-14-027536-0, 1
-Don Quixote,  Miguel de Cervantes,  Novel,  978-0-14-243723-9, 3
-The Brothers Grimm Fairy Tales,  Jacob and Wilhelm Grimm,  Fairy Tales,  978-0-486-42822-0, 1
-Frankenstein,  Mary Shelley,  Gothic Fiction,  978-0-14-143947-1, 2
-Dracula,  Bram Stoker,  Horror,  978-0-14-143984-6, 2
-The Secret Garden,  Frances Hodgson Burnett,  Novel,  978-0-06-440188-0, 3
-The Adventures of Huckleberry Finn,  Mark Twain,  Novel,  978-0-14-243717-8, 3
-The Adventures of Sherlock Holmes,  Arthur Conan Doyle,  Mystery,  978-0-14-043908-7, 1
-The Call of the Wild,  Jack London,  Adventure,  978-0-14-032233-4, 3
-Treasure Island,  Robert Louis Stevenson,  Adventure,  978-0-14-143982-5, 3
-The Wind in the Willows,  Kenneth Grahame,  Children’s Book,  978-0-14-043778-6, 1
-The Scarlet Letter,  Nathaniel Hawthorne,  Historical Fiction,  978-0-14-243726-0, 1
-Catch-22,  Joseph Heller,  War,  978-0-684-83339-9, 1
-Slaughterhouse-Five,  Kurt Vonnegut,  Science Fiction,  978-0-8129-8295-1, 2
-The Road,  Cormac McCarthy,  Post-apocalyptic,  978-0-307-27721-2, 2
-The Fault in Our Stars,  John Green,  Romance,  978-0-525-47881-2, 1
-The Hunger Games,  Suzanne Collins,  Dystopia,  978-0-439-02352-8, 2
-The Book Thief,  Markus Zusak,  Historical Fiction,  978-0-375-84220-7, 3
-The Handmaid's Tale,  Margaret Atwood,  Dystopia,  978-0-385-49327-2, 1
-Gone with the Wind,  Margaret Mitchell,  Historical Fiction,  978-1-4391-2670-2, 3
-The Shining,  Stephen King,  Horror,  978-0-451-17039-1, 3
-It,  Stephen King,  Horror,  978-0-671-78421-2, 3
-Misery,  Stephen King,  Horror,  978-0-452-26841-6, 1
-The Stand,  Stephen King,  Horror,  978-0-385-31288-1, 3
-Carrie,  Stephen King,  Horror,  978-0-671-74426-0, 2
-The Dark Tower: The Gunslinger,  Stephen King,  Fantasy,  978-1-85723-739-7, 3
-The Dark Tower: The Drawing of the Three,  Stephen King,  Fantasy,  978-1-85723-738-0, 1
-The Dark Tower: The Waste Lands,  Stephen King,  Fantasy,  978-1-85723-740-3, 2
-The Night Circus,  Erin Morgenstern,  Fantasy,  978-0-385-53770-7, 1
-The Madman,  Sabahattin Ali,  Novel,  978-975-07-2049-2, 1
-The Stranger,  Albert Camus,  Novel,  978-0-679-73429-5, 1
-The Time Traveler's Wife,  Audrey Niffenegger,  Novel,  978-0-547-51512-6, 1
-The Color Purple,  Alice Walker,  Novel,  978-0-15-602835-3, 3
-Innocent,  Harlan Coben,  Crime Fiction,  978-1-4767-0462-5, 2
-The Silent Sea,  Agatha Christie,  Mystery,  978-0-06-290314-4, 3
-Murder on the Orient Express,  Agatha Christie,  Mystery,  978-0-06-269366-2, 3
-The Fall,  Albert Camus,  Novel,  978-0-679-72421-0, 2
-The Discontent,  Elif Shafak,  Novel,  978-0-14-311256-1, 3
-Freedom,  Jonathan Franzen,  Novel,  978-0-37-410800-9, 1
-The Dead,  James Joyce,  Short Story,  978-0-14-118247-9, 1
-The Human Condition,  Hannah Arendt,  Philosophy,  978-0-226-52956-9, 1
-A Farewell to Arms,  Ernest Hemingway,  Novel,  978-0-684-80172-6, 2
-For Whom the Bell Tolls,  Ernest Hemingway,  Novel,  978-0-684-80173-3, 2
-Ulysses,  James Joyce,  Novel,  978-0-14-118280-6, 2
-Remembrance of Things Past,  Marcel Proust,  Novel,  978-0-679-72215-5, 1
-The Master and Margarita,  Mikhail Bulgakov,  Novel,  978-1-56025-436-3, 3
-The Little Prince,  Antoine de Saint-Exupéry,  Children’s Book,  978-0-15-601219-5, 3
-The Old Man and the Sea,  Ernest Hemingway,  Novel,  978-0-684-80152-8, 3
-East of Eden,  John Steinbeck,  Novel,  978-0-14-200067-0, 2
-The Grapes of Wrath,  John Steinbeck,  Novel,  978-0-14-303943-3, 1
-Animal Farm,  George Orwell,  Allegory,  978-0-452-28424-1, 3
-A Tale of Two Cities,  Charles Dickens,  Historical Novel,  978-0-14-043054-0, 2
-A Passage to India,  E.M. Forster,  Novel,  978-0-15-671142-6, 1
-The Prime of Miss Jean Brodie,  Muriel Spark,  Novel,  978-0-14-118178-6, 1
-The Return of the Soldier,  Rebecca West,  Novel,  978-0-312-45899-5, 3
-The Time Machine,  H.G. Wells,  Sci-Fi,  978-0-451-52994-1, 1
-The Invisible Man,  H.G. Wells,  Sci-Fi,  978-0-451-52994-1, 1
-War of the Worlds,  H.G. Wells,  Sci-Fi,  978-0-451-52994-1, 3
-A Midsummer Night's Dream,  William Shakespeare,  Play,  978-0-7434-7513-0, 2
-Hamlet,  William Shakespeare,  Play,  978-0-7434-7523-9, 3
-Macbeth,  William Shakespeare,  Play,  978-0-7434-7514-7, 2
-Julius Caesar,  William Shakespeare,  Play,  978-0-7434-7521-5, 1
-Othello,  William Shakespeare,  Play,  978-0-7434-7522-2, 2
-King Lear,  William Shakespeare,  Play,  978-0-7434-7512-3, 1
-The Tempest,  William Shakespeare,  Play,  978-0-7434-7511-6, 2
-A Doll's House,  Henrik Ibsen,  Play,  978-0-553-21050-1, 3
-A Streetcar Named Desire,  Tennessee Williams,  Play,  978-0-440-23515-0, 3
-Waiting for Godot,  Samuel Beckett,  Play,  978-0-671-73197-0, 1
-Death of a Salesman,  Arthur Miller,  Play,  978-0-14-048134-3, 2
-The Glass Menagerie,  Tennessee Williams,  Play,  978-0-553-21061-7, 3
-Rosencrantz and Guildenstern Are Dead,  Tom Stoppard,  Play,  978-0-14-024517-3, 1
-A Raisin in the Sun,  Lorraine Hansberry,  Play,  978-0-679-72152-1, 2
-The Vagina Monologues,  Eve Ensler,  Play,  978-1-55861-368-4, 1
-The Pillowman,  Martin McDonagh,  Play,  978-0-573-17073-3, 2
-Fences,  August Wilson,  Play,  978-0-553-21052-5, 2
-The Crucible,  Arthur Miller,  Play,  978-0-14-043128-8, 2
-The Glass Bead Game,  Hermann Hesse,  Novel,  978-0-06-090919-5, 1
+The Catcher in the Rye, J.D. Salinger, Novel, 9780316769480, 3
+The Great Gatsby, F. Scott Fitzgerald, Novel, 9780743273565, 3
+Moby Dick, Herman Melville, Novel, 9780142437247, 1
+To Kill a Mockingbird, Harper Lee, Novel, 9780061120084, 3
+1984, George Orwell, Dystopia, 9780452284234, 2
+Pride and Prejudice, Jane Austen, Romance, 9781853260002, 1
+The Hobbit, J.R.R. Tolkien, Fantasy, 9780618002228, 3
+Brave New World, Aldous Huxley, Dystopia, 9780060850524, 2
+The Great Expectations, Charles Dickens, Novel, 9780141439563, 3
+One Hundred Years of Solitude, Gabriel García Márquez, Magical Realism, 9780060883287, 2
+The Brothers Karamazov, Fyodor Dostoyevsky, Novel, 9780140449242, 3
+War and Peace, Leo Tolstoy, Historical Fiction, 9780143039999, 1
+Anna Karenina, Leo Tolstoy, Novel, 9780143035008, 2
+The Picture of Dorian Gray, Oscar Wilde, Novel, 9780141439570, 3
+Wuthering Heights, Emily Brontë, Novel, 9780141439570, 3
+Crime and Punishment, Fyodor Dostoyevsky, Novel, 9780140449136, 3
+Les Misérables, Victor Hugo, Historical Fiction, 9780307388675, 3
+The Odyssey, Homer, Epic, 9780140268867, 2
+The Iliad, Homer, Epic, 9780140275360, 1
+Don Quixote, Miguel de Cervantes, Novel, 9780142437239, 3
+The Brothers Grimm Fairy Tales, Jacob and Wilhelm Grimm, Fairy Tales, 9780486428220, 1
+Frankenstein, Mary Shelley, Gothic Fiction, 9780141439471, 2
+Dracula, Bram Stoker, Horror, 9780141439846, 2
+The Secret Garden, Frances Hodgson Burnett, Novel, 9780064401880, 3
+The Adventures of Huckleberry Finn, Mark Twain, Novel, 9780142437178, 3
+The Adventures of Sherlock Holmes, Arthur Conan Doyle, Mystery, 9780140439087, 1
+The Call of the Wild, Jack London, Adventure, 9780140322334, 3
+Treasure Island, Robert Louis Stevenson, Adventure, 9780141439825, 3
+The Wind in the Willows, Kenneth Grahame, Children’s Book, 9780140437786, 1
+The Scarlet Letter, Nathaniel Hawthorne, Historical Fiction, 9780142437260, 1
+Catch-22, Joseph Heller, War, 9780684833399, 1
+Slaughterhouse-Five, Kurt Vonnegut, Science Fiction, 9780812982951, 2
+The Road, Cormac McCarthy, Post-apocalyptic, 9780307277212, 2
+The Fault in Our Stars, John Green, Romance, 9780525478812, 1
+The Hunger Games, Suzanne Collins, Dystopia, 9780439023528, 2
+The Book Thief, Markus Zusak, Historical Fiction, 9780375842207, 3
+The Handmaid's Tale, Margaret Atwood, Dystopia, 9780385493272, 1
+Gone with the Wind, Margaret Mitchell, Historical Fiction, 9781439126702, 3
+The Shining, Stephen King, Horror, 9780451170391, 3
+It, Stephen King, Horror, 9780671784212, 3
+Misery, Stephen King, Horror, 9780452268416, 1
+The Stand, Stephen King, Horror, 9780385312881, 3
+Carrie, Stephen King, Horror, 9780671744260, 2
+The Dark Tower: The Gunslinger, Stephen King, Fantasy, 9781857237397, 3
+The Dark Tower: The Drawing of the Three, Stephen King, Fantasy, 9781857237380, 1
+The Dark Tower: The Waste Lands, Stephen King, Fantasy, 9781857237403, 2
+The Night Circus, Erin Morgenstern, Fantasy, 9780385537707, 1
+The Madman, Sabahattin Ali, Novel, 9789750720492, 1
+The Stranger, Albert Camus, Novel, 9780679734295, 1
+The Time Traveler's Wife, Audrey Niffenegger, Novel, 9780547515126, 1
+The Color Purple, Alice Walker, Novel, 9780156028353, 3
+Innocent, Harlan Coben, Crime Fiction, 9781476704625, 2
+The Silent Sea, Agatha Christie, Mystery, 9780062903144, 3
+Murder on the Orient Express, Agatha Christie, Mystery, 9780062693662, 3
+The Fall, Albert Camus, Novel, 9780679724210, 2
+The Discontent, Elif Shafak, Novel, 9780143112561, 3
+Freedom, Jonathan Franzen, Novel, 9780374108009, 1
+The Dead, James Joyce, Short Story, 9780141182479, 1
+The Human Condition, Hannah Arendt, Philosophy, 9780226529569, 1
+A Farewell to Arms, Ernest Hemingway, Novel, 9780684801726, 2
+For Whom the Bell Tolls, Ernest Hemingway, Novel, 9780684801733, 2
+Ulysses, James Joyce, Novel, 9780141182806, 2
+Remembrance of Things Past, Marcel Proust, Novel, 9780679722155, 1
+The Master and Margarita, Mikhail Bulgakov, Novel, 9781560254363, 3
+The Little Prince, Antoine de Saint-Exupéry, Children’s Book, 9780156012195, 3
+The Old Man and the Sea, Ernest Hemingway, Novel, 9780684801528, 3
+East of Eden, John Steinbeck, Novel, 9780142000670, 2
+The Grapes of Wrath, John Steinbeck, Novel, 9780143039433, 1
+Animal Farm, George Orwell, Allegory, 9780452284241, 3
+A Tale of Two Cities, Charles Dickens, Historical Novel, 9780140430540, 2
+A Passage to India, E.M. Forster, Novel, 9780156711426, 1
+The Prime of Miss Jean Brodie, Muriel Spark, Novel, 9780141181786, 1
+The Return of the Soldier, Rebecca West, Novel, 9780312458995, 3
+The Time Machine, H.G. Wells, Sci-Fi, 9780451529941, 1
+The Invisible Man, H.G. Wells, Sci-Fi, 9780451529941, 1
+War of the Worlds, H.G. Wells, Sci-Fi, 9780451529941, 3
+A Midsummer Night's Dream, William Shakespeare, Play, 9780743475130, 2
+Hamlet, William Shakespeare, Play, 9780743475239, 3
+Macbeth, William Shakespeare, Play, 9780743475147, 2
+Julius Caesar, William Shakespeare, Play, 9780743475215, 1
+Othello, William Shakespeare, Play, 9780743475222, 2
+King Lear, William Shakespeare, Play, 9780743475123, 1
+The Tempest, William Shakespeare, Play, 9780743475116, 2
+A Doll's House, Henrik Ibsen, Play, 9780553210501, 3
+A Streetcar Named Desire, Tennessee Williams, Play, 9780440235150, 3
+Waiting for Godot, Samuel Beckett, Play, 9780671731970, 1
+Death of a Salesman, Arthur Miller, Play, 9780140481343, 2
+The Glass Menagerie, Tennessee Williams, Play, 9780553210617, 3
+Rosencrantz and Guildenstern Are Dead, Tom Stoppard, Play, 9780140245173, 1
+A Raisin in the Sun, Lorraine Hansberry, Play, 9780143105822, 2
+The Vagina Monologues, Eve Ensler, Play, 9781583226781, 1
+The Revolution Betrayed, Leon Trotsky, Non-fiction, 9780850367436, 2
+The Second Sex, Simone de Beauvoir, Non-fiction, 9780679724503, 3
+The Feminine Mystique, Betty Friedan, Non-fiction, 9780393322576, 1
+Sapiens, Yuval Noah Harari, Non-fiction, 9780062316097, 2
+Educated, Tara Westover, Memoir, 9780399590504, 1
+The Immortal Life of Henrietta Lacks, Rebecca Skloot, Biography, 9781400052172, 2
+The Diary of a Young Girl, Anne Frank, Memoir, 9780553296983, 3
+The Glass Castle, Jeanette Walls, Memoir, 9780743247542, 1
+Becoming, Michelle Obama, Memoir, 9781524763138, 3

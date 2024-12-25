@@ -20,21 +20,18 @@ public:
     QString getm_username() const;
     QString getm_password() const;
     Book_Management_fUser &bookManager;
-<<<<<<< HEAD
+
     void setm_userType(const QString& userType);
     void setm_username(const QString& username) { m_username = username; }
     void setm_password(const QString& password) { m_password = password; }
 
-private:
-=======
+
+
 
 private:
 
     QString m_email;
->>>>>>> c6c584033b7e038d0a4866a83fcb6e398ce0357d
     QString m_username;
-    QString m_email;
-
     QString m_password;
     QString m_userType;
 
