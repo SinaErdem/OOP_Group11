@@ -173,6 +173,9 @@ QLineEdit::placeholder {
    <property name="text">
     <string/>
    </property>
+   <property name="echoMode">
+    <enum>QLineEdit::EchoMode::Password</enum>
+   </property>
    <property name="placeholderText">
     <string>Please set a password of at least 8 characters.</string>
    </property>
