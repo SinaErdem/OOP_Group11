@@ -253,6 +253,7 @@ color: red;
     <string>Borrow Book</string>
    </property>
   </widget>
+<<<<<<< HEAD
   <widget class="QTableWidget" name="barrowedbooks">
    <property name="geometry">
     <rect>
@@ -261,6 +262,19 @@ color: red;
      <width>511</width>
      <height>192</height>
     </rect>
+=======
+  <widget class="QListWidget" name="borrowedBookListWidget">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>50</y>
+     <width>256</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:green;</string>
+>>>>>>> c6c584033b7e038d0a4866a83fcb6e398ce0357d
    </property>
   </widget>
   <zorder>allBackground</zorder>
@@ -271,7 +285,11 @@ color: red;
   <zorder>filterComboBox</zorder>
   <zorder>resultsTableWidget</zorder>
   <zorder>findButton</zorder>
+<<<<<<< HEAD
   <zorder>barrowedbooks</zorder>
+=======
+  <zorder>borrowedBookListWidget</zorder>
+>>>>>>> c6c584033b7e038d0a4866a83fcb6e398ce0357d
  </widget>
  <resources/>
  <connections/>

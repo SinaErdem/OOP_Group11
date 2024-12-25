@@ -35,7 +35,10 @@ private slots:
     void on_bookReturnTimeout();
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c6c584033b7e038d0a4866a83fcb6e398ce0357d
     void on_showBorrowedBooksButton_clicked();
     void on_returnBookClicked();
 

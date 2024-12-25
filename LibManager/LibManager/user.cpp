@@ -18,6 +18,8 @@ void User::setm_userType(const QString& userType) {
 
 
 
+
+
 void User::saveUserInfo() const {
     QString filePath = "C:/LibManager/LibManager/LBResources/users.txt";
 

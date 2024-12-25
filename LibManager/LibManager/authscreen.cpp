@@ -112,8 +112,15 @@ void AuthScreen::on_signinButton_clicked()
         AdminDashboard *adminDashboard = new AdminDashboard(this);
         adminDashboard->show();
 
+<<<<<<< HEAD
     } else if (userType == "User") {
         QMessageBox::information(this, "Giriş Başarılı", "Kullanıcı paneline yönlendiriliyorsunuz.");
+=======
+
+    } else if (userType == "User") {
+        QMessageBox::information(this, "Giriş Başarılı", "Kullanıcı paneline yönlendiriliyorsunuz.");
+        UserDashboard *userDashboard = new UserDashboard(currentUser, bookManager,this);
+>>>>>>> c6c584033b7e038d0a4866a83fcb6e398ce0357d
         userDashboard->show();
 
     } else {
