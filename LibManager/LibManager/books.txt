@@ -1,10 +1,8 @@
 The Catcher in the Rye, J.D. Salinger, Novel, 9780316769480, 3
-The Great Gatsby, F. Scott Fitzgerald, Novel, 9780743273565, 3
 Moby Dick, Herman Melville, Novel, 9780142437247, 1
 To Kill a Mockingbird, Harper Lee, Novel, 9780061120084, 3
 1984, George Orwell, Dystopia, 9780452284234, 2
 Pride and Prejudice, Jane Austen, Romance, 9781853260002, 1
-The Hobbit, J.R.R. Tolkien, Fantasy, 9780618002228, 3
 Brave New World, Aldous Huxley, Dystopia, 9780060850524, 2
 The Great Expectations, Charles Dickens, Novel, 9780141439563, 3
 One Hundred Years of Solitude, Gabriel García Márquez, Magical Realism, 9780060883287, 2
@@ -93,7 +91,6 @@ The Revolution Betrayed, Leon Trotsky, Non-fiction, 9780850367436, 2
 The Second Sex, Simone de Beauvoir, Non-fiction, 9780679724503, 3
 The Feminine Mystique, Betty Friedan, Non-fiction, 9780393322576, 1
 Sapiens, Yuval Noah Harari, Non-fiction, 9780062316097, 2
-Educated, Tara Westover, Memoir, 9780399590504, 1
 The Immortal Life of Henrietta Lacks, Rebecca Skloot, Biography, 9781400052172, 2
 The Diary of a Young Girl, Anne Frank, Memoir, 9780553296983, 3
 The Glass Castle, Jeanette Walls, Memoir, 9780743247542, 1

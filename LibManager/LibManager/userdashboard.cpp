@@ -151,7 +151,8 @@ void UserDashboard::borrowBook() {
         msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
         msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                              "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                             "QPushButton:hover { background-color: #888; }");
+                             "QPushButton:hover { background-color: #888; }"
+                             "QMessageBox { color: white; background-color: transparent; }");
         msgBox.exec();
         return;
     }
@@ -170,7 +171,8 @@ void UserDashboard::borrowBook() {
             msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
             msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                                  "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                                 "QPushButton:hover { background-color: #888; }");
+                                 "QPushButton:hover { background-color: #888; }"
+                                 "QMessageBox { color: white; background-color: transparent; }");
             msgBox.exec();
             return;
         }
@@ -202,7 +204,8 @@ void UserDashboard::borrowBook() {
             msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
             msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                                  "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                                 "QPushButton:hover { background-color: #888; }");
+                                 "QPushButton:hover { background-color: #888; }"
+                                 "QMessageBox { color: white; background-color: transparent; }");
             msgBox.exec();
             return;
         }
@@ -223,8 +226,9 @@ void UserDashboard::borrowBook() {
         info1.setText("Book added to borrowed list and saved to file.");  // Mesaj metni
         info1.setStandardButtons(QMessageBox::Ok);    // Ok butonu
         info1.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
-                            "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                            "QPushButton:hover { background-color: #888; }");
+                             "QPushButton { background-color: #555; color: white; font-size: 12px; }"
+                             "QPushButton:hover { background-color: #888; }"
+                             "QMessageBox { color: white; background-color: transparent; }");
         info1.exec();
 
         // Tabloyu yeniden güncelle
@@ -275,7 +279,8 @@ void UserDashboard::borrowBook() {
         msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
         msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                              "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                             "QPushButton:hover { background-color: #888; }");
+                             "QPushButton:hover { background-color: #888; }"
+                             "QMessageBox { color: white; background-color: transparent; }");
         msgBox.exec();
     }
 }
@@ -303,7 +308,8 @@ void UserDashboard::on_findButton_toggled(bool checked) {
         // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
         msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                              "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                             "QPushButton:hover { background-color: #888; }");
+                             "QPushButton:hover { background-color: #888; }"
+                             "QMessageBox { color: white; background-color: transparent; }");
 
         // Mesaj kutusunu göster
         msgBox.exec();
@@ -354,7 +360,8 @@ void UserDashboard::on_findButton_toggled(bool checked) {
         // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
         msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                              "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                             "QPushButton:hover { background-color: #888; }");
+                             "QPushButton:hover { background-color: #888; }"
+                             "QMessageBox { color: white; background-color: transparent; }");
 
         // Mesaj kutusunu göster
         msgBox.exec();
@@ -485,7 +492,8 @@ void UserDashboard::on_returnBookClicked() {
         // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
         msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                              "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                             "QPushButton:hover { background-color: #888; }");
+                             "QPushButton:hover { background-color: #888; }"
+                             "QMessageBox { color: white; background-color: transparent; }");
 
         // Mesaj kutusunu göster
         msgBox.exec();
@@ -541,7 +549,8 @@ void UserDashboard::on_returnBookClicked() {
     // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
     msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                          "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                         "QPushButton:hover { background-color: #888; }");
+                         "QPushButton:hover { background-color: #888; }"
+                         "QMessageBox { color: white; background-color: transparent; }");
 
     // Mesaj kutusunu göster
     msgBox.exec();
@@ -619,7 +628,8 @@ void UserDashboard::on_bookReturnTimeout() {
     // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
     msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                          "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                         "QPushButton:hover { background-color: #888; }");
+                         "QPushButton:hover { background-color: #888; }"
+                         "QMessageBox { color: white; background-color: transparent; }");
 
     // Mesaj kutusunu göster
     msgBox.exec();
@@ -637,7 +647,7 @@ void UserDashboard::on_bookReturnTimeout() {
             // bookManager nesnesinin doğru şekilde tanımlandığından emin olun
             bookManager.returnBook(*it); // Kitabı iade et
             qDebug() << "Book successfully returned.";
-            QMessageBox::information(this, "Success", "Book returned successfully.");
+            //QMessageBox::information(this, "Success", "Book returned successfully.");
             QMessageBox msgBox;
             msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
             msgBox.setIcon(QMessageBox::Information);  // Uyarı simgesi
@@ -648,7 +658,8 @@ void UserDashboard::on_bookReturnTimeout() {
             // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
             msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                                  "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                                 "QPushButton:hover { background-color: #888; }");
+                                 "QPushButton:hover { background-color: #888; }"
+                                 "QMessageBox { color: white; background-color: transparent; }");
 
             // Mesaj kutusunu göster
             msgBox.exec();

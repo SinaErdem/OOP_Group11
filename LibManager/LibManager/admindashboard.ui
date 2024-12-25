@@ -6,102 +6,323 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>640</width>
-    <height>344</height>
+    <width>550</width>
+    <height>310</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:reflect, x1:0.484, y1:0.534091, x2:0.479, y2:1, stop:0 rgba(90, 191, 47, 255), stop:1 rgba(13, 134, 0, 255));</string>
+  </property>
   <widget class="QLineEdit" name="bookNameInput">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>40</y>
-     <width>113</width>
+     <y>100</y>
+     <width>111</width>
      <height>22</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: black;
+background-color: white;</string>
+   </property>
    <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
     <string>Name</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="authorNameInput">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>40</y>
-     <width>113</width>
+     <x>10</x>
+     <y>130</y>
+     <width>111</width>
      <height>22</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: black;
+background-color: white;</string>
+   </property>
    <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
     <string>Author</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="genreInput">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>40</y>
-     <width>113</width>
+     <x>10</x>
+     <y>160</y>
+     <width>111</width>
      <height>22</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: black;
+background-color: white;</string>
+   </property>
    <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
     <string>Genre</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="isbnInput">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>40</y>
-     <width>113</width>
+     <x>10</x>
+     <y>190</y>
+     <width>111</width>
      <height>22</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: black;
+background-color: white;</string>
+   </property>
    <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
     <string>ISBN</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="numberInput">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>40</y>
-     <width>113</width>
+     <x>10</x>
+     <y>220</y>
+     <width>111</width>
      <height>22</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: black;
+background-color: white;</string>
+   </property>
    <property name="text">
-    <string>Number of books</string>
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Number of Books</string>
    </property>
   </widget>
   <widget class="QPushButton" name="addBooksButton">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>110</y>
+     <y>250</y>
      <width>111</width>
      <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;</string>
+   </property>
    <property name="text">
-    <string>Add boook</string>
+    <string>Add book</string>
    </property>
   </widget>
   <widget class="QPushButton" name="removeBooksButton">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>110</y>
+     <x>150</x>
+     <y>250</y>
      <width>111</width>
      <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;</string>
+   </property>
    <property name="text">
     <string>Remove book</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="removeBookInput">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>220</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: black;
+background-color: white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Name</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addUserButton">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>250</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;</string>
+   </property>
+   <property name="text">
+    <string>Add User</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="RemoveUserButton">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>250</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;</string>
+   </property>
+   <property name="text">
+    <string>Remove User</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="removeUserInput">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>220</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: black;
+background-color: white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Username</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="UsernameInput">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>190</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: black;
+background-color: white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Username</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="UserPasswordInput">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>220</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: black;
+background-color: white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Password</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="title">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>301</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+font: 22pt &quot;Calibri&quot;;
+background-color:transparent;</string>
+   </property>
+   <property name="text">
+    <string>Admin Panel</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="UserComboBox">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>123</y>
+     <width>111</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:black;
+background-color:white;</string>
+   </property>
+   <property name="placeholderText">
+    <string>User Type</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>User</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Admin</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLineEdit" name="EmailInput">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>160</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: black;
+background-color: white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>E-mail</string>
    </property>
   </widget>
  </widget>

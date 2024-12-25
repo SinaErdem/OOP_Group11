@@ -199,6 +199,9 @@ QPushButton:hover {
 
 </string>
    </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
   </widget>
   <widget class="QTableWidget" name="resultsTableWidget">
    <property name="geometry">

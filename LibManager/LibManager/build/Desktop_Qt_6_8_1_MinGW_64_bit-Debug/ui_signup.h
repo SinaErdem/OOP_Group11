@@ -117,7 +117,7 @@ public:
 "	color: rgb(141,141,141); \n"
 "    font-style: italic; \n"
 "}"));
-        Password_Line_Edit->setEchoMode(QLineEdit::EchoMode::PasswordEchoOnEdit);
+        Password_Line_Edit->setEchoMode(QLineEdit::EchoMode::Password);
         Mail_text = new QLabel(SignUp);
         Mail_text->setObjectName("Mail_text");
         Mail_text->setGeometry(QRect(50, 155, 111, 20));

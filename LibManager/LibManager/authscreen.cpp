@@ -99,7 +99,8 @@ void AuthScreen::on_signinButton_clicked()
         // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
         msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                              "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                             "QPushButton:hover { background-color: #888; }");
+                             "QPushButton:hover { background-color: #888; }"
+                             "QMessageBox { color: white; background-color: transparent; }");
 
         // Mesaj kutusunu göster
         msgBox.exec();
@@ -123,7 +124,8 @@ void AuthScreen::on_signinButton_clicked()
         // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
         msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                              "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                             "QPushButton:hover { background-color: #888; }");
+                             "QPushButton:hover { background-color: #888; }"
+                             "QMessageBox { color: white; background-color: transparent; }");
 
         // Mesaj kutusunu göster
         msgBox.exec();
@@ -148,12 +150,14 @@ void AuthScreen::on_signinButton_clicked()
         // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
         msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                              "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                             "QPushButton:hover { background-color: #888; }");
+                             "QPushButton:hover { background-color: #888; }"
+                             "QMessageBox { color: white; background-color: transparent; }");
 
         // Mesaj kutusunu göster
         msgBox.exec();
         AdminDashboard *adminDashboard = new AdminDashboard(this);
         adminDashboard->show();
+        this->hide();
 
     } else if (userType == "User") {
         //QMessageBox::information(this, "Giriş Başarılı", "Kullanıcı paneline yönlendiriliyorsunuz.");
@@ -167,7 +171,8 @@ void AuthScreen::on_signinButton_clicked()
         // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
         msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                              "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                             "QPushButton:hover { background-color: #888; }");
+                             "QPushButton:hover { background-color: #888; }"
+                             "QMessageBox { color: white; background-color: transparent; }");
 
         // Mesaj kutusunu göster
         msgBox.exec();
@@ -176,7 +181,8 @@ void AuthScreen::on_signinButton_clicked()
             userDashboard = new UserDashboard(currentUser, bookManager, this);
         }
 
-        userDashboard->show(); // Kullanıcı panelini göster
+        userDashboard->show();
+        this->hide();        // Kullanıcı panelini göster
     } else {
         //QMessageBox::warning(this, "Hata", "Geçersiz kullanıcı türü!");
         QMessageBox msgBox;
@@ -189,7 +195,8 @@ void AuthScreen::on_signinButton_clicked()
         // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
         msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                              "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                             "QPushButton:hover { background-color: #888; }");
+                             "QPushButton:hover { background-color: #888; }"
+                             "QMessageBox { color: white; background-color: transparent; }");
 
         // Mesaj kutusunu göster
         msgBox.exec();

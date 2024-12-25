@@ -193,7 +193,8 @@ void SignUp::on_signupButton_clicked() {
         // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
         msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                              "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                             "QPushButton:hover { background-color: #888; }");
+                             "QPushButton:hover { background-color: #888; }"
+                             "QMessageBox { color: white; background-color: transparent; }");
 
         // Mesaj kutusunu göster
         msgBox.exec();
@@ -218,7 +219,8 @@ void SignUp::on_signupButton_clicked() {
         // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
         msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                              "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                             "QPushButton:hover { background-color: #888; }");
+                             "QPushButton:hover { background-color: #888; }"
+                             "QMessageBox { color: white; background-color: transparent; }");
 
         // Mesaj kutusunu göster
         msgBox.exec();
@@ -239,7 +241,8 @@ void SignUp::on_signupButton_clicked() {
         // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
         msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                              "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                             "QPushButton:hover { background-color: #888; }");
+                             "QPushButton:hover { background-color: #888; }"
+                             "QMessageBox { color: white; background-color: transparent; }");
 
         // Mesaj kutusunu göster
         msgBox.exec();
@@ -259,13 +262,14 @@ void SignUp::on_signupButton_clicked() {
         msgBox.setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
         msgBox.setIcon(QMessageBox::Information);  // Uyarı simgesi
         msgBox.setWindowTitle("Registration Successful!");        // Başlık
-        msgBox.setText("User registered successfully!");  // Mesaj metni
+        msgBox.setText("User registered successfully!");       // Mesaj metni
         msgBox.setStandardButtons(QMessageBox::Ok);    // Ok butonu
 
         // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
         msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                              "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                             "QPushButton:hover { background-color: #888; }");
+                             "QPushButton:hover { background-color: #888; }"
+                             "QMessageBox { color: white; background-color: transparent; }");
 
         // Mesaj kutusunu göster
         msgBox.exec();
@@ -283,7 +287,8 @@ void SignUp::on_signupButton_clicked() {
         // Stil sayfası ile arka plan siyah, yazılar beyaz yapılır
         msgBox.setStyleSheet("QMessageBox { background-color: black; color: white; font-size: 14px; }"
                              "QPushButton { background-color: #555; color: white; font-size: 12px; }"
-                             "QPushButton:hover { background-color: #888; }");
+                             "QPushButton:hover { background-color: #888; }"
+                             "QMessageBox { color: white; background-color: transparent; }");
 
         // Mesaj kutusunu göster
         msgBox.exec();

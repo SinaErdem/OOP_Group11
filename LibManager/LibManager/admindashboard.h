@@ -19,6 +19,8 @@ public:
 private slots:
     void addBooks();  // Kitap ekleme fonksiyonu
     void removeBooks();  // Kitap kaldırma fonksiyonu
+    void addUsers();
+    void removeUsers();
 
 
 private:
