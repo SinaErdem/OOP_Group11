@@ -1,9 +1,11 @@
 #include "book_management_fuser.h"
+#include "qdebug.h"
 #include <ctime>
 #include <iostream>
 #include <memory>
 #include <stdexcept>
 #include <cstdlib>
+
 Book_Management_fUser gbookManager;
 Book_Management_fUser::Book_Management_fUser(User* user) {
     this->user = user;
@@ -30,16 +32,49 @@ long Book_Management_fUser::barrowBook( Library_Database &book) {
     return code;
 }
 
+
 void Book_Management_fUser::returnBook(Library_Database& book) {
     auto it = std::find(user->borrowedBooks.begin(), user->borrowedBooks.end(), book);
     if (it == user->borrowedBooks.end()) {
+        qDebug() << "Error: Book not found in borrowedBooks list.";
         throw std::runtime_error("This book has not been borrowed by the user!");
     }
 
-    user->borrowedBooks.erase(it);
+    // Kitap bilgilerini geçici değişkene taşı
+    Library_Database tempBook = *it;
+    qDebug() << "Book found: " << QString::fromStdString(tempBook.getName());
 
-    book.setNumber(book.getNumber() + 1);
+    // Kitabı listeden çıkar
+    user->borrowedBooks.erase(it);
+    qDebug() << "Book removed from borrowedBooks list.";
+
+    // Stok miktarını artır
+    tempBook.setNumber(tempBook.getNumber() + 1);
+    qDebug() << "Stock updated for the book. Current stock:" << tempBook.getNumber();
 }
+
+
+
+// List borrowed books
+void Book_Management_fUser::listBorrowedBooks() const {
+    if (user->borrowedBooks.empty()) {
+        qDebug() << "No borrowed books.";
+        return;
+    }
+
+    for (const auto& book : user->borrowedBooks) {
+        qDebug() << "Book Name:" << book.getName()
+        << ", Author:" << book.getAuthor()
+        << ", Genre:" << book.getGenre()
+        << ", ISBN:" << book.getIsbn();
+    }
+
+}
+
+
+
+
+
 void Book_Management_fUser::seeAllBooks() {
     auto books = library.allBooks();
     for ( auto& book : books) {
@@ -134,3 +169,4 @@ void Book_Management_fUser::searchBookByISBN(const std::string& isbn)  {
     }
     std::cout<<"\n";
 }
+

@@ -10,8 +10,8 @@ class Book_Management_fUser;
 
 class User {
 public:
-    std::vector<Library_Database> borrowedBooks;
     Library library;
+    std::vector<Library_Database> borrowedBooks;
 
     User(const QString& email, const QString& username, const QString& password,Book_Management_fUser& bookManager);
     void saveUserInfo() const;
@@ -19,9 +19,10 @@ public:
     QString getm_email() const;
     QString getm_username() const;
     QString getm_password() const;
-    Book_Management_fUser& bookManager;
+    Book_Management_fUser &bookManager;
 
 private:
+
     QString m_email;
     QString m_username;
     QString m_password;

@@ -24,6 +24,7 @@ public:
     Book_Management_fUser(User* user);
     long barrowBook( Library_Database &book);
     void returnBook(Library_Database& book);
+    void listBorrowedBooks() const;
 
 };
 

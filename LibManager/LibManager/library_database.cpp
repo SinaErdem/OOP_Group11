@@ -3,7 +3,7 @@
 Library_Database::Library_Database(const std::string& name, const std::string& author, const std::string& genre, const std::string& isbn, int number)
     : name(name), author(author), genre(genre), isbn(isbn), number(number) {}
 
-int Library_Database::getNumber()   {
+int Library_Database::getNumber()  const {
     return number;
 }
 
@@ -18,7 +18,7 @@ bool Library_Database::operator==(const Library_Database& other)  {
            this->genre == other.genre &&
            this->isbn == other.isbn;
 }
-std::string Library_Database::getName()  {
+std::string Library_Database::getName()  const{
     return name;
 }
 void Library_Database::setName( std::string& n)  {
@@ -26,7 +26,7 @@ void Library_Database::setName( std::string& n)  {
 }
 
 // Author getter ve setter
-std::string Library_Database::getAuthor()  {
+std::string Library_Database::getAuthor() const {
     return author;
 }
 void Library_Database::setAuthor( std::string& a)  {
@@ -34,7 +34,7 @@ void Library_Database::setAuthor( std::string& a)  {
 }
 
 // Genre getter ve setter
-std::string Library_Database::getGenre()  {
+std::string Library_Database::getGenre()  const{
     return genre;
 }
 void Library_Database::setGenre( std::string& g)  {
@@ -42,7 +42,7 @@ void Library_Database::setGenre( std::string& g)  {
 }
 
 // ISBN getter ve setter
-std::string Library_Database::getIsbn()  {
+std::string Library_Database::getIsbn() const {
     return isbn;
 }
 void Library_Database::setIsbn( std::string& i)  {

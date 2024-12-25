@@ -121,37 +121,45 @@ public:
 "	color: black;\n"
 "	\n"
 "	font: 300 10pt \"Calibri\";\n"
-"	background-color: qlineargradient(spread:pad, x1:0.23, y1:0.477273, x2:0.915, y2:0.0800455, stop:0 rgba(165, 34, 36, 255), stop:1 rgba(255, 224, 174, 255));\n"
+"		\n"
+"	background-color: qlineargradient(spread:reflect, x1:0.484, y1:0.534091, x2:0.479, y2:1, stop:0 rgba(90, 191, 47, 255), stop:1 rgba(13, 134, 0, 255));\n"
+"}\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(136, 202, 129);\n"
 "}"));
         LibManager_logo = new QLabel(centralwidget);
         LibManager_logo->setObjectName("LibManager_logo");
-        LibManager_logo->setGeometry(QRect(460, 60, 349, 79));
-        LibManager_logo->setStyleSheet(QString::fromUtf8("background-image: url(C:/LibManager/LibManager/LBResources/full_logo_LibManager_relieved.png);\n"
+        LibManager_logo->setGeometry(QRect(470, 50, 349, 79));
+        LibManager_logo->setStyleSheet(QString::fromUtf8("background-image: url(C:/LibManager/LibManager/LBResources/LibManager_logo_revised.png);\n"
 "background-color:transparent;"));
         welcome_text = new QLabel(centralwidget);
         welcome_text->setObjectName("welcome_text");
         welcome_text->setGeometry(QRect(500, 150, 311, 41));
         welcome_text->setStyleSheet(QString::fromUtf8("font: 18pt \"Calibri\";\n"
+"color:white;\n"
 "background-color:transparent;"));
         label = new QLabel(centralwidget);
         label->setObjectName("label");
         label->setGeometry(QRect(460, 240, 391, 21));
-        label->setStyleSheet(QString::fromUtf8("background-color:transparent;"));
+        label->setStyleSheet(QString::fromUtf8("background-color:transparent;\n"
+"color:white;"));
         label->setAlignment(Qt::AlignmentFlag::AlignCenter);
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(460, 280, 391, 21));
-        label_2->setStyleSheet(QString::fromUtf8("background-color:transparent;"));
+        label_2->setStyleSheet(QString::fromUtf8("background-color:transparent;\n"
+"color: white;"));
         label_2->setAlignment(Qt::AlignmentFlag::AlignCenter);
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(460, 320, 391, 21));
-        label_3->setStyleSheet(QString::fromUtf8("background-color:transparent;"));
+        label_3->setStyleSheet(QString::fromUtf8("background-color:transparent;\n"
+"color:white;"));
         label_3->setAlignment(Qt::AlignmentFlag::AlignCenter);
         AuthScreen1_2 = new QLabel(centralwidget);
         AuthScreen1_2->setObjectName("AuthScreen1_2");
         AuthScreen1_2->setGeometry(QRect(430, 0, 427, 480));
-        AuthScreen1_2->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0.23, y1:0.477273, x2:0.915, y2:0.0800455, stop:0 rgba(165, 34, 36, 255), stop:1 rgba(255, 224, 174, 255));"));
+        AuthScreen1_2->setStyleSheet(QString::fromUtf8("background-image:url(C:/LibManager/LibManager/LBResources/authScreen_imageV2.png)"));
         signupButton = new QPushButton(centralwidget);
         signupButton->setObjectName("signupButton");
         signupButton->setGeometry(QRect(40, 410, 341, 41));
@@ -160,7 +168,12 @@ public:
 "	color: black;\n"
 "	\n"
 "	font: 300 10pt \"Calibri\";\n"
-"	background-color: qlineargradient(spread:pad, x1:0.23, y1:0.477273, x2:0.915, y2:0.0800455, stop:0 rgba(165, 34, 36, 255), stop:1 rgba(255, 224, 174, 255));\n"
+"		\n"
+"	background-color: qlineargradient(spread:reflect, x1:0.484, y1:0.534091, x2:0.479, y2:1, stop:0 rgba(90, 191, 47, 255), stop:1 rgba(13, 134, 0, 255));\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(136, 202, 129);\n"
 "}"));
         AuthScreen->setCentralWidget(centralwidget);
         AuthScreen1_2->raise();

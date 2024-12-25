@@ -1,4 +1,3 @@
-debug/account.o
 debug/admin.o
 debug/admindashboard.o
 debug/book_management_fadmin.o
@@ -8,7 +7,6 @@ debug/library_database.o
 debug/librarymanagement.o
 debug/main.o
 debug/authscreen.o
-debug/person.o
 debug/signup.o
 debug/user.o
 debug/userdashboard.o

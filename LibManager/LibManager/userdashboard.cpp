@@ -8,8 +8,8 @@
 #include<QMessageBox>
 #include "book_management_fuser.h"
 #include "QString"
-UserDashboard::UserDashboard(User& currentUser, QWidget *parent)
-    : QDialog(parent), ui(new Ui::UserDashboard), currentUser(currentUser)
+UserDashboard::UserDashboard(User& currentUser,Book_Management_fUser& bookManager ,QWidget *parent)
+    : QDialog(parent), ui(new Ui::UserDashboard), currentUser(currentUser),bookManager(bookManager) // bookManager başlatılıyor
 {
     ui->setupUi(this);
     ui->bookListWidget->hide();
@@ -17,6 +17,9 @@ UserDashboard::UserDashboard(User& currentUser, QWidget *parent)
     ui->bookListWidget->hide();
     ui->resultsTableWidget->hide();
     ui->findButton->setCheckable(true);
+
+
+
 }
 
 UserDashboard::~UserDashboard()
@@ -220,3 +223,98 @@ void UserDashboard::on_findButton_toggled(bool checked) {
     populateResults(results);  // Sonuçları doldur
     ui->resultsTableWidget->show();  // Sonuçları göster
 }
+
+
+void UserDashboard::on_showBorrowedBooksButton_clicked()
+{
+    qDebug() << "Displaying borrowed books...";
+
+    ui->borrowedBookListWidget->clear(); // Listeyi temizle
+
+    // Ödünç alınan kitapları al
+    const auto& borrowedBooks = currentUser.borrowedBooks;
+    qDebug() << "Number of borrowed books:" << borrowedBooks.size();
+
+    if (borrowedBooks.empty()) {
+        qDebug() << "No borrowed books found.";
+        ui->borrowedBookListWidget->addItem("No borrowed books.");
+        return;
+    }
+
+    for (const auto& book : borrowedBooks) {
+        qDebug() << "Processing book:" << QString::fromStdString(book.getName());
+
+        // Kitap için özel bir widget oluştur
+        QWidget* itemWidget = new QWidget(ui->borrowedBookListWidget);
+
+        // Kitap bilgilerini gösteren QLabel
+        QLabel* bookLabel = new QLabel(
+            QString("Name: %1, Author: %2, Genre: %3, ISBN: %4")
+                .arg(QString::fromStdString(book.getName()))
+                .arg(QString::fromStdString(book.getAuthor()))
+                .arg(QString::fromStdString(book.getGenre()))
+                .arg(QString::fromStdString(book.getIsbn())),
+            itemWidget);
+
+        // "Return Book" butonu oluştur
+        QPushButton* returnButton = new QPushButton("Return Book", itemWidget);
+        returnButton->setProperty("bookIsbn", QString::fromStdString(book.getIsbn())); // ISBN bilgisini butona ekle
+
+        // Buton sinyalini slota bağla
+        connect(returnButton, &QPushButton::clicked, this, &UserDashboard::on_returnBookClicked);
+
+        // Widget için layout
+        QHBoxLayout* layout = new QHBoxLayout(itemWidget);
+        layout->addWidget(bookLabel);
+        layout->addWidget(returnButton);
+        itemWidget->setLayout(layout);
+
+        // Widget'i QListWidgetItem olarak ekle
+        QListWidgetItem* item = new QListWidgetItem(ui->borrowedBookListWidget);
+        item->setSizeHint(itemWidget->sizeHint());
+        ui->borrowedBookListWidget->setItemWidget(item, itemWidget);
+
+        qDebug() << "Book added to the list:" << QString::fromStdString(book.getName());
+    }
+}
+
+
+void UserDashboard::on_returnBookClicked() {
+    QPushButton* button = qobject_cast<QPushButton*>(sender());
+    if (!button) {
+        qDebug() << "Error: Button is invalid!";
+        return;
+    }
+
+    QString bookIsbn = button->property("bookIsbn").toString().trimmed();
+    qDebug() << "Book ISBN retrieved:" << bookIsbn;
+
+    auto& borrowedBooks = currentUser.borrowedBooks;
+    qDebug() << "Number of borrowed books before return:" << borrowedBooks.size();
+
+    auto it = std::find_if(borrowedBooks.begin(), borrowedBooks.end(),
+                           [bookIsbn](const Library_Database& book) {
+                               return QString::fromStdString(book.getIsbn()).trimmed() == bookIsbn;
+                           });
+
+    if (it != borrowedBooks.end()) {
+        qDebug() << "Book found:" << QString::fromStdString(it->getName());
+        try {
+            bookManager.returnBook(*it); // Kitabı iade et
+            qDebug() << "Book successfully returned.";
+            QMessageBox::information(this, "Success", "Book returned successfully.");
+            on_showBorrowedBooksButton_clicked(); // Listeyi güncelle
+        } catch (std::runtime_error& e) {
+            QMessageBox::critical(this, "Error", e.what());
+            qDebug() << "Error during returnBook:" << e.what();
+        }
+    } else {
+        qDebug() << "Error: Book not found in borrowedBooks.";
+        QMessageBox::warning(this, "Error", "Book not found in your borrowed list.");
+    }
+}
+
+
+
+
+
