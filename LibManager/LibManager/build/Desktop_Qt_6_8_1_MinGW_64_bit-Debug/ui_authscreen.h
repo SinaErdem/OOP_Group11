@@ -101,6 +101,7 @@ public:
 "	color: rgb(141,141,141); \n"
 "    font-style: italic; \n"
 "}"));
+        PasswordLineEdit->setEchoMode(QLineEdit::EchoMode::Password);
         Password_text = new QLabel(centralwidget);
         Password_text->setObjectName("Password_text");
         Password_text->setGeometry(QRect(50, 220, 111, 20));
