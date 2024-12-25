@@ -157,7 +157,7 @@ void AuthScreen::on_signinButton_clicked()
         msgBox.exec();
         AdminDashboard *adminDashboard = new AdminDashboard(this);
         adminDashboard->show();
-        this->hide();
+
 
     } else if (userType == "User") {
         //QMessageBox::information(this, "Giriş Başarılı", "Kullanıcı paneline yönlendiriliyorsunuz.");
@@ -182,7 +182,7 @@ void AuthScreen::on_signinButton_clicked()
         }
 
         userDashboard->show();
-        this->hide();        // Kullanıcı panelini göster
+              // Kullanıcı panelini göster
     } else {
         //QMessageBox::warning(this, "Hata", "Geçersiz kullanıcı türü!");
         QMessageBox msgBox;
