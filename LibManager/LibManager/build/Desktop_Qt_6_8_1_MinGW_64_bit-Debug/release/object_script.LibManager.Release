@@ -1,4 +1,3 @@
-release/account.o
 release/admin.o
 release/admindashboard.o
 release/book_management_fadmin.o
@@ -8,7 +7,6 @@ release/library_database.o
 release/librarymanagement.o
 release/main.o
 release/authscreen.o
-release/person.o
 release/signup.o
 release/user.o
 release/userdashboard.o

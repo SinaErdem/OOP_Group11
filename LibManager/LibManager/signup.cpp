@@ -178,6 +178,8 @@ bool isValidPassword(const QString &password) {
 
 void SignUp::on_signupButton_clicked() {
     QString userType;
+
+    // Kullanıcı türü seçilip seçilmediğini kontrol et
     if (selectedUserType == -1) {
         qDebug() << "User type not selected!";
         QMessageBox::warning(this, "Registration error", "Please select a user type.");
@@ -188,14 +190,14 @@ void SignUp::on_signupButton_clicked() {
     QString username = ui->UsernameLineEdit->text();
     QString password = ui->Password_Line_Edit->text();
 
-    // Email validation
+    // Email doğrulama
     if (!isValidEmail(email)) {
         qDebug() << "Invalid email!";
         QMessageBox::warning(this, "Registration error", "Invalid email address.");
         return;
     }
 
-    // Password validation
+    // Şifre doğrulama
     if (!isValidPassword(password)) {
         qDebug() << "Password must contain at least one letter and one digit!";
         QMessageBox::warning(this, "Registration error", "Password must contain at least one letter and one digit.");
@@ -206,13 +208,15 @@ void SignUp::on_signupButton_clicked() {
     qDebug() << "Username: " << username;
     qDebug() << "Password: " << password;
 
-    // Instantiate appropriate user object
+    // Uygun kullanıcı nesnesini oluştur
     if (selectedUserType == 0) {  // User
-        User user(email, username, password,bookManager);  // *bookmanager kullanılıyor, çünkü bookmanager işaretçi
+        User user(email, username, password, bookManager);  // *bookManager kullanılıyor çünkü işaretçi
         user.saveUserInfo();
+        QMessageBox::information(this, "Registration", "User registered successfully!");
     } else if (selectedUserType == 1) {  // Admin
         Admin admin(email, username, password);
         admin.saveUserInfo();
+        QMessageBox::information(this, "Registration", "Admin registered successfully!");
     }
 }
 void SignUp::on_Back_Button_clicked()

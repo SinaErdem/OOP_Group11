@@ -1,14 +1,21 @@
 #include "User.h"
 #include "book_management_fuser.h"
+#include "library_database.h"
 #include <QFile>
 #include <QTextStream>
 #include <QDebug>
 #include <QDir>
+#include <QTimer>
+#include <QMessageBox>
 
 User::User(const QString& email, const QString& username, const QString& password, Book_Management_fUser& bookManager)
     : bookManager(bookManager), m_email(email), m_username(username), m_password(password) {}
 
 User::~User(){}
+void User::setm_userType(const QString& userType) {
+    m_userType = userType;  // Parametreyi sınıf üyesine atama
+}
+
 
 
 void User::saveUserInfo() const {
@@ -31,9 +38,11 @@ void User::saveUserInfo() const {
         qDebug() << "Failed to open file!" << file.errorString();
     }
 }
+
+
 QString User::getm_email() const {
-    return m_email;
-}
+        return m_email;
+    }
 
 QString User::getm_username() const {
     return m_username;
@@ -42,3 +51,4 @@ QString User::getm_username() const {
 QString User::getm_password() const {
     return m_password;
 }
+

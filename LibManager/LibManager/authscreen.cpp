@@ -15,7 +15,7 @@ AuthScreen::AuthScreen(QWidget *parent)
 
     ui->setupUi(this);
     this->setWindowIcon(QIcon("C:/LibManager/LibManager/LBResources/LB_favicon.png"));
-    userDashboard = new UserDashboard(currentUser, this);
+    userDashboard = new UserDashboard(currentUser, bookManager,this);
     userDashboard->hide();
 
 }
@@ -101,15 +101,21 @@ void AuthScreen::on_signinButton_clicked()
         return;
     }
 
+    // `currentUser` bilgilerini güncelle  // Kullanıcı türünü güncelliyoruz
+    currentUser.setm_username(username);
+    currentUser.setm_password(password);
+    currentUser.setm_userType(userType);  // Kullanıcı türünü ayarla
+
     // Kullanıcı türüne göre yönlendirme
     if (userType == "Admin") {
         QMessageBox::information(this, "Giriş Başarılı", "Admin paneline yönlendiriliyorsunuz.");
-        AdminDashboard *adminDashboard = new AdminDashboard(this);  // QWidget'ı kullanıyorsanız
+        AdminDashboard *adminDashboard = new AdminDashboard(this);
         adminDashboard->show();
+
     } else if (userType == "User") {
         QMessageBox::information(this, "Giriş Başarılı", "Kullanıcı paneline yönlendiriliyorsunuz.");
-        UserDashboard *userDashboard = new UserDashboard(currentUser, this);
         userDashboard->show();
+
     } else {
         QMessageBox::warning(this, "Hata", "Geçersiz kullanıcı türü!");
     }

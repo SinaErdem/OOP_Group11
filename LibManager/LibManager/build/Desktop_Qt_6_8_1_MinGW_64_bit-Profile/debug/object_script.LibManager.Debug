@@ -1,7 +1,14 @@
+debug/admin.o
 debug/admindashboard.o
+debug/book_management_fadmin.o
+debug/book_management_fuser.o
+debug/library.o
+debug/library_database.o
+debug/librarymanagement.o
 debug/main.o
 debug/authscreen.o
 debug/signup.o
+debug/user.o
 debug/userdashboard.o
 debug/qrc_qmake_qmake_qm_files.o
 debug/moc_admindashboard.o

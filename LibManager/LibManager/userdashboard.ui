@@ -142,6 +142,32 @@ QPushButton:hover {
      <string>Profile</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="showBorrowedBooksButton">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>0</y>
+      <width>131</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+	border-color: transparent;
+	border-radius: 0px;
+}
+QPushButton:hover {
+	background-color: rgb(136, 202, 129);
+	border-radius: 0px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Borrowed Books</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QLabel" name="allBackground">
    <property name="geometry">
@@ -192,6 +218,9 @@ QPushButton:hover {
      <pointsize>16</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:red;</string>
+   </property>
   </widget>
   <widget class="QTableWidget" name="resultsTableWidget">
    <property name="geometry">
@@ -201,6 +230,9 @@ QPushButton:hover {
      <width>521</width>
      <height>361</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:green;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="findButton">
@@ -212,8 +244,23 @@ QPushButton:hover {
      <height>51</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">
+color: red;
+</string>
+   </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>Borrow Book</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="barrowedbooks">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>50</y>
+     <width>511</width>
+     <height>192</height>
+    </rect>
    </property>
   </widget>
   <zorder>allBackground</zorder>
@@ -224,6 +271,7 @@ QPushButton:hover {
   <zorder>filterComboBox</zorder>
   <zorder>resultsTableWidget</zorder>
   <zorder>findButton</zorder>
+  <zorder>barrowedbooks</zorder>
  </widget>
  <resources/>
  <connections/>

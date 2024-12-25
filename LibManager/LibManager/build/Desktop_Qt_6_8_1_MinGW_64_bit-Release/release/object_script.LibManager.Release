@@ -1,7 +1,14 @@
+release/admin.o
 release/admindashboard.o
+release/book_management_fadmin.o
+release/book_management_fuser.o
+release/library.o
+release/library_database.o
+release/librarymanagement.o
 release/main.o
 release/authscreen.o
 release/signup.o
+release/user.o
 release/userdashboard.o
 release/qrc_qmake_qmake_qm_files.o
 release/moc_admindashboard.o

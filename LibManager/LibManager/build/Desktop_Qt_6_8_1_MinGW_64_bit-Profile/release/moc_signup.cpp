@@ -40,6 +40,8 @@ static constexpr auto qt_meta_stringdata_ZN6SignUpE = QtMocHelpers::stringData(
     "SignUp",
     "on_signupButton_clicked",
     "",
+    "on_user_Button_clicked",
+    "on_admin_Button_clicked",
     "on_Back_Button_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
@@ -52,7 +54,7 @@ Q_CONSTINIT static const uint qt_meta_data_ZN6SignUpE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -60,10 +62,14 @@ Q_CONSTINIT static const uint qt_meta_data_ZN6SignUpE[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   26,    2, 0x08,    1 /* Private */,
-       3,    0,   27,    2, 0x08,    2 /* Private */,
+       1,    0,   38,    2, 0x08,    1 /* Private */,
+       3,    0,   39,    2, 0x08,    2 /* Private */,
+       4,    0,   40,    2, 0x08,    3 /* Private */,
+       5,    0,   41,    2, 0x08,    4 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -81,6 +87,10 @@ Q_CONSTINIT const QMetaObject SignUp::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<SignUp, std::true_type>,
         // method 'on_signupButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_user_Button_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_admin_Button_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_Back_Button_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
@@ -93,7 +103,9 @@ void SignUp::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->on_signupButton_clicked(); break;
-        case 1: _t->on_Back_Button_clicked(); break;
+        case 1: _t->on_user_Button_clicked(); break;
+        case 2: _t->on_admin_Button_clicked(); break;
+        case 3: _t->on_Back_Button_clicked(); break;
         default: ;
         }
     }
@@ -119,14 +131,14 @@ int SignUp::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 4;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 4)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 2;
+        _id -= 4;
     }
     return _id;
 }
