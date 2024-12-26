@@ -1,0 +1,106 @@
+\doxysection{Book\+\_\+\+Management\+\_\+f\+Admin Class Reference}
+\hypertarget{class_book___management__f_admin}{}\label{class_book___management__f_admin}\index{Book\_Management\_fAdmin@{Book\_Management\_fAdmin}}
+
+
+Provides book and user management functionalities for administrators.  
+
+
+
+
+{\ttfamily \#include $<$book\+\_\+management\+\_\+fadmin.\+h$>$}
+
+
+
+Collaboration diagram for Book\+\_\+\+Management\+\_\+f\+Admin\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_book___management__f_admin_a2d26474b4182cd1b6c778151b3119f16}{Book\+\_\+\+Management\+\_\+f\+Admin}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_book___management__f_admin}{Book\+\_\+\+Management\+\_\+f\+Admin} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_book___management__f_admin_a8361fb15aadb383cda5ddc3124b73358}{remove\+User}} ()
+\begin{DoxyCompactList}\small\item\em Removes a user from the system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_book___management__f_admin_a918c11071a832f439c07d48f4fa6be43}{add\+Book}} (const std\+::string \&book\+Info)
+\begin{DoxyCompactList}\small\item\em Adds a book to the system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_book___management__f_admin_ab74e8722cf72ec8ab9723678446d057e}{display\+Users}} ()
+\begin{DoxyCompactList}\small\item\em Displays all users in the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_book___management__f_admin_ac016d336a5f89307635053ddf86387dc}{add\+User}} (\mbox{\hyperlink{class_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Adds a user to the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides book and user management functionalities for administrators. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_book___management__f_admin_a2d26474b4182cd1b6c778151b3119f16}\index{Book\_Management\_fAdmin@{Book\_Management\_fAdmin}!Book\_Management\_fAdmin@{Book\_Management\_fAdmin}}
+\index{Book\_Management\_fAdmin@{Book\_Management\_fAdmin}!Book\_Management\_fAdmin@{Book\_Management\_fAdmin}}
+\doxysubsubsection{\texorpdfstring{Book\_Management\_fAdmin()}{Book\_Management\_fAdmin()}}
+{\footnotesize\ttfamily \label{class_book___management__f_admin_a2d26474b4182cd1b6c778151b3119f16} 
+Book\+\_\+\+Management\+\_\+f\+Admin\+::\+Book\+\_\+\+Management\+\_\+f\+Admin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_book___management__f_admin}{Book\+\_\+\+Management\+\_\+f\+Admin} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_book___management__f_admin_a918c11071a832f439c07d48f4fa6be43}\index{Book\_Management\_fAdmin@{Book\_Management\_fAdmin}!addBook@{addBook}}
+\index{addBook@{addBook}!Book\_Management\_fAdmin@{Book\_Management\_fAdmin}}
+\doxysubsubsection{\texorpdfstring{addBook()}{addBook()}}
+{\footnotesize\ttfamily \label{class_book___management__f_admin_a918c11071a832f439c07d48f4fa6be43} 
+void Book\+\_\+\+Management\+\_\+f\+Admin\+::add\+Book (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{book\+Info}{}\end{DoxyParamCaption})}
+
+
+
+Adds a book to the system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em book\+Info} & A string containing book details in the format\+: "{}name,author,genre,isbn,quantity"{}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_book___management__f_admin_ac016d336a5f89307635053ddf86387dc}\index{Book\_Management\_fAdmin@{Book\_Management\_fAdmin}!addUser@{addUser}}
+\index{addUser@{addUser}!Book\_Management\_fAdmin@{Book\_Management\_fAdmin}}
+\doxysubsubsection{\texorpdfstring{addUser()}{addUser()}}
+{\footnotesize\ttfamily \label{class_book___management__f_admin_ac016d336a5f89307635053ddf86387dc} 
+void Book\+\_\+\+Management\+\_\+f\+Admin\+::add\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user}{User}}}]{user}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Adds a user to the system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The user to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_book___management__f_admin_ab74e8722cf72ec8ab9723678446d057e}\index{Book\_Management\_fAdmin@{Book\_Management\_fAdmin}!displayUsers@{displayUsers}}
+\index{displayUsers@{displayUsers}!Book\_Management\_fAdmin@{Book\_Management\_fAdmin}}
+\doxysubsubsection{\texorpdfstring{displayUsers()}{displayUsers()}}
+{\footnotesize\ttfamily \label{class_book___management__f_admin_ab74e8722cf72ec8ab9723678446d057e} 
+void Book\+\_\+\+Management\+\_\+f\+Admin\+::display\+Users (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Displays all users in the system. 
+
+(Currently not implemented.) \Hypertarget{class_book___management__f_admin_a8361fb15aadb383cda5ddc3124b73358}\index{Book\_Management\_fAdmin@{Book\_Management\_fAdmin}!removeUser@{removeUser}}
+\index{removeUser@{removeUser}!Book\_Management\_fAdmin@{Book\_Management\_fAdmin}}
+\doxysubsubsection{\texorpdfstring{removeUser()}{removeUser()}}
+{\footnotesize\ttfamily \label{class_book___management__f_admin_a8361fb15aadb383cda5ddc3124b73358} 
+void Book\+\_\+\+Management\+\_\+f\+Admin\+::remove\+User (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Removes a user from the system. 
+
+(Currently not implemented.) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{book__management__fadmin_8h}{book\+\_\+management\+\_\+fadmin.\+h}}\item 
+\mbox{\hyperlink{book__management__fadmin_8cpp}{book\+\_\+management\+\_\+fadmin.\+cpp}}\end{DoxyCompactItemize}

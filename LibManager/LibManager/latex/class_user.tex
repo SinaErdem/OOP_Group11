@@ -1,0 +1,258 @@
+\doxysection{User Class Reference}
+\hypertarget{class_user}{}\label{class_user}\index{User@{User}}
+
+
+Represents a user in the library management system.  
+
+
+
+
+{\ttfamily \#include $<$user.\+h$>$}
+
+
+
+Collaboration diagram for User\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_ac37c22715985f13b0a0f0ed477474d1f}{User}} (const QString \&email, const QString \&username, const QString \&password, \mbox{\hyperlink{class_book___management__f_user}{Book\+\_\+\+Management\+\_\+f\+User}} \&\mbox{\hyperlink{class_user_addc0376a80f4c403a47c596aa30fe6ec}{book\+Manager}})
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_user}{User} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_af11483139428a089a6ad3d2d3ed4395a}{save\+User\+Info}} () const
+\begin{DoxyCompactList}\small\item\em Saves the user\textquotesingle{}s information to a persistent storage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_user_ac00b72ad64eb4149f7b21b9f5468c2b2}{\texorpdfstring{$\sim$}{\string~}\+User}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_user}{User} class. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_user_ace86f10b81493356e357bd83589d29d1}{getm\+\_\+email}} () const
+\begin{DoxyCompactList}\small\item\em Gets the email of the user. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_user_a07bc979860693eebbe0220b9af4a8f7f}{getm\+\_\+username}} () const
+\begin{DoxyCompactList}\small\item\em Gets the username of the user. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_user_a5ed5896e712557778513601344ccc15b}{getm\+\_\+password}} () const
+\begin{DoxyCompactList}\small\item\em Gets the password of the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_a4af75e75cf3124469909a70f0434c759}{setm\+\_\+user\+Type}} (const QString \&user\+Type)
+\begin{DoxyCompactList}\small\item\em Sets the user type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_abd69b8e86000ded84c7c0769d08a40fd}{setm\+\_\+username}} (const QString \&username)
+\begin{DoxyCompactList}\small\item\em Sets the username of the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_a7bb6c398712e94bab86ba05101081665}{setm\+\_\+password}} (const QString \&password)
+\begin{DoxyCompactList}\small\item\em Sets the password of the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_library}{Library}} \mbox{\hyperlink{class_user_aff35a1574f0747d3af554eb75c2847ed}{library}}
+\begin{DoxyCompactList}\small\item\em Reference to the library instance associated with the user. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_library___database}{Library\+\_\+\+Database}} $>$ \mbox{\hyperlink{class_user_a3d95e16e134a33bb9e37f337692485e6}{borrowed\+Books}}
+\begin{DoxyCompactList}\small\item\em List of books borrowed by the user. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_book___management__f_user}{Book\+\_\+\+Management\+\_\+f\+User}} \& \mbox{\hyperlink{class_user_addc0376a80f4c403a47c596aa30fe6ec}{book\+Manager}}
+\begin{DoxyCompactList}\small\item\em Reference to the book management system for the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a user in the library management system. 
+
+Represents a library user with associated functionality.
+
+This class provides functionalities for managing user information and saving it to a file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_user_ac37c22715985f13b0a0f0ed477474d1f}\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}}
+{\footnotesize\ttfamily \label{class_user_ac37c22715985f13b0a0f0ed477474d1f} 
+User\+::\+User (\begin{DoxyParamCaption}\item[{const QString \&}]{email}{, }\item[{const QString \&}]{username}{, }\item[{const QString \&}]{password}{, }\item[{\mbox{\hyperlink{class_book___management__f_user}{Book\+\_\+\+Management\+\_\+f\+User}} \&}]{book\+Manager}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_user}{User} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & The user\textquotesingle{}s email address. \\
+\hline
+{\em username} & The user\textquotesingle{}s username. \\
+\hline
+{\em password} & The user\textquotesingle{}s password. \\
+\hline
+{\em book\+Manager} & Reference to the book management system for the user.\\
+\hline
+\end{DoxyParams}
+Initializes a user with email, username, password, and a reference to the book manager.
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & Email of the user. \\
+\hline
+{\em username} & Username of the user. \\
+\hline
+{\em password} & Password of the user. \\
+\hline
+{\em book\+Manager} & Reference to the book management system for the user. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_ac00b72ad64eb4149f7b21b9f5468c2b2}\index{User@{User}!````~User@{\texorpdfstring{$\sim$}{\string~}User}}
+\index{````~User@{\texorpdfstring{$\sim$}{\string~}User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}User()}{\string~User()}}
+{\footnotesize\ttfamily \label{class_user_ac00b72ad64eb4149f7b21b9f5468c2b2} 
+User\+::\texorpdfstring{$\sim$}{\string~}\+User (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor for the \doxylink{class_user}{User} class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_user_ace86f10b81493356e357bd83589d29d1}\index{User@{User}!getm\_email@{getm\_email}}
+\index{getm\_email@{getm\_email}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getm\_email()}{getm\_email()}}
+{\footnotesize\ttfamily \label{class_user_ace86f10b81493356e357bd83589d29d1} 
+QString User\+::getm\+\_\+email (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the email of the user. 
+
+Gets the user\textquotesingle{}s email.
+
+\begin{DoxyReturn}{Returns}
+The user\textquotesingle{}s email address.
+
+The email of the user. 
+\end{DoxyReturn}
+\Hypertarget{class_user_a5ed5896e712557778513601344ccc15b}\index{User@{User}!getm\_password@{getm\_password}}
+\index{getm\_password@{getm\_password}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getm\_password()}{getm\_password()}}
+{\footnotesize\ttfamily \label{class_user_a5ed5896e712557778513601344ccc15b} 
+QString User\+::getm\+\_\+password (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the password of the user. 
+
+Gets the user\textquotesingle{}s password.
+
+\begin{DoxyReturn}{Returns}
+The user\textquotesingle{}s password.
+
+The password of the user. 
+\end{DoxyReturn}
+\Hypertarget{class_user_a07bc979860693eebbe0220b9af4a8f7f}\index{User@{User}!getm\_username@{getm\_username}}
+\index{getm\_username@{getm\_username}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getm\_username()}{getm\_username()}}
+{\footnotesize\ttfamily \label{class_user_a07bc979860693eebbe0220b9af4a8f7f} 
+QString User\+::getm\+\_\+username (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the username of the user. 
+
+Gets the user\textquotesingle{}s username.
+
+\begin{DoxyReturn}{Returns}
+The user\textquotesingle{}s username.
+
+The username of the user. 
+\end{DoxyReturn}
+\Hypertarget{class_user_af11483139428a089a6ad3d2d3ed4395a}\index{User@{User}!saveUserInfo@{saveUserInfo}}
+\index{saveUserInfo@{saveUserInfo}!User@{User}}
+\doxysubsubsection{\texorpdfstring{saveUserInfo()}{saveUserInfo()}}
+{\footnotesize\ttfamily \label{class_user_af11483139428a089a6ad3d2d3ed4395a} 
+void User\+::save\+User\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Saves the user\textquotesingle{}s information to a persistent storage. 
+
+Saves the user information to a file.
+
+This method writes the user\textquotesingle{}s email, username, password, and user type to a designated file. If the directory doesn\textquotesingle{}t exist, it creates it before saving the file. Check and create the directory if it doesn\textquotesingle{}t exist.
+
+Open the file in append mode and write user information.\Hypertarget{class_user_a7bb6c398712e94bab86ba05101081665}\index{User@{User}!setm\_password@{setm\_password}}
+\index{setm\_password@{setm\_password}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setm\_password()}{setm\_password()}}
+{\footnotesize\ttfamily \label{class_user_a7bb6c398712e94bab86ba05101081665} 
+void User\+::setm\+\_\+password (\begin{DoxyParamCaption}\item[{const QString \&}]{password}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the password of the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em password} & The new password. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_abd69b8e86000ded84c7c0769d08a40fd}\index{User@{User}!setm\_username@{setm\_username}}
+\index{setm\_username@{setm\_username}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setm\_username()}{setm\_username()}}
+{\footnotesize\ttfamily \label{class_user_abd69b8e86000ded84c7c0769d08a40fd} 
+void User\+::setm\+\_\+username (\begin{DoxyParamCaption}\item[{const QString \&}]{username}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the username of the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The new username. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_a4af75e75cf3124469909a70f0434c759}\index{User@{User}!setm\_userType@{setm\_userType}}
+\index{setm\_userType@{setm\_userType}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setm\_userType()}{setm\_userType()}}
+{\footnotesize\ttfamily \label{class_user_a4af75e75cf3124469909a70f0434c759} 
+void User\+::setm\+\_\+user\+Type (\begin{DoxyParamCaption}\item[{const QString \&}]{user\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Sets the user type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Type} & The type of user (e.\+g., admin, member).\\
+\hline
+\end{DoxyParams}
+Updates the user type with the provided value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Type} & The new user type to be set. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{class_user_addc0376a80f4c403a47c596aa30fe6ec}\index{User@{User}!bookManager@{bookManager}}
+\index{bookManager@{bookManager}!User@{User}}
+\doxysubsubsection{\texorpdfstring{bookManager}{bookManager}}
+{\footnotesize\ttfamily \label{class_user_addc0376a80f4c403a47c596aa30fe6ec} 
+\mbox{\hyperlink{class_book___management__f_user}{Book\+\_\+\+Management\+\_\+f\+User}}\& User\+::book\+Manager}
+
+
+
+Reference to the book management system for the user. 
+
+\Hypertarget{class_user_a3d95e16e134a33bb9e37f337692485e6}\index{User@{User}!borrowedBooks@{borrowedBooks}}
+\index{borrowedBooks@{borrowedBooks}!User@{User}}
+\doxysubsubsection{\texorpdfstring{borrowedBooks}{borrowedBooks}}
+{\footnotesize\ttfamily \label{class_user_a3d95e16e134a33bb9e37f337692485e6} 
+std\+::vector$<$\mbox{\hyperlink{class_library___database}{Library\+\_\+\+Database}}$>$ User\+::borrowed\+Books}
+
+
+
+List of books borrowed by the user. 
+
+\Hypertarget{class_user_aff35a1574f0747d3af554eb75c2847ed}\index{User@{User}!library@{library}}
+\index{library@{library}!User@{User}}
+\doxysubsubsection{\texorpdfstring{library}{library}}
+{\footnotesize\ttfamily \label{class_user_aff35a1574f0747d3af554eb75c2847ed} 
+\mbox{\hyperlink{class_library}{Library}} User\+::library}
+
+
+
+Reference to the library instance associated with the user. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{user_8h}{user.\+h}}\item 
+\mbox{\hyperlink{user_8cpp}{user.\+cpp}}\end{DoxyCompactItemize}

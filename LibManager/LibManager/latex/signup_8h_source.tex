@@ -1,0 +1,43 @@
+\doxysection{signup.\+h}
+\hypertarget{signup_8h_source}{}\label{signup_8h_source}\mbox{\hyperlink{signup_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SIGNUP\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SIGNUP\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{user_8h}{user.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{book__management__fuser_8h}{book\_management\_fuser.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sign_up}{SignUp}};}
+\DoxyCodeLine{00015\ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sign_up}{SignUp}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_sign_up_ae87a848743877522219f3de0e1ed65a4}{SignUp}}(QWidget\ *parent,\ \mbox{\hyperlink{class_book___management__f_user}{Book\_Management\_fUser}}\&\ bookManager);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_sign_up_a361ad19f46cd8a70d0f661a841e3a63e}{\string~SignUp}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_signupButton\_clicked();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_user\_Button\_clicked();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_admin\_Button\_clicked();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_Back\_Button\_clicked();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00060\ \ \ \ \ Ui::SignUp\ *ui;\ }
+\DoxyCodeLine{00061\ \ \ \ \ QPushButton\ *adminButton;\ }
+\DoxyCodeLine{00062\ \ \ \ \ QPushButton\ *userButton;\ }
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_book___management__f_user}{Book\_Management\_fUser}}\&\ bookManager;\ }
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SIGNUP\_H}}
+
+\end{DoxyCode}

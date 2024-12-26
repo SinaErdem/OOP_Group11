@@ -1,0 +1,80 @@
+\doxysection{Admin Class Reference}
+\hypertarget{class_admin}{}\label{class_admin}\index{Admin@{Admin}}
+
+
+Represents an administrator user in the library management system.  
+
+
+
+
+{\ttfamily \#include $<$admin.\+h$>$}
+
+
+
+Collaboration diagram for Admin\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_admin_a9dfaf9fb8975f475b4c10444523f407e}{Admin}} (const QString \&email, const QString \&username, const QString \&password)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_admin}{Admin} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_admin_abfafe3f2d054c54deb4b0dda5fcd9507}{save\+User\+Info}} () const
+\begin{DoxyCompactList}\small\item\em Saves the admin\textquotesingle{}s information to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_book___management__f_admin}{Book\+\_\+\+Management\+\_\+f\+Admin}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_admin_a09e01ee1a3c5c43ad67334f009d16d09}{book\+\_\+management\+\_\+f\+Admin}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an administrator user in the library management system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_admin_a9dfaf9fb8975f475b4c10444523f407e}\index{Admin@{Admin}!Admin@{Admin}}
+\index{Admin@{Admin}!Admin@{Admin}}
+\doxysubsubsection{\texorpdfstring{Admin()}{Admin()}}
+{\footnotesize\ttfamily \label{class_admin_a9dfaf9fb8975f475b4c10444523f407e} 
+Admin\+::\+Admin (\begin{DoxyParamCaption}\item[{const QString \&}]{email}{, }\item[{const QString \&}]{username}{, }\item[{const QString \&}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_admin}{Admin} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & The email of the admin. \\
+\hline
+{\em username} & The username of the admin. \\
+\hline
+{\em password} & The password of the admin. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_admin_abfafe3f2d054c54deb4b0dda5fcd9507}\index{Admin@{Admin}!saveUserInfo@{saveUserInfo}}
+\index{saveUserInfo@{saveUserInfo}!Admin@{Admin}}
+\doxysubsubsection{\texorpdfstring{saveUserInfo()}{saveUserInfo()}}
+{\footnotesize\ttfamily \label{class_admin_abfafe3f2d054c54deb4b0dda5fcd9507} 
+void Admin\+::save\+User\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Saves the admin\textquotesingle{}s information to a file. 
+
+This function writes the admin\textquotesingle{}s email, username, password, and user type to a file located at "{}\+C\+:/\+Lib\+Manager/\+Lib\+Manager/\+LBResources/users.\+txt"{}. It ensures the directory exists before attempting to write the file. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{class_admin_a09e01ee1a3c5c43ad67334f009d16d09}\index{Admin@{Admin}!book\_management\_fAdmin@{book\_management\_fAdmin}}
+\index{book\_management\_fAdmin@{book\_management\_fAdmin}!Admin@{Admin}}
+\doxysubsubsection{\texorpdfstring{book\_management\_fAdmin}{book\_management\_fAdmin}}
+{\footnotesize\ttfamily \label{class_admin_a09e01ee1a3c5c43ad67334f009d16d09} 
+\mbox{\hyperlink{class_book___management__f_admin}{Book\+\_\+\+Management\+\_\+f\+Admin}}\texorpdfstring{$\ast$}{*} Admin\+::book\+\_\+management\+\_\+f\+Admin}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{admin_8h}{admin.\+h}}\item 
+\mbox{\hyperlink{admin_8cpp}{admin.\+cpp}}\end{DoxyCompactItemize}
