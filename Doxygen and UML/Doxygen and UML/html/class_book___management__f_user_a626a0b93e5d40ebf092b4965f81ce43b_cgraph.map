@@ -1,0 +1,7 @@
+<map id="Book_Management_fUser::barrowBook" name="Book_Management_fUser::barrowBook">
+<area shape="rect" id="Node000001" title="Borrows a book from the library." alt="" coords="5,23,178,65"/>
+<area shape="rect" id="Node000002" href="$class_library___database.html#a356673ecbee076bf5da60b63543dd415" title="Retrieves the number of available copies." alt="" coords="226,5,421,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,32,210,28,210,34,178,37"/>
+<area shape="rect" id="Node000003" href="$class_library___database.html#a4e8d496e6bcebd3e85b790eb9be04358" title="Sets the number of available copies." alt="" coords="226,56,421,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="178,51,210,54,210,60,178,56"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Book_Management_fUser::searchBookByAuthor" name="Book_Management_fUser::searchBookByAuthor">
+<area shape="rect" id="Node000001" title="Searches for books by their author." alt="" coords="5,5,178,48"/>
+<area shape="rect" id="Node000002" href="$class_library.html#a828b028b352561dd1c8c0836e09b3a42" title="Retrieves all books in the library." alt="" coords="226,13,344,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,24,210,24,210,29,178,29"/>
+</map>

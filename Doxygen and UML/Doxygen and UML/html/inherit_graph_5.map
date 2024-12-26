@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,56,74,83"/>
+<area shape="rect" id="Node000001" href="$class_admin_dashboard.html" title="The AdminDashboard class provides the interface for administrative actions." alt="" coords="122,5,243,32"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="87,50,142,30,143,35,89,55"/>
+<area shape="rect" id="Node000002" href="$class_sign_up.html" title="Provides functionality for user registration." alt="" coords="150,56,214,83"/>
+<area shape="poly" id="edge3_Node000000_Node000002" title=" " alt="" coords="89,67,150,67,150,72,89,72"/>
+<area shape="rect" id="Node000003" href="$class_user_dashboard.html" title="Provides functionality for the user&#39;s dashboard, including viewing, borrowing, and returning books." alt="" coords="126,107,238,133"/>
+<area shape="poly" id="edge4_Node000000_Node000003" title=" " alt="" coords="89,84,143,104,142,109,87,89"/>
+</map>

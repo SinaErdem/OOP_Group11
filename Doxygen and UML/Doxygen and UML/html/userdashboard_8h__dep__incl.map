@@ -1,0 +1,12 @@
+<map id="userdashboard.h" name="userdashboard.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="87,5,204,32"/>
+<area shape="rect" id="Node000002" href="$authscreen_8cpp.html" title="Implementation of the AuthScreen class for user authentication." alt="" coords="5,155,116,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,44,103,61,88,81,72,120,65,155,60,154,67,119,84,79,99,58,116,40"/>
+<area shape="rect" id="Node000003" href="$authscreen_8h.html" title=" " alt="" coords="98,80,194,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,48,148,80,143,80,143,48"/>
+<area shape="rect" id="Node000005" href="$userdashboard_8cpp.html" title=" " alt="" coords="218,80,349,107"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="184,37,260,77,258,82,182,42"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="121,119,77,156,73,152,118,115"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title=" " alt="" coords="139,155,214,181"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="160,120,174,153,169,155,155,122"/>
+</map>

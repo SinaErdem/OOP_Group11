@@ -1,0 +1,8 @@
+<map id="User" name="User">
+<area shape="rect" id="Node000001" title="Represents a user in the library management system." alt="" coords="5,608,218,1040"/>
+<area shape="rect" id="Node000002" href="$class_library.html" title="Manages a collection of books in the library." alt="" coords="24,5,199,128"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,128,105,192,102,396,105,591,100,591,96,396,100,192,104,128"/>
+<area shape="rect" id="Node000003" href="$class_book___management__f_user.html" title="Provides book management functionalities for regular users." alt="" coords="162,192,345,544"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="143,127,166,176,161,178,138,129"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="201,545,186,593,181,591,196,543"/>
+</map>

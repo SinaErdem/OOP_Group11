@@ -1,0 +1,256 @@
+\doxysection{Book\+\_\+\+Management\+\_\+f\+User Class Reference}
+\hypertarget{class_book___management__f_user}{}\label{class_book___management__f_user}\index{Book\_Management\_fUser@{Book\_Management\_fUser}}
+
+
+Provides book management functionalities for regular users.  
+
+
+
+
+{\ttfamily \#include $<$book\+\_\+management\+\_\+fuser.\+h$>$}
+
+
+
+Collaboration diagram for Book\+\_\+\+Management\+\_\+f\+User\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{class_book___management__f_user__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_book___management__f_user_a63777416760b9ec29df4a2e441d43898}{Book\+\_\+\+Management\+\_\+f\+User}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_book___management__f_user_a388b4c5d2fca4d5ed9b3a45bc1d6c11d}{Book\+\_\+\+Management\+\_\+f\+User}} (\mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*}user)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_book___management__f_user}{Book\+\_\+\+Management\+\_\+f\+User} object with a user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_book___management__f_user_a1ab3abf8e380a5096a6c83aa073a6629}{see\+All\+Books}} ()
+\begin{DoxyCompactList}\small\item\em Allows a user to see all available books in the library. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_book___management__f_user_a57e77b39e3bf31570a8efebde6d50c86}{search\+Book\+By\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Searches for a book by its name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_book___management__f_user_a7da932cc037c5f03c063289cff6d1ebe}{search\+Book\+By\+Author}} (const std\+::string \&author)
+\begin{DoxyCompactList}\small\item\em Searches for books by their author. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_book___management__f_user_a3831eb0b156af9cf9c09566eb5a2904f}{search\+Book\+By\+ISBN}} (const std\+::string \&isbn)
+\begin{DoxyCompactList}\small\item\em Searches for a book by its ISBN. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{class_book___management__f_user_a626a0b93e5d40ebf092b4965f81ce43b}{barrow\+Book}} (\mbox{\hyperlink{class_library___database}{Library\+\_\+\+Database}} \&book)
+\begin{DoxyCompactList}\small\item\em Borrows a book from the library. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_book___management__f_user_ae4fc75f93bbf4ed6f7e4b12d9a16664b}{return\+Book}} (\mbox{\hyperlink{class_library___database}{Library\+\_\+\+Database}} \&book)
+\begin{DoxyCompactList}\small\item\em Returns a borrowed book to the library. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_book___management__f_user_ab69508893253076cad04f3933b24fa45}{list\+Borrowed\+Books}} () const
+\begin{DoxyCompactList}\small\item\em Lists all books borrowed by the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_library}{Library}} \mbox{\hyperlink{class_book___management__f_user_a19031279a777b93f1233ee636ac009bc}{library}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_library}{Library} instance for managing books. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides book management functionalities for regular users. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_book___management__f_user_a63777416760b9ec29df4a2e441d43898}\index{Book\_Management\_fUser@{Book\_Management\_fUser}!Book\_Management\_fUser@{Book\_Management\_fUser}}
+\index{Book\_Management\_fUser@{Book\_Management\_fUser}!Book\_Management\_fUser@{Book\_Management\_fUser}}
+\doxysubsubsection{\texorpdfstring{Book\_Management\_fUser()}{Book\_Management\_fUser()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_book___management__f_user_a63777416760b9ec29df4a2e441d43898} 
+Book\+\_\+\+Management\+\_\+f\+User\+::\+Book\+\_\+\+Management\+\_\+f\+User (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\Hypertarget{class_book___management__f_user_a388b4c5d2fca4d5ed9b3a45bc1d6c11d}\index{Book\_Management\_fUser@{Book\_Management\_fUser}!Book\_Management\_fUser@{Book\_Management\_fUser}}
+\index{Book\_Management\_fUser@{Book\_Management\_fUser}!Book\_Management\_fUser@{Book\_Management\_fUser}}
+\doxysubsubsection{\texorpdfstring{Book\_Management\_fUser()}{Book\_Management\_fUser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_book___management__f_user_a388b4c5d2fca4d5ed9b3a45bc1d6c11d} 
+Book\+\_\+\+Management\+\_\+f\+User\+::\+Book\+\_\+\+Management\+\_\+f\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*}}]{user}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_book___management__f_user}{Book\+\_\+\+Management\+\_\+f\+User} object with a user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & Pointer to the user managing books. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_book___management__f_user_a626a0b93e5d40ebf092b4965f81ce43b}\index{Book\_Management\_fUser@{Book\_Management\_fUser}!barrowBook@{barrowBook}}
+\index{barrowBook@{barrowBook}!Book\_Management\_fUser@{Book\_Management\_fUser}}
+\doxysubsubsection{\texorpdfstring{barrowBook()}{barrowBook()}}
+{\footnotesize\ttfamily \label{class_book___management__f_user_a626a0b93e5d40ebf092b4965f81ce43b} 
+long Book\+\_\+\+Management\+\_\+f\+User\+::barrow\+Book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_library___database}{Library\+\_\+\+Database}} \&}]{book}{}\end{DoxyParamCaption})}
+
+
+
+Borrows a book from the library. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em book} & The book to be borrowed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A unique code for the borrowed book. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the book is out of stock. \\
+\hline
+\end{DoxyExceptions}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_book___management__f_user_a626a0b93e5d40ebf092b4965f81ce43b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_book___management__f_user_ab69508893253076cad04f3933b24fa45}\index{Book\_Management\_fUser@{Book\_Management\_fUser}!listBorrowedBooks@{listBorrowedBooks}}
+\index{listBorrowedBooks@{listBorrowedBooks}!Book\_Management\_fUser@{Book\_Management\_fUser}}
+\doxysubsubsection{\texorpdfstring{listBorrowedBooks()}{listBorrowedBooks()}}
+{\footnotesize\ttfamily \label{class_book___management__f_user_ab69508893253076cad04f3933b24fa45} 
+void Book\+\_\+\+Management\+\_\+f\+User\+::list\+Borrowed\+Books (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Lists all books borrowed by the user. 
+
+\Hypertarget{class_book___management__f_user_ae4fc75f93bbf4ed6f7e4b12d9a16664b}\index{Book\_Management\_fUser@{Book\_Management\_fUser}!returnBook@{returnBook}}
+\index{returnBook@{returnBook}!Book\_Management\_fUser@{Book\_Management\_fUser}}
+\doxysubsubsection{\texorpdfstring{returnBook()}{returnBook()}}
+{\footnotesize\ttfamily \label{class_book___management__f_user_ae4fc75f93bbf4ed6f7e4b12d9a16664b} 
+void Book\+\_\+\+Management\+\_\+f\+User\+::return\+Book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_library___database}{Library\+\_\+\+Database}} \&}]{book}{}\end{DoxyParamCaption})}
+
+
+
+Returns a borrowed book to the library. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em book} & The book to be returned. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the book is not found in the user\textquotesingle{}s borrowed list. \\
+\hline
+\end{DoxyExceptions}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_book___management__f_user_ae4fc75f93bbf4ed6f7e4b12d9a16664b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_book___management__f_user_a7da932cc037c5f03c063289cff6d1ebe}\index{Book\_Management\_fUser@{Book\_Management\_fUser}!searchBookByAuthor@{searchBookByAuthor}}
+\index{searchBookByAuthor@{searchBookByAuthor}!Book\_Management\_fUser@{Book\_Management\_fUser}}
+\doxysubsubsection{\texorpdfstring{searchBookByAuthor()}{searchBookByAuthor()}}
+{\footnotesize\ttfamily \label{class_book___management__f_user_a7da932cc037c5f03c063289cff6d1ebe} 
+void Book\+\_\+\+Management\+\_\+f\+User\+::search\+Book\+By\+Author (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{author}{}\end{DoxyParamCaption})}
+
+
+
+Searches for books by their author. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em author} & The author\textquotesingle{}s name. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_book___management__f_user_a7da932cc037c5f03c063289cff6d1ebe_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_book___management__f_user_a3831eb0b156af9cf9c09566eb5a2904f}\index{Book\_Management\_fUser@{Book\_Management\_fUser}!searchBookByISBN@{searchBookByISBN}}
+\index{searchBookByISBN@{searchBookByISBN}!Book\_Management\_fUser@{Book\_Management\_fUser}}
+\doxysubsubsection{\texorpdfstring{searchBookByISBN()}{searchBookByISBN()}}
+{\footnotesize\ttfamily \label{class_book___management__f_user_a3831eb0b156af9cf9c09566eb5a2904f} 
+void Book\+\_\+\+Management\+\_\+f\+User\+::search\+Book\+By\+ISBN (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{isbn}{}\end{DoxyParamCaption})}
+
+
+
+Searches for a book by its ISBN. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em isbn} & The ISBN of the book. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_book___management__f_user_a3831eb0b156af9cf9c09566eb5a2904f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_book___management__f_user_a57e77b39e3bf31570a8efebde6d50c86}\index{Book\_Management\_fUser@{Book\_Management\_fUser}!searchBookByName@{searchBookByName}}
+\index{searchBookByName@{searchBookByName}!Book\_Management\_fUser@{Book\_Management\_fUser}}
+\doxysubsubsection{\texorpdfstring{searchBookByName()}{searchBookByName()}}
+{\footnotesize\ttfamily \label{class_book___management__f_user_a57e77b39e3bf31570a8efebde6d50c86} 
+void Book\+\_\+\+Management\+\_\+f\+User\+::search\+Book\+By\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Searches for a book by its name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the book to search for. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_book___management__f_user_a57e77b39e3bf31570a8efebde6d50c86_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_book___management__f_user_a1ab3abf8e380a5096a6c83aa073a6629}\index{Book\_Management\_fUser@{Book\_Management\_fUser}!seeAllBooks@{seeAllBooks}}
+\index{seeAllBooks@{seeAllBooks}!Book\_Management\_fUser@{Book\_Management\_fUser}}
+\doxysubsubsection{\texorpdfstring{seeAllBooks()}{seeAllBooks()}}
+{\footnotesize\ttfamily \label{class_book___management__f_user_a1ab3abf8e380a5096a6c83aa073a6629} 
+void Book\+\_\+\+Management\+\_\+f\+User\+::see\+All\+Books (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Allows a user to see all available books in the library. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_book___management__f_user_a1ab3abf8e380a5096a6c83aa073a6629_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_book___management__f_user_a19031279a777b93f1233ee636ac009bc}\index{Book\_Management\_fUser@{Book\_Management\_fUser}!library@{library}}
+\index{library@{library}!Book\_Management\_fUser@{Book\_Management\_fUser}}
+\doxysubsubsection{\texorpdfstring{library}{library}}
+{\footnotesize\ttfamily \label{class_book___management__f_user_a19031279a777b93f1233ee636ac009bc} 
+\mbox{\hyperlink{class_library}{Library}} Book\+\_\+\+Management\+\_\+f\+User\+::library}
+
+
+
+\doxylink{class_library}{Library} instance for managing books. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{book__management__fuser_8h}{book\+\_\+management\+\_\+fuser.\+h}}\item 
+\mbox{\hyperlink{book__management__fuser_8cpp}{book\+\_\+management\+\_\+fuser.\+cpp}}\end{DoxyCompactItemize}

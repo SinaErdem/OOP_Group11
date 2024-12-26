@@ -1,0 +1,5 @@
+<map id="UserDashboard::displayBooks" name="UserDashboard::displayBooks">
+<area shape="rect" id="Node000001" title="Displays all books in the library." alt="" coords="263,13,461,40"/>
+<area shape="rect" id="Node000002" href="$class_user_dashboard.html#a48c41da34e6e1a2d582407568548fde8" title="Toggles the visibility of the book list." alt="" coords="5,5,215,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="247,29,215,29,215,24,247,24"/>
+</map>
