@@ -9,7 +9,6 @@ One Hundred Years of Solitude, Gabriel García Márquez, Magical Realism, 978006
 The Brothers Karamazov, Fyodor Dostoyevsky, Novel, 9780140449242, 3
 War and Peace, Leo Tolstoy, Historical Fiction, 9780143039999, 1
 Anna Karenina, Leo Tolstoy, Novel, 9780143035008, 2
-The Picture of Dorian Gray, Oscar Wilde, Novel, 9780141439570, 3
 Wuthering Heights, Emily Brontë, Novel, 9780141439570, 3
 Crime and Punishment, Fyodor Dostoyevsky, Novel, 9780140449136, 3
 Les Misérables, Victor Hugo, Historical Fiction, 9780307388675, 3
@@ -88,10 +87,10 @@ Rosencrantz and Guildenstern Are Dead, Tom Stoppard, Play, 9780140245173, 1
 A Raisin in the Sun, Lorraine Hansberry, Play, 9780143105822, 2
 The Vagina Monologues, Eve Ensler, Play, 9781583226781, 1
 The Revolution Betrayed, Leon Trotsky, Non-fiction, 9780850367436, 2
-The Second Sex, Simone de Beauvoir, Non-fiction, 9780679724503, 3
 The Feminine Mystique, Betty Friedan, Non-fiction, 9780393322576, 1
 Sapiens, Yuval Noah Harari, Non-fiction, 9780062316097, 2
 The Immortal Life of Henrietta Lacks, Rebecca Skloot, Biography, 9781400052172, 2
 The Diary of a Young Girl, Anne Frank, Memoir, 9780553296983, 3
 The Glass Castle, Jeanette Walls, Memoir, 9780743247542, 1
-Becoming, Michelle Obama, Memoir, 9781524763138, 3
+Hadji Murat, Lev Tolstoy, Novel, 217125987, 3
+David Copperfield, Charles Dickens, Novel, 5937139719, 3

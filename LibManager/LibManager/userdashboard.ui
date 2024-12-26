@@ -236,7 +236,7 @@ QPushButton:hover {
 </string>
    </property>
    <property name="text">
-    <string>Borrow Book</string>
+    <string>Search</string>
    </property>
   </widget>
   <widget class="QTableWidget" name="barrowedbooks">

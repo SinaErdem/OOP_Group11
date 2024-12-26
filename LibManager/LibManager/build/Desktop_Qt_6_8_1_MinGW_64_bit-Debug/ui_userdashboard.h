@@ -164,7 +164,7 @@ public:
         showBorrowedBooksButton->setText(QCoreApplication::translate("UserDashboard", "Borrowed Books", nullptr));
         allBackground->setText(QString());
         filterComboBox->setPlaceholderText(QString());
-        findButton->setText(QCoreApplication::translate("UserDashboard", "Borrow Book", nullptr));
+        findButton->setText(QCoreApplication::translate("UserDashboard", "Search", nullptr));
     } // retranslateUi
 
 };

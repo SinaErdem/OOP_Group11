@@ -4,3 +4,7 @@ a@gmail.com,araba11,araba111,Admin
 ali@gmail.com,ali,123456ali,
 xd123,123456789aa,User
 m.sefa.soysal@gmail.com,mss12345,123456asd,User
+mustafasefa@gmail.com,mss123,123456asd,User
+m.sefa.soysal@gmail.com,124msss,123456asd,Admin
+m.sefa.soysal@gmail.com,mss123,123456asd,User
+qwerty@gmail.com,admin123,123456asd,Admin

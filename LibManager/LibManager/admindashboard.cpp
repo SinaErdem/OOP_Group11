@@ -74,7 +74,7 @@ void AdminDashboard::addBooks()
     }
 
     QTextStream out(&file);
-    out << bookName << "," << authorName << "," << genre << "," << isbn << "," << number << "\n";
+    out << bookName << ", " << authorName << ", " << genre << ", " << isbn << ", " << number << "\n";
     file.close();
 
     //QMessageBox::information(this, "Success", "Book added successfully!");
