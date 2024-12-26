@@ -1,0 +1,60 @@
+\doxysection{userdashboard.\+h}
+\hypertarget{userdashboard_8h_source}{}\label{userdashboard_8h_source}\mbox{\hyperlink{userdashboard_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ USERDASHBOARD\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ USERDASHBOARD\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{user_8h}{user.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QLineEdit>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QComboBox>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QListWidget>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QTimer>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{library__database_8h}{library\_database.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{book__management__fuser_8h}{book\_management\_fuser.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_user_dashboard}{UserDashboard}};}
+\DoxyCodeLine{00020\ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_user_dashboard}{UserDashboard}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_user_dashboard_af0b56ae5e5fea8eec6dd99aacd5bd0a3}{UserDashboard}}(\mbox{\hyperlink{class_user}{User}}\&\ currentUser,\ \mbox{\hyperlink{class_book___management__f_user}{Book\_Management\_fUser}}\&\ bookManager,\ QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_user_dashboard_a9c18a7bbe0af2ecb58e2e02fab8ce965}{\string~UserDashboard}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_user_dashboard_a6905b1db7a16ff781cdc7bd714ea1f1e}{displayBooks}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_user_dashboard_a48c41da34e6e1a2d582407568548fde8}{on\_showBooksButton\_clicked}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_BookList\_button\_clicked();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ borrowBook();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_findButton\_toggled(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_bookReturnTimeout();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_showBorrowedBooksButton\_clicked();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_returnBookClicked();}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00088\ \ \ \ \ QTimer*\ borrowTimer;\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ bookBorrowDuration\ =\ 30;\ }
+\DoxyCodeLine{00090\ \ \ \ \ Ui::UserDashboard\ *ui;\ }
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{class_user}{User}}\&\ currentUser;\ }
+\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{class_book___management__f_user}{Book\_Management\_fUser}}\&\ bookManager;\ }
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ populateResults(std::vector<Library\_Database>\&\ results);}
+\DoxyCodeLine{00099\ \};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ USERDASHBOARD\_H}}
+
+\end{DoxyCode}

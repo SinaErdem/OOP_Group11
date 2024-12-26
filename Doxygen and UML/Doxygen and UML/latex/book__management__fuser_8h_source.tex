@@ -1,0 +1,46 @@
+\doxysection{book\+\_\+management\+\_\+fuser.\+h}
+\hypertarget{book__management__fuser_8h_source}{}\label{book__management__fuser_8h_source}\mbox{\hyperlink{book__management__fuser_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BOOK\_MANAGEMENT\_FUSER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BOOK\_MANAGEMENT\_FUSER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{library_8h}{library.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{user_8h}{user.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{librarymanagement_8h}{librarymanagement.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cctype>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_book___management__f_user}{Book\_Management\_fUser}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ barrowingTime\ =\ 15;\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{long}\ code;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_user}{User}}*\ user;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_library}{Library}}\ \mbox{\hyperlink{class_book___management__f_user_a19031279a777b93f1233ee636ac009bc}{library}};\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_book___management__f_user_a63777416760b9ec29df4a2e441d43898}{Book\_Management\_fUser}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_book___management__f_user_a63777416760b9ec29df4a2e441d43898}{Book\_Management\_fUser}}(\mbox{\hyperlink{class_user}{User}}*\ user);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_book___management__f_user_a1ab3abf8e380a5096a6c83aa073a6629}{seeAllBooks}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_book___management__f_user_a57e77b39e3bf31570a8efebde6d50c86}{searchBookByName}}(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_book___management__f_user_a7da932cc037c5f03c063289cff6d1ebe}{searchBookByAuthor}}(\textcolor{keyword}{const}\ std::string\&\ author);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_book___management__f_user_a3831eb0b156af9cf9c09566eb5a2904f}{searchBookByISBN}}(\textcolor{keyword}{const}\ std::string\&\ isbn);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_book___management__f_user_a626a0b93e5d40ebf092b4965f81ce43b}{barrowBook}}(\mbox{\hyperlink{class_library___database}{Library\_Database}}\&\ book);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_book___management__f_user_ae4fc75f93bbf4ed6f7e4b12d9a16664b}{returnBook}}(\mbox{\hyperlink{class_library___database}{Library\_Database}}\&\ book);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_book___management__f_user_ab69508893253076cad04f3933b24fa45}{listBorrowedBooks}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{class_book___management__f_user}{Book\_Management\_fUser}}\ \mbox{\hyperlink{book__management__fuser_8h_abc92bd41dc69b4cb08a7c0aa424ce0bb}{gbookManager}};\ }
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BOOK\_MANAGEMENT\_FUSER\_H}}
+
+\end{DoxyCode}

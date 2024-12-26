@@ -1,0 +1,37 @@
+<map id="signup.h" name="signup.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="136,5,206,32"/>
+<area shape="rect" id="Node000002" href="$user_8h.html" title="Defines the User class, which represents a user in the library system." alt="" coords="145,155,202,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,33,164,66,163,106,169,139,163,140,157,107,159,66,165,32"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="105,304,170,331"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="158,34,125,65,83,111,43,167,25,198,12,230,8,243,12,255,27,273,47,287,91,305,89,309,44,291,24,277,7,257,3,243,7,228,21,196,38,164,79,107,121,61,154,30"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="173,80,241,107"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="179,31,196,65,191,67,175,34"/>
+<area shape="rect" id="Node000012" href="$book__management__fuser_8h.html" title=" " alt="" coords="266,80,444,107"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="204,30,310,71,308,76,202,35"/>
+<area shape="rect" id="Node000003" href="$library_8h.html" title=" " alt="" coords="390,229,456,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="203,176,214,179,375,225,374,230,213,184,202,181"/>
+<area shape="rect" id="Node000005" href="$library__database_8h.html" title=" " alt="" coords="223,304,350,331"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="185,180,270,290,266,293,181,183"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="297,229,365,256"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="202,179,291,220,288,225,200,184"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="22,229,79,256"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="153,184,87,223,84,219,151,180"/>
+<area shape="rect" id="Node000009" href="$admin_8h.html" title=" " alt="" coords="104,229,171,256"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="170,183,153,216,148,214,165,181"/>
+<area shape="poly" id="edge11_Node000002_Node000010" title=" " alt="" coords="181,181,188,215,189,236,185,257,176,277,163,294,159,291,171,274,180,255,184,236,183,216,175,182"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="404,304,442,331"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="425,257,425,288,420,288,420,257"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="400,259,325,299,323,294,398,254"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="260,379,313,405"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="289,331,289,363,284,363,284,331"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="140,257,140,288,135,288,135,257"/>
+<area shape="poly" id="edge16_Node000012_Node000002" title=" " alt="" coords="324,110,217,152,215,147,322,105"/>
+<area shape="poly" id="edge15_Node000012_Node000003" title=" " alt="" coords="368,106,384,127,400,153,412,184,420,214,415,215,407,186,395,156,380,130,364,109"/>
+<area shape="rect" id="Node000013" href="$librarymanagement_8h.html" title=" " alt="" coords="460,155,602,181"/>
+<area shape="poly" id="edge17_Node000012_Node000013" title=" " alt="" coords="386,105,487,146,485,151,384,110"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="226,155,300,181"/>
+<area shape="poly" id="edge19_Node000012_Node000014" title=" " alt="" coords="340,109,292,147,289,143,337,105"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="325,155,385,181"/>
+<area shape="poly" id="edge20_Node000012_Node000015" title=" " alt="" coords="357,107,357,139,352,139,352,107"/>
+<area shape="poly" id="edge18_Node000013_Node000003" title=" " alt="" coords="513,184,456,222,453,218,511,180"/>
+</map>

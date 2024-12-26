@@ -1,0 +1,5 @@
+<map id="Library" name="Library">
+<area shape="rect" id="Node000001" title="Manages a collection of books in the library." alt="" coords="5,5,180,128"/>
+<area shape="rect" id="Node000002" href="$class_library_management.html" title="Extends the Library class to include additional management functionalities." alt="" coords="20,176,166,245"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,143,96,176,90,176,90,143"/>
+</map>

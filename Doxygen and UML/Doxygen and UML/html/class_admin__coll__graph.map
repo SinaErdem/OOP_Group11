@@ -1,0 +1,5 @@
+<map id="Admin" name="Admin">
+<area shape="rect" id="Node000001" title="Represents an administrator user in the library management system." alt="" coords="10,256,192,411"/>
+<area shape="rect" id="Node000002" href="$class_book___management__f_admin.html" title="Provides book and user management functionalities for administrators." alt="" coords="5,5,197,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,192,104,239,99,239,99,192"/>
+</map>

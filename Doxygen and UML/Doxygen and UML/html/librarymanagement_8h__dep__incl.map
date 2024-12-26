@@ -1,0 +1,33 @@
+<map id="librarymanagement.h" name="librarymanagement.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="460,5,602,32"/>
+<area shape="rect" id="Node000002" href="$book__management__fuser_8h.html" title=" " alt="" coords="346,80,524,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="504,44,453,82,450,77,501,39"/>
+<area shape="rect" id="Node000012" href="$librarymanagement_8cpp.html" title=" " alt="" coords="549,80,705,107"/>
+<area shape="poly" id="edge19_Node000001_Node000012" title=" " alt="" coords="561,39,612,77,609,82,558,44"/>
+<area shape="rect" id="Node000003" href="$authscreen_8h.html" title=" " alt="" coords="5,229,102,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="330,101,281,107,229,118,178,134,130,157,108,173,89,193,63,231,58,227,85,190,104,169,127,152,176,129,228,113,280,102,330,95"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html" title=" " alt="" coords="358,304,432,331"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="466,115,497,143,525,178,535,198,541,218,540,238,532,257,512,279,486,295,459,306,433,313,432,308,457,301,484,291,508,275,527,255,535,237,535,218,530,200,521,181,493,147,462,119"/>
+<area shape="rect" id="Node000006" href="$book__management__fuser_8cpp.html" title=" " alt="" coords="592,155,784,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="494,109,644,151,643,157,492,114"/>
+<area shape="rect" id="Node000007" href="$signup_8cpp.html" title=" " alt="" coords="433,229,517,256"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="445,121,474,228,469,230,440,123"/>
+<area shape="rect" id="Node000008" href="$signup_8h.html" title=" " alt="" coords="360,155,430,181"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="423,122,404,156,399,153,418,119"/>
+<area shape="rect" id="Node000009" href="$userdashboard_8cpp.html" title=" " alt="" coords="176,229,307,256"/>
+<area shape="poly" id="edge14_Node000002_Node000009" title=" " alt="" coords="405,118,350,157,258,231,254,227,347,153,402,113"/>
+<area shape="rect" id="Node000010" href="$user_8cpp.html" title=" " alt="" coords="808,155,880,181"/>
+<area shape="poly" id="edge13_Node000002_Node000010" title=" " alt="" coords="539,107,662,127,797,152,809,155,807,160,796,157,661,132,538,112"/>
+<area shape="rect" id="Node000011" href="$userdashboard_8h.html" title=" " alt="" coords="140,155,258,181"/>
+<area shape="poly" id="edge15_Node000002_Node000011" title=" " alt="" coords="380,114,241,157,239,151,379,109"/>
+<area shape="rect" id="Node000004" href="$authscreen_8cpp.html" title="Implementation of the AuthScreen class for user authentication." alt="" coords="84,304,194,331"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="81,264,126,302,122,306,78,268"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="117,255,358,306,357,311,116,260"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="380,196,355,228,320,258,290,275,257,289,195,308,194,303,256,284,288,271,317,254,351,225,376,193"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="398,197,398,304,392,304,392,197"/>
+<area shape="poly" id="edge11_Node000008_Node000007" title=" " alt="" coords="422,190,463,227,459,231,418,194"/>
+<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="355,191,270,231,267,226,353,186"/>
+<area shape="poly" id="edge17_Node000011_Node000003" title=" " alt="" coords="161,191,80,231,78,226,159,186"/>
+<area shape="poly" id="edge16_Node000011_Node000004" title=" " alt="" coords="185,196,167,230,153,271,144,305,139,303,148,269,162,228,180,193"/>
+<area shape="poly" id="edge18_Node000011_Node000009" title=" " alt="" coords="216,193,236,228,232,230,212,196"/>
+</map>

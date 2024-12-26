@@ -1,0 +1,46 @@
+\doxysection{library\+\_\+database.\+h}
+\hypertarget{library__database_8h_source}{}\label{library__database_8h_source}\mbox{\hyperlink{library__database_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LIBRARY\_DATABASE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LIBRARY\_DATABASE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_library___database}{Library\_Database}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ std::string\ name;\ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ std::string\ author;\ \ }
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ genre;\ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ std::string\ isbn;\ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ number;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_library___database_aa92918fa56bcbf0bfef414709e031502}{Library\_Database}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ std::string\&\ author,\ \textcolor{keyword}{const}\ std::string\&\ genre,\ \textcolor{keyword}{const}\ std::string\&\ isbn,\ \textcolor{keywordtype}{int}\ number);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_library___database_a356673ecbee076bf5da60b63543dd415}{getNumber}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_library___database_a4e8d496e6bcebd3e85b790eb9be04358}{setNumber}}(\textcolor{keywordtype}{int}\ num);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_library___database_ace6621bd95d01955aa7e35b20ed4b259}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_library___database}{Library\_Database}}\&\ other);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ std::string\ \mbox{\hyperlink{class_library___database_ad83d5073d749d833e09ae0aa664c9b39}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_library___database_a1d2a286660eb81d7680f24efffa2ce87}{setName}}(std::string\&\ n);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \ \ \ \ std::string\ \mbox{\hyperlink{class_library___database_ae10af6b6976b604e7a5ffc9d2d380a48}{getAuthor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_library___database_a8fc0471d1cb4bf96ffbac4a8ca667cf2}{setAuthor}}(std::string\&\ a);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00077\ \ \ \ \ std::string\ \mbox{\hyperlink{class_library___database_ae3fab38ec243f38c22fc704631232cbb}{getGenre}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_library___database_a983abab578595b81675082b039eddbbb}{setGenre}}(std::string\&\ g);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00089\ \ \ \ \ std::string\ \mbox{\hyperlink{class_library___database_acc83ff533b36b76a63fa06a3994a1443}{getIsbn}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_library___database_a0f04bad2fdf075f3e0d8d274272c005c}{setIsbn}}(std::string\&\ i);}
+\DoxyCodeLine{00096\ \};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ LIBRARY\_DATABASE\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,83 @@
+\doxysection{signup.\+cpp File Reference}
+\hypertarget{signup_8cpp}{}\label{signup_8cpp}\index{signup.cpp@{signup.cpp}}
+{\ttfamily \#include "{}signup.\+h"{}}\newline
+{\ttfamily \#include "{}book\+\_\+management\+\_\+fuser.\+h"{}}\newline
+{\ttfamily \#include "{}ui\+\_\+signup.\+h"{}}\newline
+{\ttfamily \#include $<$QMessage\+Box$>$}\newline
+{\ttfamily \#include $<$QFile$>$}\newline
+{\ttfamily \#include $<$QString$>$}\newline
+{\ttfamily \#include $<$QRegular\+Expression$>$}\newline
+{\ttfamily \#include $<$QFile\+Info$>$}\newline
+{\ttfamily \#include $<$QVBox\+Layout$>$}\newline
+{\ttfamily \#include $<$QText\+Stream$>$}\newline
+{\ttfamily \#include $<$QDir$>$}\newline
+{\ttfamily \#include "{}admin.\+h"{}}\newline
+{\ttfamily \#include "{}user.\+h"{}}\newline
+Include dependency graph for signup.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{signup_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{signup_8cpp_ae03ccce1b56aae473b335d09fdd7b679}{is\+Valid\+Email}} (const QString \&email)
+\begin{DoxyCompactList}\small\item\em Validates the format of an email address. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{signup_8cpp_a9ad8c0b0a4492cf4bd70cb2a082a75cd}{is\+Valid\+Password}} (const QString \&password)
+\begin{DoxyCompactList}\small\item\em Validates the password complexity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{signup_8cpp_a037b828374894d92f2279ff56bd124ae}{selected\+User\+Type}} = -\/1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{signup_8cpp_ae03ccce1b56aae473b335d09fdd7b679}\index{signup.cpp@{signup.cpp}!isValidEmail@{isValidEmail}}
+\index{isValidEmail@{isValidEmail}!signup.cpp@{signup.cpp}}
+\doxysubsubsection{\texorpdfstring{isValidEmail()}{isValidEmail()}}
+{\footnotesize\ttfamily \label{signup_8cpp_ae03ccce1b56aae473b335d09fdd7b679} 
+bool is\+Valid\+Email (\begin{DoxyParamCaption}\item[{const QString \&}]{email}{}\end{DoxyParamCaption})}
+
+
+
+Validates the format of an email address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & The email address to validate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the email is valid, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{signup_8cpp_a9ad8c0b0a4492cf4bd70cb2a082a75cd}\index{signup.cpp@{signup.cpp}!isValidPassword@{isValidPassword}}
+\index{isValidPassword@{isValidPassword}!signup.cpp@{signup.cpp}}
+\doxysubsubsection{\texorpdfstring{isValidPassword()}{isValidPassword()}}
+{\footnotesize\ttfamily \label{signup_8cpp_a9ad8c0b0a4492cf4bd70cb2a082a75cd} 
+bool is\+Valid\+Password (\begin{DoxyParamCaption}\item[{const QString \&}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Validates the password complexity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em password} & The password to validate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the password meets the requirements, false otherwise. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{signup_8cpp_a037b828374894d92f2279ff56bd124ae}\index{signup.cpp@{signup.cpp}!selectedUserType@{selectedUserType}}
+\index{selectedUserType@{selectedUserType}!signup.cpp@{signup.cpp}}
+\doxysubsubsection{\texorpdfstring{selectedUserType}{selectedUserType}}
+{\footnotesize\ttfamily \label{signup_8cpp_a037b828374894d92f2279ff56bd124ae} 
+int selected\+User\+Type = -\/1}
+

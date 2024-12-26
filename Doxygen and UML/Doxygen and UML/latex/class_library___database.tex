@@ -1,0 +1,260 @@
+\doxysection{Library\+\_\+\+Database Class Reference}
+\hypertarget{class_library___database}{}\label{class_library___database}\index{Library\_Database@{Library\_Database}}
+
+
+Represents a book\textquotesingle{}s data in the library database.  
+
+
+
+
+{\ttfamily \#include $<$library\+\_\+database.\+h$>$}
+
+
+
+Collaboration diagram for Library\+\_\+\+Database\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_library___database__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_library___database_aa92918fa56bcbf0bfef414709e031502}{Library\+\_\+\+Database}} (const std\+::string \&name, const std\+::string \&author, const std\+::string \&genre, const std\+::string \&isbn, int number)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_library___database}{Library\+\_\+\+Database} object with specified attributes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_library___database_a356673ecbee076bf5da60b63543dd415}{get\+Number}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the number of available copies. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library___database_a4e8d496e6bcebd3e85b790eb9be04358}{set\+Number}} (int num)
+\begin{DoxyCompactList}\small\item\em Sets the number of available copies. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_library___database_ace6621bd95d01955aa7e35b20ed4b259}{operator==}} (const \mbox{\hyperlink{class_library___database}{Library\+\_\+\+Database}} \&other)
+\begin{DoxyCompactList}\small\item\em Compares two \doxylink{class_library___database}{Library\+\_\+\+Database} objects for equality. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_library___database_ad83d5073d749d833e09ae0aa664c9b39}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the book. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library___database_a1d2a286660eb81d7680f24efffa2ce87}{set\+Name}} (std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em Sets the name of the book. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_library___database_ae10af6b6976b604e7a5ffc9d2d380a48}{get\+Author}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the author of the book. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library___database_a8fc0471d1cb4bf96ffbac4a8ca667cf2}{set\+Author}} (std\+::string \&a)
+\begin{DoxyCompactList}\small\item\em Sets the author of the book. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_library___database_ae3fab38ec243f38c22fc704631232cbb}{get\+Genre}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the genre of the book. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library___database_a983abab578595b81675082b039eddbbb}{set\+Genre}} (std\+::string \&g)
+\begin{DoxyCompactList}\small\item\em Sets the genre of the book. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_library___database_acc83ff533b36b76a63fa06a3994a1443}{get\+Isbn}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the ISBN of the book. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library___database_a0f04bad2fdf075f3e0d8d274272c005c}{set\+Isbn}} (std\+::string \&i)
+\begin{DoxyCompactList}\small\item\em Sets the ISBN of the book. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a book\textquotesingle{}s data in the library database. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_library___database_aa92918fa56bcbf0bfef414709e031502}\index{Library\_Database@{Library\_Database}!Library\_Database@{Library\_Database}}
+\index{Library\_Database@{Library\_Database}!Library\_Database@{Library\_Database}}
+\doxysubsubsection{\texorpdfstring{Library\_Database()}{Library\_Database()}}
+{\footnotesize\ttfamily \label{class_library___database_aa92918fa56bcbf0bfef414709e031502} 
+Library\+\_\+\+Database\+::\+Library\+\_\+\+Database (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{const std\+::string \&}]{author}{, }\item[{const std\+::string \&}]{genre}{, }\item[{const std\+::string \&}]{isbn}{, }\item[{int}]{number}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_library___database}{Library\+\_\+\+Database} object with specified attributes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the book. \\
+\hline
+{\em author} & The author of the book. \\
+\hline
+{\em genre} & The genre of the book. \\
+\hline
+{\em isbn} & The ISBN of the book. \\
+\hline
+{\em number} & The number of copies available. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_library___database_ae10af6b6976b604e7a5ffc9d2d380a48}\index{Library\_Database@{Library\_Database}!getAuthor@{getAuthor}}
+\index{getAuthor@{getAuthor}!Library\_Database@{Library\_Database}}
+\doxysubsubsection{\texorpdfstring{getAuthor()}{getAuthor()}}
+{\footnotesize\ttfamily \label{class_library___database_ae10af6b6976b604e7a5ffc9d2d380a48} 
+std\+::string Library\+\_\+\+Database\+::get\+Author (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the author of the book. 
+
+\begin{DoxyReturn}{Returns}
+The author of the book. 
+\end{DoxyReturn}
+\Hypertarget{class_library___database_ae3fab38ec243f38c22fc704631232cbb}\index{Library\_Database@{Library\_Database}!getGenre@{getGenre}}
+\index{getGenre@{getGenre}!Library\_Database@{Library\_Database}}
+\doxysubsubsection{\texorpdfstring{getGenre()}{getGenre()}}
+{\footnotesize\ttfamily \label{class_library___database_ae3fab38ec243f38c22fc704631232cbb} 
+std\+::string Library\+\_\+\+Database\+::get\+Genre (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the genre of the book. 
+
+\begin{DoxyReturn}{Returns}
+The genre of the book. 
+\end{DoxyReturn}
+\Hypertarget{class_library___database_acc83ff533b36b76a63fa06a3994a1443}\index{Library\_Database@{Library\_Database}!getIsbn@{getIsbn}}
+\index{getIsbn@{getIsbn}!Library\_Database@{Library\_Database}}
+\doxysubsubsection{\texorpdfstring{getIsbn()}{getIsbn()}}
+{\footnotesize\ttfamily \label{class_library___database_acc83ff533b36b76a63fa06a3994a1443} 
+std\+::string Library\+\_\+\+Database\+::get\+Isbn (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the ISBN of the book. 
+
+\begin{DoxyReturn}{Returns}
+The ISBN of the book. 
+\end{DoxyReturn}
+\Hypertarget{class_library___database_ad83d5073d749d833e09ae0aa664c9b39}\index{Library\_Database@{Library\_Database}!getName@{getName}}
+\index{getName@{getName}!Library\_Database@{Library\_Database}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_library___database_ad83d5073d749d833e09ae0aa664c9b39} 
+std\+::string Library\+\_\+\+Database\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the name of the book. 
+
+\begin{DoxyReturn}{Returns}
+The name of the book. 
+\end{DoxyReturn}
+\Hypertarget{class_library___database_a356673ecbee076bf5da60b63543dd415}\index{Library\_Database@{Library\_Database}!getNumber@{getNumber}}
+\index{getNumber@{getNumber}!Library\_Database@{Library\_Database}}
+\doxysubsubsection{\texorpdfstring{getNumber()}{getNumber()}}
+{\footnotesize\ttfamily \label{class_library___database_a356673ecbee076bf5da60b63543dd415} 
+int Library\+\_\+\+Database\+::get\+Number (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the number of available copies. 
+
+\begin{DoxyReturn}{Returns}
+The number of available copies. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_library___database_a356673ecbee076bf5da60b63543dd415_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_library___database_ace6621bd95d01955aa7e35b20ed4b259}\index{Library\_Database@{Library\_Database}!operator==@{operator==}}
+\index{operator==@{operator==}!Library\_Database@{Library\_Database}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_library___database_ace6621bd95d01955aa7e35b20ed4b259} 
+bool Library\+\_\+\+Database\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_library___database}{Library\+\_\+\+Database}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Compares two \doxylink{class_library___database}{Library\+\_\+\+Database} objects for equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \doxylink{class_library___database}{Library\+\_\+\+Database} object to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the objects are equal; otherwise, false. 
+\end{DoxyReturn}
+\Hypertarget{class_library___database_a8fc0471d1cb4bf96ffbac4a8ca667cf2}\index{Library\_Database@{Library\_Database}!setAuthor@{setAuthor}}
+\index{setAuthor@{setAuthor}!Library\_Database@{Library\_Database}}
+\doxysubsubsection{\texorpdfstring{setAuthor()}{setAuthor()}}
+{\footnotesize\ttfamily \label{class_library___database_a8fc0471d1cb4bf96ffbac4a8ca667cf2} 
+void Library\+\_\+\+Database\+::set\+Author (\begin{DoxyParamCaption}\item[{std\+::string \&}]{a}{}\end{DoxyParamCaption})}
+
+
+
+Sets the author of the book. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The new author of the book. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_library___database_a983abab578595b81675082b039eddbbb}\index{Library\_Database@{Library\_Database}!setGenre@{setGenre}}
+\index{setGenre@{setGenre}!Library\_Database@{Library\_Database}}
+\doxysubsubsection{\texorpdfstring{setGenre()}{setGenre()}}
+{\footnotesize\ttfamily \label{class_library___database_a983abab578595b81675082b039eddbbb} 
+void Library\+\_\+\+Database\+::set\+Genre (\begin{DoxyParamCaption}\item[{std\+::string \&}]{g}{}\end{DoxyParamCaption})}
+
+
+
+Sets the genre of the book. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & The new genre of the book. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_library___database_a0f04bad2fdf075f3e0d8d274272c005c}\index{Library\_Database@{Library\_Database}!setIsbn@{setIsbn}}
+\index{setIsbn@{setIsbn}!Library\_Database@{Library\_Database}}
+\doxysubsubsection{\texorpdfstring{setIsbn()}{setIsbn()}}
+{\footnotesize\ttfamily \label{class_library___database_a0f04bad2fdf075f3e0d8d274272c005c} 
+void Library\+\_\+\+Database\+::set\+Isbn (\begin{DoxyParamCaption}\item[{std\+::string \&}]{i}{}\end{DoxyParamCaption})}
+
+
+
+Sets the ISBN of the book. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The new ISBN of the book. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_library___database_a1d2a286660eb81d7680f24efffa2ce87}\index{Library\_Database@{Library\_Database}!setName@{setName}}
+\index{setName@{setName}!Library\_Database@{Library\_Database}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \label{class_library___database_a1d2a286660eb81d7680f24efffa2ce87} 
+void Library\+\_\+\+Database\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string \&}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Sets the name of the book. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The new name of the book. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_library___database_a4e8d496e6bcebd3e85b790eb9be04358}\index{Library\_Database@{Library\_Database}!setNumber@{setNumber}}
+\index{setNumber@{setNumber}!Library\_Database@{Library\_Database}}
+\doxysubsubsection{\texorpdfstring{setNumber()}{setNumber()}}
+{\footnotesize\ttfamily \label{class_library___database_a4e8d496e6bcebd3e85b790eb9be04358} 
+void Library\+\_\+\+Database\+::set\+Number (\begin{DoxyParamCaption}\item[{int}]{num}{}\end{DoxyParamCaption})}
+
+
+
+Sets the number of available copies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & The new number of copies. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_library___database_a4e8d496e6bcebd3e85b790eb9be04358_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{library__database_8h}{library\+\_\+database.\+h}}\item 
+\mbox{\hyperlink{library__database_8cpp}{library\+\_\+database.\+cpp}}\end{DoxyCompactItemize}

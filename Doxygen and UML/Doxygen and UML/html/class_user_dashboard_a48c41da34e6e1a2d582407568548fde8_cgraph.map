@@ -1,0 +1,7 @@
+<map id="UserDashboard::on_showBooksButton_clicked" name="UserDashboard::on_showBooksButton_clicked">
+<area shape="rect" id="Node000001" title="Toggles the visibility of the book list." alt="" coords="5,5,215,48"/>
+<area shape="rect" id="Node000002" href="$class_user_dashboard.html#a6905b1db7a16ff781cdc7bd714ea1f1e" title="Displays all books in the library." alt="" coords="263,13,461,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,24,247,24,247,29,215,29"/>
+<area shape="rect" id="Node000003" href="$class_library.html#a828b028b352561dd1c8c0836e09b3a42" title="Retrieves all books in the library." alt="" coords="509,13,627,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="461,24,493,24,493,29,461,29"/>
+</map>

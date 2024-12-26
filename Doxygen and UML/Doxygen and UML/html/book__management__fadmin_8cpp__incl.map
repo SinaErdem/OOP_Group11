@@ -1,0 +1,33 @@
+<map id="book_management_fadmin.cpp" name="book_management_fadmin.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="186,5,388,32"/>
+<area shape="rect" id="Node000002" href="$book__management__fadmin_8h.html" title=" " alt="" coords="40,80,228,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,35,176,75,174,70,259,30"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="252,80,323,107"/>
+<area shape="poly" id="edge16_Node000001_Node000013" title=" " alt="" coords="290,33,290,64,285,64,285,33"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="346,80,415,107"/>
+<area shape="poly" id="edge17_Node000001_Node000014" title=" " alt="" coords="305,30,354,68,351,73,302,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,71,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="119,109,68,147,65,143,116,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="163,379,217,405"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="134,108,126,146,120,202,122,267,127,299,136,330,148,349,163,366,159,370,144,353,132,332,122,300,116,267,115,202,121,146,128,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="145,304,184,331"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="138,107,164,288,158,289,133,108"/>
+<area shape="rect" id="Node000006" href="$user_8h.html" title="Defines the User class, which represents a user in the library system." alt="" coords="344,155,401,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="176,105,330,151,328,156,175,110"/>
+<area shape="rect" id="Node000007" href="$library_8h.html" title=" " alt="" coords="197,229,263,256"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="349,184,270,224,267,219,347,179"/>
+<area shape="rect" id="Node000008" href="$library__database_8h.html" title=" " alt="" coords="208,304,335,331"/>
+<area shape="poly" id="edge10_Node000006_Node000008" title=" " alt="" coords="364,184,328,231,289,292,284,289,324,228,360,180"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="338,229,407,256"/>
+<area shape="poly" id="edge11_Node000006_Node000009" title=" " alt="" coords="375,182,375,214,370,214,370,182"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="431,229,488,256"/>
+<area shape="poly" id="edge12_Node000006_Node000010" title=" " alt="" coords="389,180,435,217,431,221,386,184"/>
+<area shape="rect" id="Node000011" href="$admin_8h.html" title=" " alt="" coords="512,229,580,256"/>
+<area shape="poly" id="edge13_Node000006_Node000011" title=" " alt="" coords="403,179,503,220,501,225,401,184"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="548,304,613,331"/>
+<area shape="poly" id="edge15_Node000006_Node000012" title=" " alt="" coords="402,170,509,190,561,206,580,216,593,228,601,243,602,259,596,290,590,289,597,259,595,244,589,231,577,221,559,211,507,195,401,176"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="221,258,188,294,184,291,217,255"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="240,255,259,289,254,292,235,258"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="259,333,217,370,213,366,255,329"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="554,255,571,289,566,291,550,258"/>
+</map>

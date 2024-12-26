@@ -1,0 +1,21 @@
+<map id="user.h" name="user.h">
+<area shape="rect" id="Node000001" title="Defines the User class, which represents a user in the library system." alt="" coords="217,5,275,32"/>
+<area shape="rect" id="Node000002" href="$library_8h.html" title=" " alt="" coords="27,80,94,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,34,108,76,106,71,216,29"/>
+<area shape="rect" id="Node000004" href="$library__database_8h.html" title=" " alt="" coords="68,155,195,181"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="219,35,187,54,159,82,144,110,137,140,132,139,139,108,154,78,184,50,216,30"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="169,80,237,107"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="241,34,221,68,216,65,236,31"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="261,80,319,107"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="256,31,277,65,272,68,251,34"/>
+<area shape="rect" id="Node000008" href="$admin_8h.html" title=" " alt="" coords="343,80,410,107"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="270,30,342,70,339,74,267,35"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="379,155,444,181"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="275,18,311,21,352,31,392,49,409,62,424,79,431,93,432,110,426,141,421,140,427,110,426,95,420,81,406,66,389,53,350,36,310,27,275,23"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,44,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="57,108,40,142,35,139,52,106"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="75,105,110,142,107,145,71,109"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="105,229,158,256"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="134,182,134,214,129,214,129,182"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="385,106,401,139,396,142,380,108"/>
+</map>
